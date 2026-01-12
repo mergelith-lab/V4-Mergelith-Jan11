@@ -4,6 +4,7 @@ import Hero from './components/Hero.tsx';
 import Pillars from './components/Pillars.tsx';
 import IntelligenceSection from './components/IntelligenceSection.tsx';
 import PrivacyProtocol from './components/PrivacyProtocol.tsx';
+import AboutSection from './components/AboutSection.tsx';
 import ContactSection from './components/ContactSection.tsx';
 import Footer from './components/Footer.tsx';
 import BackgroundGraphics from './components/BackgroundGraphics.tsx';
@@ -30,6 +31,7 @@ const App: React.FC = () => {
           <Pillars />
           <IntelligenceSection />
           <PrivacyProtocol />
+          <AboutSection />
           <ContactSection />
         </div>
       </main>

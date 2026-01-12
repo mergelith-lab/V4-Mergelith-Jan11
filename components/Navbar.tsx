@@ -43,6 +43,12 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             >
               Security
             </button>
+            <button 
+              onClick={() => scrollTo('about')}
+              className="text-[10px] uppercase tracking-widest text-[#e2e8f0] hover:text-[#c5a059] transition-colors font-bold bg-transparent border-none cursor-pointer"
+            >
+              About
+            </button>
           </div>
           
           <button 

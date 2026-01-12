@@ -35,9 +35,9 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#c5a059] font-bold">Company</h4>
               <ul className="space-y-2 text-xs text-slate-400 font-light list-none p-0 m-0">
+                <li><button onClick={() => scrollTo('about')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Founder</button></li>
                 <li><button onClick={() => scrollTo('privacy-protocol')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Privacy Protocol</button></li>
                 <li><button onClick={() => scrollTo('contact')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Advisory</button></li>
-                <li><button onClick={() => scrollTo('contact')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Legal</button></li>
               </ul>
             </div>
           </div>
