@@ -38,9 +38,9 @@ const IntelligenceSection: React.FC = () => {
               <div className="flex justify-between items-center mb-8 border-b border-slate-800 pb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#c5a059]"></div>
-                  <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Intake_L6 Active</span>
+                  <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">System Status: Monitoring</span>
                 </div>
-                <div className="text-[10px] text-slate-500 font-mono">ID: ML-8829-PX</div>
+                <div className="text-[10px] text-slate-500 font-mono tracking-widest">VERIFIED_ENVIRONMENT</div>
               </div>
 
               <div className="space-y-6">
@@ -72,7 +72,7 @@ const IntelligenceSection: React.FC = () => {
               </div>
 
               <div className="mt-8 flex justify-end">
-                <div className="text-[10px] text-slate-600 italic">Institutional Protocol: Encrypted Layer 7</div>
+                <div className="text-[10px] text-slate-600 italic">Institutional Protocol: Secure Deployment</div>
               </div>
             </div>
 

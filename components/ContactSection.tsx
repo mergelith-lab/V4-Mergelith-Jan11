@@ -1,7 +1,17 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 
 const ContactSection: React.FC = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate API call
+    setIsSubmitted(true);
+    setTimeout(() => {
+      // Potentially reset or keep success message
+    }, 5000);
+  };
+
   return (
     <section id="contact" className="scroll-mt-32">
       <div className="deal-room-border bg-gradient-to-b from-[#0f172a] to-[#050a14] p-12 md:p-24 relative overflow-hidden">
@@ -26,32 +36,58 @@ const ContactSection: React.FC = () => {
             Due to the sensitive nature of our deployments, we only partner with a limited number of firms per quarter. Request a private audit of your current deal-sourcing infrastructure.
           </p>
 
-          <form className="space-y-6 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 gap-4">
-              <input 
-                type="text" 
-                placeholder="Principal Name" 
-                className="w-full bg-[#050a14]/50 border border-slate-800 p-4 text-white placeholder-slate-600 focus:border-[#c5a059] outline-none transition-colors rounded-sm text-sm tracking-wide"
-              />
-              <input 
-                type="email" 
-                placeholder="Institutional Email" 
-                className="w-full bg-[#050a14]/50 border border-slate-800 p-4 text-white placeholder-slate-600 focus:border-[#c5a059] outline-none transition-colors rounded-sm text-sm tracking-wide"
-              />
-              <textarea 
-                placeholder="Brief Overview of Growth Objectives" 
-                rows={4}
-                className="w-full bg-[#050a14]/50 border border-slate-800 p-4 text-white placeholder-slate-600 focus:border-[#c5a059] outline-none transition-colors rounded-sm text-sm tracking-wide resize-none"
-              ></textarea>
+          {!isSubmitted ? (
+            <form className="space-y-6 max-w-lg mx-auto" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 gap-4">
+                <input 
+                  type="text" 
+                  required
+                  placeholder="Principal Name" 
+                  className="w-full bg-[#050a14]/50 border border-slate-800 p-4 text-white placeholder-slate-600 focus:border-[#c5a059] outline-none transition-colors rounded-sm text-sm tracking-wide"
+                />
+                <input 
+                  type="email" 
+                  required
+                  placeholder="Institutional Email" 
+                  className="w-full bg-[#050a14]/50 border border-slate-800 p-4 text-white placeholder-slate-600 focus:border-[#c5a059] outline-none transition-colors rounded-sm text-sm tracking-wide"
+                />
+                <textarea 
+                  required
+                  placeholder="Brief Overview of Growth Objectives" 
+                  rows={4}
+                  className="w-full bg-[#050a14]/50 border border-slate-800 p-4 text-white placeholder-slate-600 focus:border-[#c5a059] outline-none transition-colors rounded-sm text-sm tracking-wide resize-none"
+                ></textarea>
+              </div>
+              
+              <button 
+                type="submit"
+                className="w-full py-5 bg-[#c5a059] text-[#050a14] font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-all duration-300 rounded-sm cursor-pointer"
+              >
+                Initiate Private Consultation
+              </button>
+              <p className="text-[10px] text-slate-500 uppercase tracking-widest italic">
+                All inquiries handled with strict confidentiality protocols.
+              </p>
+            </form>
+          ) : (
+            <div className="p-12 border border-[#c5a059]/30 bg-[#c5a059]/5 backdrop-blur-sm rounded-sm animate-pulse">
+              <div className="mb-4 text-[#c5a059]">
+                <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 className="text-white font-serif text-2xl italic mb-2">Request Transmitted</h4>
+              <p className="text-slate-400 text-sm font-light">
+                Secure link established. An advisor will contact you via institutional channels shortly.
+              </p>
+              <button 
+                onClick={() => setIsSubmitted(false)}
+                className="mt-8 text-[10px] uppercase tracking-widest text-[#c5a059] hover:text-white transition-colors cursor-pointer"
+              >
+                Send Another Message
+              </button>
             </div>
-            
-            <button className="w-full py-5 bg-[#c5a059] text-[#050a14] font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-all duration-300 rounded-sm">
-              Initiate Private Consultation
-            </button>
-            <p className="text-[10px] text-slate-500 uppercase tracking-widest italic">
-              All inquiries handled with strict confidentiality protocols.
-            </p>
-          </form>
+          )}
         </div>
       </div>
     </section>

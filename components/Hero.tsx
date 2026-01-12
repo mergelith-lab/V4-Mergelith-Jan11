@@ -1,7 +1,13 @@
-
 import React from 'react';
 
 const Hero: React.FC = () => {
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-[#050a14]">
       {/* Abstract Background Elements */}
@@ -48,12 +54,15 @@ const Hero: React.FC = () => {
           
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:w-auto px-10 py-5 bg-[#c5a059] text-[#050a14] font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(197,160,89,0.3)]"
+              onClick={() => scrollTo('contact')}
+              className="w-full sm:w-auto px-10 py-5 bg-[#c5a059] text-[#050a14] font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(197,160,89,0.3)] cursor-pointer"
             >
               Request a Private Consultation
             </button>
-            <button className="w-full sm:w-auto px-10 py-5 border border-slate-700 bg-[#0f172a]/50 backdrop-blur-sm text-slate-300 font-bold uppercase tracking-[0.2em] text-xs hover:border-[#c5a059] hover:text-white transition-all duration-300 rounded-sm">
+            <button 
+              onClick={() => scrollTo('intelligence')}
+              className="w-full sm:w-auto px-10 py-5 border border-slate-700 bg-[#0f172a]/50 backdrop-blur-sm text-slate-300 font-bold uppercase tracking-[0.2em] text-xs hover:border-[#c5a059] hover:text-white transition-all duration-300 rounded-sm cursor-pointer"
+            >
               View Deployment Portfolio
             </button>
           </div>

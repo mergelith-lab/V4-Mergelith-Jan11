@@ -1,7 +1,13 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-[#050a14] border-t border-slate-900 py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -18,26 +24,21 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-2 gap-12">
             <div className="space-y-4">
               <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#c5a059] font-bold">Systems</h4>
-              <ul className="space-y-2 text-xs text-slate-400 font-light">
-                <li className="hover:text-white cursor-pointer">Sourcing Engine</li>
-                <li className="hover:text-white cursor-pointer">Intelligence Layer</li>
-                <li className="hover:text-white cursor-pointer">Automation Suite</li>
+              <ul className="space-y-2 text-xs text-slate-400 font-light list-none p-0 m-0">
+                <li><button onClick={() => scrollTo('pillars')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Sourcing Engine</button></li>
+                <li><button onClick={() => scrollTo('intelligence')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Intelligence Layer</button></li>
               </ul>
             </div>
             <div className="space-y-4">
               <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#c5a059] font-bold">Company</h4>
-              <ul className="space-y-2 text-xs text-slate-400 font-light">
-                <li className="hover:text-white cursor-pointer">Privacy Protocol</li>
-                <li className="hover:text-white cursor-pointer">Advisory</li>
-                <li className="hover:text-white cursor-pointer">Legal</li>
+              <ul className="space-y-2 text-xs text-slate-400 font-light list-none p-0 m-0">
+                <li><button onClick={() => scrollTo('privacy-protocol')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Privacy Protocol</button></li>
+                <li><button onClick={() => scrollTo('contact')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Advisory</button></li>
+                <li><button onClick={() => scrollTo('contact')} className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer text-xs font-light">Legal</button></li>
               </ul>
-            </div>
-            <div className="space-y-4 hidden md:block">
-              <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#c5a059] font-bold">Contact</h4>
-              <p className="text-xs text-slate-400 font-light italic">By Invitation Only</p>
             </div>
           </div>
         </div>
@@ -47,8 +48,8 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Mergelith Growth Partners. All Rights Reserved.
           </p>
           <div className="flex gap-8">
-            <span className="text-[10px] text-slate-600 uppercase tracking-widest hover:text-slate-400 cursor-pointer">Security Protocol</span>
-            <span className="text-[10px] text-slate-600 uppercase tracking-widest hover:text-slate-400 cursor-pointer">Terms of Engagement</span>
+            <button onClick={() => scrollTo('privacy-protocol')} className="text-[10px] text-slate-600 uppercase tracking-widest hover:text-slate-400 transition-colors bg-transparent border-none p-0 cursor-pointer">Security Protocol</button>
+            <button onClick={() => scrollTo('contact')} className="text-[10px] text-slate-600 uppercase tracking-widest hover:text-slate-400 transition-colors bg-transparent border-none p-0 cursor-pointer">Terms of Engagement</button>
           </div>
         </div>
       </div>

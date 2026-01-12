@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import Pillars from './components/Pillars.tsx';
 import IntelligenceSection from './components/IntelligenceSection.tsx';
+import PrivacyProtocol from './components/PrivacyProtocol.tsx';
 import ContactSection from './components/ContactSection.tsx';
 import Footer from './components/Footer.tsx';
 import BackgroundGraphics from './components/BackgroundGraphics.tsx';
@@ -25,9 +26,10 @@ const App: React.FC = () => {
       
       <main>
         <Hero />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-48">
           <Pillars />
           <IntelligenceSection />
+          <PrivacyProtocol />
           <ContactSection />
         </div>
       </main>
