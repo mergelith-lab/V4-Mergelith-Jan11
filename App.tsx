@@ -1,12 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Pillars from './components/Pillars';
-import IntelligenceSection from './components/IntelligenceSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import BackgroundGraphics from './components/BackgroundGraphics';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import Pillars from './components/Pillars.tsx';
+import IntelligenceSection from './components/IntelligenceSection.tsx';
+import ContactSection from './components/ContactSection.tsx';
+import Footer from './components/Footer.tsx';
+import BackgroundGraphics from './components/BackgroundGraphics.tsx';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
