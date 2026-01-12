@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const IntelligenceSection: React.FC = () => {
@@ -47,7 +46,7 @@ const IntelligenceSection: React.FC = () => {
               <div className="space-y-6">
                 <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-sm">
                   <div className="text-[10px] text-[#c5a059] uppercase tracking-tighter mb-1">Signal Detected</div>
-                  <div className="text-sm font-mono text-white italic">"Detecting Sell-Side Mandate: Confirmed >$20M valuation. Initiating conflict check..."</div>
+                  <div className="text-sm font-mono text-white italic">"Detecting Sell-Side Mandate: Confirmed &gt;$20M valuation. Initiating conflict check..."</div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -64,7 +63,7 @@ const IntelligenceSection: React.FC = () => {
                 {/* Abstract Data Visuals (CSS Grid Bars) */}
                 <div className="space-y-2">
                   <div className="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <div className="h-full w-3/4 bg-[#c5a059] animate-[shimmer_2s_infinite]"></div>
+                    <div className="h-full w-3/4 bg-[#c5a059] animate-shimmer"></div>
                   </div>
                   <div className="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
                     <div className="h-full w-1/2 bg-[#c5a059]/60"></div>
