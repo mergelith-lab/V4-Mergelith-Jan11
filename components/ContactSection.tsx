@@ -27,10 +27,19 @@ const ContactSection: React.FC = () => {
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-10">
-          <h2 className="text-4xl md:text-5xl font-serif text-white italic">
-            Elite advisors don't scale people. <br />
-            <span className="text-[#c5a059]">They scale systems.</span>
-          </h2>
+          <div className="space-y-4">
+            <h2 className="text-4xl md:text-5xl font-serif text-white italic">
+              Elite advisors don't scale people. <br />
+              <span className="text-[#c5a059]">They scale systems.</span>
+            </h2>
+            
+            <div className="pt-4">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-[#c5a059] font-bold mb-2">Immediate Access</p>
+              <a href="tel:714-477-7490" className="text-2xl md:text-3xl font-serif text-white hover:text-[#c5a059] transition-colors italic tracking-wider">
+                714-477-7490
+              </a>
+            </div>
+          </div>
           
           <p className="text-slate-400 text-lg font-light">
             Due to the sensitive nature of our deployments, we only partner with a limited number of firms per quarter. Request a private audit of your current deal-sourcing infrastructure.

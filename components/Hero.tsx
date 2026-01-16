@@ -29,19 +29,29 @@ const Hero: React.FC = () => {
             M&A deals are won in the first five minutes. We deploy human-parity intelligence and high-velocity triage to capture high-stakes deal flow <span className="text-white font-medium italic">with institutional precision.</span>
           </p>
           
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button 
-              onClick={() => scrollTo('contact')}
-              className="w-full sm:w-auto px-10 py-5 bg-[#c5a059] text-[#050a14] font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(197,160,89,0.3)] cursor-pointer"
+          <div className="pt-8 flex flex-col items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+              <button 
+                onClick={() => scrollTo('contact')}
+                className="w-full sm:w-auto px-10 py-5 bg-[#c5a059] text-[#050a14] font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(197,160,89,0.3)] cursor-pointer"
+              >
+                Request a Private Consultation
+              </button>
+              <button 
+                onClick={() => scrollTo('intelligence')}
+                className="w-full sm:w-auto px-10 py-5 border border-slate-700 bg-[#0f172a]/50 backdrop-blur-sm text-slate-300 font-bold uppercase tracking-[0.2em] text-xs hover:border-[#c5a059] hover:text-white transition-all duration-300 rounded-sm cursor-pointer"
+              >
+                View Deployment Portfolio
+              </button>
+            </div>
+            
+            <a 
+              href="tel:714-477-7490" 
+              className="text-[10px] uppercase tracking-[0.4em] text-[#c5a059] font-bold hover:text-white transition-colors group flex items-center gap-2"
             >
-              Request a Private Consultation
-            </button>
-            <button 
-              onClick={() => scrollTo('intelligence')}
-              className="w-full sm:w-auto px-10 py-5 border border-slate-700 bg-[#0f172a]/50 backdrop-blur-sm text-slate-300 font-bold uppercase tracking-[0.2em] text-xs hover:border-[#c5a059] hover:text-white transition-all duration-300 rounded-sm cursor-pointer"
-            >
-              View Deployment Portfolio
-            </button>
+              <span className="opacity-60 group-hover:opacity-100 italic">Priority Advisory Line:</span> 
+              <span className="text-sm tracking-widest">714-477-7490</span>
+            </a>
           </div>
         </div>
       </div>

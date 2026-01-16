@@ -19,9 +19,14 @@ const Footer: React.FC = () => {
               </div>
               <h1 className="font-cinzel text-base tracking-[0.2em] font-bold text-white uppercase">MERGELITH</h1>
             </div>
-            <p className="text-xs text-slate-500 max-w-xs font-light leading-relaxed">
-              Proprietary AI systems for institutional M&A advisors. Scalability without sacrifice.
-            </p>
+            <div className="space-y-2">
+              <p className="text-xs text-slate-500 max-w-xs font-light leading-relaxed">
+                Proprietary AI systems for institutional M&A advisors. Scalability without sacrifice.
+              </p>
+              <p className="text-[10px] text-[#c5a059] font-bold tracking-[0.1em]">
+                ADVISORY: <a href="tel:714-477-7490" className="hover:text-white transition-colors">714-477-7490</a>
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-12">

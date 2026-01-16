@@ -3,6 +3,8 @@ import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import Pillars from './components/Pillars.tsx';
 import IntelligenceSection from './components/IntelligenceSection.tsx';
+import AutomationSuite from './components/AutomationSuite.tsx';
+import ROICalculator from './components/ROICalculator.tsx';
 import PrivacyProtocol from './components/PrivacyProtocol.tsx';
 import AboutSection from './components/AboutSection.tsx';
 import ContactSection from './components/ContactSection.tsx';
@@ -30,6 +32,8 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-48">
           <Pillars />
           <IntelligenceSection />
+          <AutomationSuite />
+          <ROICalculator />
           <PrivacyProtocol />
           <AboutSection />
           <ContactSection />
