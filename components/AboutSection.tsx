@@ -35,16 +35,16 @@ const AboutSection: React.FC = () => {
           <div className="lg:w-2/3 space-y-12">
             <div className="space-y-8 text-[#2F4F68]/70 font-light leading-relaxed text-xl">
               <p>
-                <span className="text-[#2F4F68] font-semibold italic underline decoration-[#E6B65C]/50 decoration-2">Sasha Aleksic</span> brings a breadth of experience from corporate America industry as a senior market development and strategic leader. With over two decades of experience in global life science organizations, her expertise spans bioprocessing, cell and gene therapy, and advanced manufacturing in highly regulated commercial environments.
+                <span className="text-[#2F4F68] font-semibold italic underline decoration-[#E6B65C]/50 decoration-2">Mergelith</span> is an AI agency specializing exclusively in mergers and acquisitions firms. The company builds AI voice receptionists, AI chatbots, and deal intake systems that capture, qualify, and route inbound opportunities with speed and precision.
               </p>
               <p>
-                Her career has been built at the intersection of strategy, execution, and scale, working closely with executive leadership, legal, compliance, R&D, and commercial teams to drive growth in complex, high-stakes settings. 
+                Founded by <span className="text-[#2F4F68] font-semibold italic">Sasha Aleksic</span>, Mergelith brings a breadth of experience from corporate America industry as a senior market development and strategic leader. With over two decades of experience in global life science organizations, Sasha's expertise spans bioprocessing, cell and gene therapy, and advanced manufacturing in highly regulated commercial environments.
               </p>
               <p>
-                Through this institutional background, she has developed deep expertise in managing critical workflows where <span className="text-[#2F4F68] font-semibold italic">accuracy, speed, risk mitigation, and reputation protection</span> are non-negotiable. She has led cross-functional initiatives that improved throughput, reduced operational risk, and enabled organizations to operate with greater confidence under regulatory and commercial pressure.
+                Her career has been built at the intersection of strategy, execution, and scale, working closely with executive leadership, legal, compliance, R&D, and commercial teams to drive growth in complex, high-stakes settings. Through this institutional background, she has developed deep expertise in managing critical workflows where accuracy, speed, risk mitigation, and reputation protection are non-negotiable.
               </p>
               <p>
-                Today, Sasha is applying this background to the Mergers and Acquisitions space. She works with M&A advisors, attorneys, and deal teams to design AI-enabled workflows and automations that address the most critical bottlenecks across the deal lifecycle. Her focus remains on solving problems that materially impact outcomes: risk reduction, deal velocity, workload scalability, and reputation protection.
+                Today, Sasha applies this background to the M&A space, partnering with advisors, attorneys, and deal teams to design AI-enabled workflows and automations that address the most critical bottlenecks across the deal lifecycle.
               </p>
             </div>
 
@@ -52,13 +52,13 @@ const AboutSection: React.FC = () => {
               <div className="space-y-6">
                 <h4 className="text-[#2F4F68] font-cinzel text-xs tracking-[0.4em] uppercase font-black">The M&A Mandate</h4>
                 <p className="text-base text-[#2F4F68]/50 font-light leading-relaxed">
-                  We bridge the gap between legacy processes and institutional-grade AI. Our systems are built for advisors who require precision and absolute discretion.
+                  Unlike general AI marketing agencies, Mergelith focuses exclusively on deal-grade AI systems for mergers and acquisitions firms that require precision and absolute discretion.
                 </p>
               </div>
               <div className="space-y-6">
                 <h4 className="text-[#2F4F68] font-cinzel text-xs tracking-[0.4em] uppercase font-black">The Measurable Goal</h4>
                 <p className="text-base text-[#2F4F68]/50 font-light leading-relaxed">
-                  Enable M&A professionals to close more deals, with less friction, and greater control over their proprietary deal flow.
+                  Enable M&A professionals to reduce response latency, prevent deal leakage, and increase conversion from inbound interest to qualified mandates.
                 </p>
               </div>
             </div>

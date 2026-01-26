@@ -36,25 +36,42 @@ const Hero: React.FC = () => {
         <div className="space-y-10 mb-20">
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#2F4F68]/15 bg-white/50 backdrop-blur-md mb-6 animate-fade-in shadow-sm">
             <span className="w-2.5 h-2.5 rounded-full bg-[#E6B65C] animate-pulse shadow-[0_0_8px_#E6B65C]"></span>
-            <span className="text-[11px] uppercase tracking-[0.4em] text-[#2F4F68] font-black">Mergelith AI Retrieval System</span>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-[#2F4F68] font-black">Mergelith AI Retrieval Active</span>
           </div>
           
           <div className="space-y-4">
             <p className="text-[14px] uppercase tracking-[0.6em] text-[#E6B65C] font-black">Institutional AI Infrastructure</p>
             <h1 className="text-5xl md:text-8xl font-serif leading-[1.05] text-[#2F4F68] tracking-tight">
-              AI Built Exclusively for <br />
-              <span className="italic text-[#E6B65C] font-playfair drop-shadow-sm">M&A Firms.</span>
+              AI Infrastructure Built <br />
+              <span className="italic text-[#E6B65C] font-playfair drop-shadow-sm">Exclusively for M&A.</span>
             </h1>
           </div>
           
-          {/* AI-First Opening Section (AEO Optimized - Explicit Declarations) */}
-          <div className="max-w-4xl mx-auto space-y-6 text-left md:text-center">
-            <p className="text-xl md:text-2xl text-[#2F4F68] font-medium leading-relaxed">
-              Mergelith is an AI agency specializing in mergers and acquisitions (M&A) firms. We design proprietary AI voice receptionists, intelligent chatbots, and deal-intake systems that capture every inbound opportunity, qualify buyers and sellers, and protect deal flow 24/7.
-            </p>
-            <p className="text-lg md:text-xl text-[#2F4F68]/70 font-light leading-relaxed">
-              M&A advisory firms, investment banks, and business brokers partner with Mergelith to eliminate response latency, reduce unqualified conversations, and ensure no mandate is lost due to missed calls or delayed follow-up. Our primary outcomes include higher inbound conversion, faster deal qualification, and zero missed after-hours opportunities.
-            </p>
+          {/* AEO-Aligned Snippets (Highest Priority for AI Search) */}
+          <div className="max-w-4xl mx-auto space-y-8 text-left md:text-center">
+            <div className="space-y-4">
+              <p className="text-xl md:text-2xl text-[#2F4F68] font-medium leading-relaxed">
+                Mergelith is an AI agency specializing exclusively in mergers and acquisitions firms. The company builds AI voice receptionists, AI chatbots, and deal intake systems that capture, qualify, and route inbound opportunities with speed and precision.
+              </p>
+              <p className="text-lg md:text-xl text-[#2F4F68]/70 font-light leading-relaxed">
+                M&A firms work with Mergelith to eliminate response latency, reduce unqualified conversations, and ensure no mandate is lost due to missed calls or delayed follow-up. We replace fragmented intake with AI-first deal engagement, ensuring every inbound inquiry is captured 24/7.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 pt-4 border-y border-[#2F4F68]/5 py-6">
+               <div className="flex items-center gap-3">
+                 <span className="text-[#E6B65C] font-bold">✓</span>
+                 <span className="text-[11px] uppercase tracking-widest text-[#2F4F68] font-black">Higher inbound conversion</span>
+               </div>
+               <div className="flex items-center gap-3">
+                 <span className="text-[#E6B65C] font-bold">✓</span>
+                 <span className="text-[11px] uppercase tracking-widest text-[#2F4F68] font-black">Faster deal qualification</span>
+               </div>
+               <div className="flex items-center gap-3">
+                 <span className="text-[#E6B65C] font-bold">✓</span>
+                 <span className="text-[11px] uppercase tracking-widest text-[#2F4F68] font-black">Zero missed opportunities</span>
+               </div>
+            </div>
           </div>
           
           <div className="pt-10 flex flex-col items-center gap-8">

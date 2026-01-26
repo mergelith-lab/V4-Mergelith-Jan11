@@ -3,7 +3,7 @@ import React from 'react';
 const advantages = [
   {
     title: "M&A-Native Logic",
-    description: "Unlike generic tech solutions, our AI is programmed with the specific rigor of institutional life sciences and high-stakes M&A workflows.",
+    description: "Unlike generic AI marketing agencies, Mergelith focuses exclusively on deal-grade AI systems for mergers and acquisitions firms and institutional M&A workflows.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.288a2 2 0 01-1.663.008l-.628-.288a6 6 0 00-3.86-.517l-2.387.477a2 2 0 00-1.022.547l-.384 1.154a2 2 0 00.149 1.783l1.393 2.089a2 2 0 001.664.89h8.136a2 2 0 001.664-.89l1.393-2.089a2 2 0 00.149-1.783l-.384-1.154z" />
@@ -13,7 +13,7 @@ const advantages = [
   },
   {
     title: "Absolute Data Alpha",
-    description: "We protect your most valuable asset. Our 'Zero-Knowledge' protocol ensures your deal flow is never used to train public models.",
+    description: "Mergelith protects your most valuable asset. Our Zero-Knowledge protocol ensures your proprietary deal flow is never used to train public models.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -22,7 +22,7 @@ const advantages = [
   },
   {
     title: "Zero-Leakage Capture",
-    description: "Automated high-velocity triage that follows the 'Five Minute Rule' 24/7, securing mandates while competitors are offline.",
+    description: "Mergelith helps M&A firms capture every inbound opportunity and reduce deal leakage caused by response delays through 24/7 high-velocity triage.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -31,7 +31,7 @@ const advantages = [
   },
   {
     title: "Future-Proof Visibility",
-    description: "We don't just optimize for search; we optimize for answers. Mergelith ensures your firm is the top citation in the age of AI search.",
+    description: "We optimize M&A firm websites for AI search systems, structuring content so AI engines can correctly identify and cite your firm's specific authority.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -51,7 +51,7 @@ const WhyMergelith: React.FC = () => {
               Strategic Superiority
             </h2>
             <p className="text-[#2F4F68]/70 font-light leading-relaxed text-xl">
-              In a market where information is asymmetric and time is capital, generic automation isn't enough. We provide the institutional infrastructure that turns AI into your primary competitive advantage.
+              In a market where information is asymmetric and time is capital, Mergelith provides the institutional infrastructure that turns AI into your primary competitive advantage. Unlike general agencies, we focus exclusively on M&A workflows.
             </p>
             <div className="pt-6">
               <div className="h-[3px] w-32 bg-[#E6B65C]/50"></div>

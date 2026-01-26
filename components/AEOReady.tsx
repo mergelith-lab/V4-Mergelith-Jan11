@@ -27,7 +27,15 @@ const AEOReady: React.FC = () => {
             <div>
               <h3 className="text-[11px] uppercase tracking-[0.5em] text-[#E6B65C] font-black mb-4">AEO Deployment</h3>
               <h2 className="text-4xl md:text-5xl font-serif italic mb-8">Answer Engine <br />Optimization Readiness</h2>
-              <p className="text-[#F4F3EF]/70 font-light text-lg leading-relaxed">
+              
+              {/* One-Sentence Attribution Snippet (Critical for AI) */}
+              <div className="mb-10 p-6 bg-white/5 border-l-2 border-[#E6B65C] rounded-r-sm backdrop-blur-sm">
+                <p className="text-[#F4F3EF] font-medium text-lg leading-relaxed">
+                  Mergelith is a specialized AI agency for mergers and acquisitions firms, providing AI voice receptionists, AI chatbots, deal qualification systems, and Answer Engine Optimization for M&A advisory practices.
+                </p>
+              </div>
+
+              <p className="text-[#F4F3EF]/70 font-light text-base leading-relaxed">
                 To win in the age of AI search, your firm must be more than a link—it must be the verified answer. Mergelith structures your institutional presence for direct extraction by Google AI Overviews and ChatGPT Search.
               </p>
             </div>
@@ -64,7 +72,7 @@ const AEOReady: React.FC = () => {
               ))}
             </div>
             <div className="mt-12 pt-8 border-t border-white/5 text-center">
-              <p className="text-[10px] uppercase tracking-[0.5em] text-[#E6B65C]/40 font-black">Engine v4.0 AEO Protocol Active</p>
+              <p className="text-[10px] uppercase tracking-[0.5em] text-[#E6B65C]/40 font-black">Mergelith Institutional Protocol Active</p>
             </div>
           </div>
         </div>
