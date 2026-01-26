@@ -104,47 +104,49 @@ const ChatBot: React.FC = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-10 right-10 z-[60] w-16 h-16 bg-[#E6B65C] rounded-sm shadow-[0_10px_30px_rgba(230,182,92,0.4)] flex items-center justify-center transition-all duration-500 hover:scale-110 active:scale-95 group"
+        className="fixed bottom-10 right-10 z-[60] w-16 h-16 bg-[#2F4F68] rounded-sm shadow-[0_10px_30px_rgba(47,79,104,0.3)] flex items-center justify-center transition-all duration-500 hover:scale-110 active:scale-95 group border-2 border-[#E6B65C]/30"
         aria-label="Open Assistant"
       >
         {isOpen ? (
-          <svg className="w-8 h-8 text-[#2F4F68]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-8 h-8 text-[#F4F3EF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
           <div className="relative">
-            <svg className="w-8 h-8 text-[#2F4F68]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 text-[#E6B65C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-white rounded-full animate-ping"></span>
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#E6B65C] rounded-full animate-ping opacity-75"></span>
           </div>
         )}
       </button>
 
-      <div className={`fixed bottom-32 right-10 z-[60] w-[420px] h-[600px] bg-[#1e3547] border border-[#E6B65C]/30 shadow-2xl rounded-sm flex flex-col transition-all duration-500 origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0 pointer-events-none'}`}>
-        <div className="p-6 border-b border-[#E6B65C]/20 bg-[#2F4F68] flex items-center justify-between">
+      <div className={`fixed bottom-32 right-10 z-[60] w-[420px] h-[650px] bg-white border border-[#2F4F68]/15 shadow-2xl rounded-sm flex flex-col transition-all duration-500 origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0 pointer-events-none'}`}>
+        {/* Header - Institutional & Bright */}
+        <div className="p-6 border-b border-[#2F4F68]/10 bg-[#F4F3EF] flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-8 h-8 bg-[#E6B65C] flex items-center justify-center rounded-sm">
-              <span className="text-[#2F4F68] font-cinzel font-black text-sm">M</span>
+            <div className="w-9 h-9 bg-[#2F4F68] flex items-center justify-center rounded-sm">
+              <span className="text-[#F4F3EF] font-cinzel font-black text-sm">M</span>
             </div>
             <div>
-              <h4 className="text-[11px] font-cinzel uppercase tracking-[0.3em] text-[#F4F3EF] leading-none font-black">Institutional Assistant</h4>
-              <p className="text-[9px] uppercase tracking-widest text-[#E6B65C] mt-1.5 font-black">Secure Channel Active</p>
+              <h4 className="text-[11px] font-cinzel uppercase tracking-[0.3em] text-[#2F4F68] leading-none font-black">Institutional Assistant</h4>
+              <p className="text-[9px] uppercase tracking-widest text-[#E6B65C] mt-1.5 font-black">Secure Advisory Channel</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-             <span className="text-[9px] text-[#F4F3EF]/40 font-mono uppercase font-black">Online</span>
+             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+             <span className="text-[9px] text-[#2F4F68]/40 font-mono uppercase font-black tracking-widest">Active</span>
           </div>
         </div>
 
-        <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-thin scrollbar-thumb-[#E6B65C]/20">
+        {/* Message Thread */}
+        <div ref={scrollRef} className="flex-1 overflow-y-auto p-8 space-y-8 bg-[#F4F3EF]/30 scrollbar-thin scrollbar-thumb-[#2F4F68]/10">
           {messages.map((msg, i) => (
             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`max-w-[85%] p-4 text-[13px] leading-relaxed rounded-sm ${
+              <div className={`max-w-[85%] p-5 text-[13px] leading-relaxed shadow-sm ${
                 msg.role === 'user' 
-                ? 'bg-[#E6B65C]/15 border border-[#E6B65C]/40 text-[#F4F3EF]' 
-                : 'bg-[#2F4F68] border border-[#F4F3EF]/10 text-[#F4F3EF]/90 shadow-lg'
+                ? 'bg-[#2F4F68] text-[#F4F3EF] rounded-sm rounded-tr-none' 
+                : 'bg-white border border-[#2F4F68]/5 text-[#2F4F68]/90 rounded-sm rounded-tl-none'
               }`}>
                 {msg.text}
               </div>
@@ -153,14 +155,14 @@ const ChatBot: React.FC = () => {
           
           {showQuickActions && (
             <div className="space-y-3 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#F4F3EF]/30 mb-3 font-black ml-1">Priority Service Paths:</p>
+              <p className="text-[10px] uppercase tracking-[0.4em] text-[#2F4F68]/30 mb-3 font-black ml-1">Priority Service Paths:</p>
               {quickActions.map((action) => (
                 <button
                   key={action.id}
                   onClick={() => handleQuickAction(action.prompt)}
-                  className="w-full text-left p-4 text-[11px] uppercase tracking-[0.2em] border border-[#E6B65C]/30 bg-[#E6B65C]/5 text-[#F4F3EF]/80 hover:bg-[#E6B65C]/15 hover:border-[#E6B65C] transition-all rounded-sm font-black group shadow-sm"
+                  className="w-full text-left p-4 text-[10px] uppercase tracking-[0.25em] border border-[#2F4F68]/10 bg-white text-[#2F4F68]/70 hover:bg-[#E6B65C]/10 hover:border-[#E6B65C]/40 transition-all rounded-sm font-black group shadow-sm"
                 >
-                  <span className="group-hover:text-[#E6B65C] transition-colors">{action.label}</span>
+                  <span className="group-hover:text-[#2F4F68] transition-colors">{action.label}</span>
                 </button>
               ))}
             </div>
@@ -168,8 +170,8 @@ const ChatBot: React.FC = () => {
 
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-[#2F4F68] border border-[#F4F3EF]/10 p-4 rounded-sm">
-                <div className="flex gap-1.5">
+              <div className="bg-white border border-[#2F4F68]/5 p-5 rounded-sm">
+                <div className="flex gap-2">
                   <span className="w-1.5 h-1.5 bg-[#E6B65C] rounded-full animate-bounce"></span>
                   <span className="w-1.5 h-1.5 bg-[#E6B65C] rounded-full animate-bounce [animation-delay:0.2s]"></span>
                   <span className="w-1.5 h-1.5 bg-[#E6B65C] rounded-full animate-bounce [animation-delay:0.4s]"></span>
@@ -179,10 +181,11 @@ const ChatBot: React.FC = () => {
           )}
         </div>
 
-        <div className="p-6 border-t border-[#F4F3EF]/10 bg-[#2F4F68]/40">
+        {/* Input Area */}
+        <div className="p-8 border-t border-[#2F4F68]/5 bg-white">
           <form 
             onSubmit={(e) => { e.preventDefault(); sendMessage(); }}
-            className="flex gap-3"
+            className="flex gap-4"
           >
             <input
               type="text"
@@ -192,28 +195,28 @@ const ChatBot: React.FC = () => {
                 if (showQuickActions && e.target.value.length > 0) setShowQuickActions(false);
               }}
               placeholder="Enter secure inquiry..."
-              className="flex-1 bg-[#2F4F68] border border-[#F4F3EF]/20 rounded-sm px-4 py-3 text-sm text-[#F4F3EF] placeholder-[#F4F3EF]/20 focus:border-[#E6B65C]/60 outline-none transition-all shadow-inner"
+              className="flex-1 bg-[#F4F3EF]/50 border border-[#2F4F68]/15 rounded-sm px-5 py-4 text-sm text-[#2F4F68] placeholder-[#2F4F68]/30 focus:border-[#E6B65C] outline-none transition-all shadow-inner"
             />
             <button
               type="submit"
               disabled={isLoading || !input.trim()}
-              className="px-4 py-3 bg-[#E6B65C] text-[#2F4F68] rounded-sm hover:bg-[#F4F3EF] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+              className="px-5 py-4 bg-[#2F4F68] text-white rounded-sm hover:bg-[#E6B65C] hover:text-[#2F4F68] transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
             >
               <svg className="w-5 h-5 font-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </button>
           </form>
-          <div className="flex items-center justify-between mt-4 px-1">
-            <p className="text-[8px] text-[#F4F3EF]/20 uppercase tracking-[0.4em] font-black">
-              AES-256 Encrypted Session
+          <div className="flex items-center justify-between mt-5 px-1">
+            <p className="text-[8px] text-[#2F4F68]/20 uppercase tracking-[0.5em] font-black">
+              AES-256 Encryption Active
             </p>
             <button 
               onClick={() => {
                 setMessages([{ role: 'model', text: "Session reset. How may I best support your firm's growth objectives today?" }]);
                 setShowQuickActions(true);
               }}
-              className="text-[8px] text-[#E6B65C] uppercase tracking-[0.4em] hover:text-[#F4F3EF] transition-colors font-black"
+              className="text-[8px] text-[#2F4F68]/30 uppercase tracking-[0.4em] hover:text-[#E6B65C] transition-colors font-black border-b border-transparent hover:border-[#E6B65C]"
             >
               Reset Protocol
             </button>
