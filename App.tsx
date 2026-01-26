@@ -14,6 +14,7 @@ import ChatBot from './components/ChatBot.tsx';
 import EngineOptimizations from './components/EngineOptimizations.tsx';
 import FAQSection from './components/FAQSection.tsx';
 import IndustrySolutions from './components/IndustrySolutions.tsx';
+import AEOReady from './components/AEOReady.tsx';
 
 const App: React.FC = () => {
   return (
@@ -33,6 +34,7 @@ const App: React.FC = () => {
           <IntelligenceSection />
           <ROICalculator />
           <FAQSection />
+          <AEOReady />
           <PrivacyProtocol />
           <AboutSection />
           <ContactSection />

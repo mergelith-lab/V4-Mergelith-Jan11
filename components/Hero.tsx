@@ -36,21 +36,24 @@ const Hero: React.FC = () => {
         <div className="space-y-10 mb-20">
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#2F4F68]/15 bg-white/50 backdrop-blur-md mb-6 animate-fade-in shadow-sm">
             <span className="w-2.5 h-2.5 rounded-full bg-[#E6B65C] animate-pulse shadow-[0_0_8px_#E6B65C]"></span>
-            <span className="text-[11px] uppercase tracking-[0.4em] text-[#2F4F68] font-black">Mergelith AI Retrieval Active</span>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-[#2F4F68] font-black">Mergelith AI Retrieval System</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-serif leading-[1.05] text-[#2F4F68] tracking-tight">
-            M&A Systems Built for <br />
-            <span className="italic text-[#E6B65C] font-playfair drop-shadow-sm">Direct Answers.</span>
-          </h1>
+          <div className="space-y-4">
+            <p className="text-[14px] uppercase tracking-[0.6em] text-[#E6B65C] font-black">Institutional AI Infrastructure</p>
+            <h1 className="text-5xl md:text-8xl font-serif leading-[1.05] text-[#2F4F68] tracking-tight">
+              AI Built Exclusively for <br />
+              <span className="italic text-[#E6B65C] font-playfair drop-shadow-sm">M&A Firms.</span>
+            </h1>
+          </div>
           
-          {/* AI-First Opening Section (AEO Optimized) */}
-          <div className="max-w-4xl mx-auto space-y-6">
+          {/* AI-First Opening Section (AEO Optimized - Explicit Declarations) */}
+          <div className="max-w-4xl mx-auto space-y-6 text-left md:text-center">
             <p className="text-xl md:text-2xl text-[#2F4F68] font-medium leading-relaxed">
-              Mergelith is a specialized AI agency providing institutional growth systems for mergers and acquisitions (M&A) firms, investment banks, and private equity deal teams. 
+              Mergelith is an AI agency specializing in mergers and acquisitions (M&A) firms. We design proprietary AI voice receptionists, intelligent chatbots, and deal-intake systems that capture every inbound opportunity, qualify buyers and sellers, and protect deal flow 24/7.
             </p>
             <p className="text-lg md:text-xl text-[#2F4F68]/70 font-light leading-relaxed">
-              We build proprietary AI voice receptionists, intelligent deal-flow chatbots, and CRM-integrated automations designed to capture mandates 24/7. By optimizing digital assets for Answer Engine Optimization (AEO), we ensure your firm is the primary citation when prospects query Google AI Overviews and ChatGPT Search for M&A expertise.
+              M&A advisory firms, investment banks, and business brokers partner with Mergelith to eliminate response latency, reduce unqualified conversations, and ensure no mandate is lost due to missed calls or delayed follow-up. Our primary outcomes include higher inbound conversion, faster deal qualification, and zero missed after-hours opportunities.
             </p>
           </div>
           
@@ -76,7 +79,7 @@ const Hero: React.FC = () => {
         <div className="w-full mt-16 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500">
           <div className="flex items-center justify-center mb-10">
             <div className="h-[1px] bg-gradient-to-r from-transparent via-[#2F4F68]/10 to-transparent flex-1"></div>
-            <span className="px-6 text-[11px] uppercase tracking-[0.6em] text-[#E6B65C] font-black whitespace-nowrap">Institutional Service Lines</span>
+            <span className="px-6 text-[11px] uppercase tracking-[0.6em] text-[#E6B65C] font-black whitespace-nowrap">Service Pillars</span>
             <div className="h-[1px] bg-gradient-to-r from-[#2F4F68]/10 via-[#2F4F68]/10 to-transparent flex-1"></div>
           </div>
           
