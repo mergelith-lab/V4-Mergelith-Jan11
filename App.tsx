@@ -12,6 +12,8 @@ import Footer from './components/Footer.tsx';
 import BackgroundGraphics from './components/BackgroundGraphics.tsx';
 import ChatBot from './components/ChatBot.tsx';
 import EngineOptimizations from './components/EngineOptimizations.tsx';
+import FAQSection from './components/FAQSection.tsx';
+import IndustrySolutions from './components/IndustrySolutions.tsx';
 
 const App: React.FC = () => {
   return (
@@ -24,11 +26,13 @@ const App: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 space-y-56">
           <WhyMergelith />
+          <IndustrySolutions />
           <Pillars />
           <AEODiscovery />
           <EngineOptimizations />
           <IntelligenceSection />
           <ROICalculator />
+          <FAQSection />
           <PrivacyProtocol />
           <AboutSection />
           <ContactSection />
