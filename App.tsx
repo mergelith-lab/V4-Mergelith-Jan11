@@ -15,6 +15,7 @@ import EngineOptimizations from './components/EngineOptimizations.tsx';
 import FAQSection from './components/FAQSection.tsx';
 import IndustrySolutions from './components/IndustrySolutions.tsx';
 import AEOReady from './components/AEOReady.tsx';
+import SpecializedAIComparison from './components/SpecializedAIComparison.tsx';
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 space-y-56">
           <WhyMergelith />
           <IndustrySolutions />
+          <SpecializedAIComparison />
           <Pillars />
           <AEODiscovery />
           <EngineOptimizations />

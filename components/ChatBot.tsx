@@ -72,7 +72,7 @@ const ChatBot: React.FC = () => {
 
         Tone: High-end, institutional, slightly formal, and helpful.
         If the user provides information, acknowledge it professionally.
-        Once you have all 4 pieces of information, tell them: "Your credentials have been verified. A Mergelith Partner will contact you at your institutional email within 2 business hours to finalize the demo or installation environment."
+        Once you have all 4 pieces of information, tell them: "Your credentials have been verified and directed to Sasha Aleksic (mergelith@gmail.com). A Mergelith Partner will contact you at your institutional email within 2 business hours to finalize the demo or installation environment."
         Do not use emojis. Use "M&A" instead of "mergers and acquisitions".
       `;
 
