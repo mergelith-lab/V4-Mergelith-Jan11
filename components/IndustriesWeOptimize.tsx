@@ -448,28 +448,14 @@ const IndustriesWeOptimize: React.FC = () => {
     <section id="industries" className="scroll-mt-32 relative">
       <div className="space-y-24">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
-          <div className="lg:w-1/2 space-y-8">
-            <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Market Coverage</h3>
-            <h2 className="text-5xl md:text-6xl font-serif text-navy italic leading-tight">
-              Industries We <br />
-              <span className="text-gold">Optimize</span>
-            </h2>
-            <p className="text-xl text-navy/70 font-light leading-relaxed border-l-2 border-gold pl-8">
-              Our strength lies in our individuality. Set up by Esther Bryce, the team strives to bring in the best talent in various fields, from architecture to interior design and sales.
-            </p>
-          </div>
-          <div className="lg:w-1/2 relative">
-            <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl border border-navy/10">
-              <img 
-                src="https://picsum.photos/seed/mergelith-office/800/600" 
-                alt="Professional team using computers indoors" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gold/10 blur-2xl rounded-full"></div>
-          </div>
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Market Coverage</h3>
+          <h2 className="text-5xl md:text-6xl font-serif text-navy italic leading-tight">
+            Industries We <span className="text-gold">Optimize</span>
+          </h2>
+          <p className="text-xl text-navy/70 font-light leading-relaxed max-w-3xl mx-auto border-t border-gold/20 pt-8">
+            Our strength lies in our individuality. Mergelith strives to bring in the best talent in various fields, from architecture to interior design and sales, to engineer institutional growth.
+          </p>
         </div>
 
         {/* Industry Grid */}
@@ -500,20 +486,7 @@ const IndustriesWeOptimize: React.FC = () => {
             </div>
           ))}
 
-          {/* Special Image Card */}
-          <div className="lg:col-span-1 relative group overflow-hidden rounded-sm border border-navy/10 shadow-xl aspect-square md:aspect-auto">
-            <img 
-              src="https://picsum.photos/seed/mergelith-woods/800/800" 
-              alt="Forest landscape" 
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/10 transition-all duration-500"></div>
-            <div className="absolute bottom-0 left-0 p-8 w-full">
-              <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-black mb-2">Sector Depth</p>
-              <p className="text-pearl font-serif italic text-xl">Infrastructure & Industrial Precision</p>
-            </div>
-          </div>
+
         </div>
 
         {/* Bottom Callout */}

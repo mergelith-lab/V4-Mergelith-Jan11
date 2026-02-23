@@ -7,6 +7,7 @@ import BackgroundGraphics from './components/BackgroundGraphics.tsx';
 import ChatBot from './components/ChatBot.tsx';
 
 import IndustriesWeOptimize from './components/IndustriesWeOptimize.tsx';
+import AboutSection from './components/AboutSection.tsx';
 
 const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 space-y-56">
           <IndustriesWeOptimize />
+          <AboutSection />
           <ContactSection />
         </div>
       </main>
