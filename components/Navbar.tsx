@@ -66,6 +66,15 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               <Linkedin size={14} className="hover:text-gold cursor-pointer transition-colors" />
               <Twitter size={14} className="hover:text-gold cursor-pointer transition-colors" />
             </div>
+
+            <a 
+              href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary px-6 py-2.5 text-[9px] tracking-[0.2em] whitespace-nowrap"
+            >
+              BOOK A CALL
+            </a>
           </div>
         </div>
       </div>

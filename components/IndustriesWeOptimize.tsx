@@ -601,15 +601,14 @@ const IndustriesWeOptimize: React.FC = () => {
                     CRM Integrated
                   </div>
                 </div>
-                <button 
-                  onClick={() => {
-                    setSelectedSector(null);
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="btn-primary px-8 py-4 text-[10px] w-full md:w-auto"
+                <a 
+                  href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary px-8 py-4 text-[10px] w-full md:w-auto text-center"
                 >
                   Schedule A Custom Demo
-                </button>
+                </a>
               </div>
             </motion.div>
           </div>

@@ -63,13 +63,21 @@ const Hero: React.FC = () => {
             </p>
           </div>
           
-          <div className="pt-6 flex flex-col items-center gap-8">
+          <div className="pt-6 flex flex-col md:flex-row items-center justify-center gap-6">
             <button 
               onClick={() => scrollTo('contact')}
-              className="btn-primary px-12 py-5 text-xs tracking-[0.3em]"
+              className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto"
             >
               GET STARTED TODAY
             </button>
+            <a 
+              href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center border border-navy/20 hover:border-gold transition-colors"
+            >
+              BOOK A CALL
+            </a>
           </div>
         </div>
 
