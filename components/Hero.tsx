@@ -89,44 +89,6 @@ const Hero: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Conversational AI Section - Based on Image Structure */}
-        <div className="w-full mt-24 space-y-16">
-          <div className="text-center space-y-4 max-w-3xl mx-auto">
-            <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-black">Artificial Intelligence</p>
-            <h2 className="text-3xl md:text-5xl font-serif text-navy leading-tight">
-              Revolutionize Your Business with Multilingual, High-Volume Conversational AI
-            </h2>
-            <p className="text-xs uppercase tracking-[0.3em] text-navy/40 font-black">
-              Handle thousands of conversations simultaneously in multiple languages with Mergelith advanced AI solutions
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: 'Inbound Calls', img: 'https://picsum.photos/seed/inbound/800/600' },
-              { title: 'Outbound Calls', img: 'https://picsum.photos/seed/outbound/800/600' },
-              { title: 'And More...', img: 'https://picsum.photos/seed/more/800/600' }
-            ].map((card, idx) => (
-              <div key={idx} className="group relative overflow-hidden rounded-sm border border-navy/10 shadow-xl bg-white transition-all duration-500 hover:-translate-y-2">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={card.img} 
-                    alt={card.title} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all duration-500"></div>
-                </div>
-                <div className="p-6 bg-white border-t border-navy/5">
-                  <h3 className="text-[11px] uppercase tracking-[0.4em] text-navy font-black text-center group-hover:text-gold transition-colors">
-                    {card.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       <div className="absolute bottom-0 left-0 w-full h-[150px] bg-gradient-to-t from-pearl to-transparent pointer-events-none"></div>
