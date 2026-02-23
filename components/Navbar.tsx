@@ -1,4 +1,5 @@
 import React from 'react';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -12,51 +13,60 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
     }
   };
 
+  const navLinks = [
+    { label: 'Quantum AI Tools', id: 'pillars' },
+    { label: 'Industries We Optimize', id: 'industries' },
+    { label: 'Request a Demo', id: 'contact' },
+    { label: 'Meet The Team', id: 'about' },
+    { label: 'FAQ', id: 'faq-section' },
+    { label: 'Privacy Policy', id: 'privacy-protocol' },
+    { label: 'Terms and Conditions', id: 'footer' }
+  ];
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-[#050a14]/90 backdrop-blur-md border-b border-[#c5a059]/20 py-4' 
-        : 'bg-transparent py-8'
+        ? 'bg-pearl/95 backdrop-blur-md border-b border-navy/10 py-3 shadow-sm' 
+        : 'bg-transparent py-6'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-[1800px] mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <div className="w-10 h-10 bg-[#c5a059] flex items-center justify-center rounded-sm">
-            <span className="text-[#050a14] font-cinzel font-bold text-xl">M</span>
+          <div className="w-9 h-9 bg-navy flex items-center justify-center rounded-sm shadow-md">
+            <span className="text-pearl font-cinzel font-bold text-lg">M</span>
           </div>
-          <div className="hidden sm:block">
-            <h1 className="font-cinzel text-lg tracking-[0.2em] font-bold text-white leading-none">MERGELITH</h1>
-            <p className="text-[10px] tracking-[0.3em] text-[#c5a059] uppercase font-medium">Growth Partners</p>
+          <div className="hidden xl:block">
+            <h1 className="font-cinzel text-base tracking-[0.2em] font-bold text-navy leading-none">MERGELITH</h1>
+            <p className="text-[9px] tracking-[0.3em] text-gold uppercase font-black">Growth Partners</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-6 lg:gap-12">
-          <div className="hidden md:flex items-center gap-8 lg:gap-12">
-            <button 
-              onClick={() => scrollTo('pillars')}
-              className="text-[10px] uppercase tracking-widest text-[#e2e8f0] hover:text-[#c5a059] transition-colors font-bold bg-transparent border-none cursor-pointer"
-            >
-              Solutions
-            </button>
-            <button 
-              onClick={() => scrollTo('privacy-protocol')}
-              className="text-[10px] uppercase tracking-widest text-[#e2e8f0] hover:text-[#c5a059] transition-colors font-bold bg-transparent border-none cursor-pointer"
-            >
-              Security
-            </button>
-            <button 
-              onClick={() => scrollTo('about')}
-              className="text-[10px] uppercase tracking-widest text-[#e2e8f0] hover:text-[#c5a059] transition-colors font-bold bg-transparent border-none cursor-pointer"
-            >
-              About
-            </button>
+        <div className="flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
+            {navLinks.map((link, idx) => (
+              <button 
+                key={idx}
+                onClick={() => scrollTo(link.id)}
+                className="text-[9px] uppercase tracking-widest text-navy/60 hover:text-gold transition-colors font-black bg-transparent border-none cursor-pointer whitespace-nowrap"
+              >
+                {link.label}
+              </button>
+            ))}
           </div>
           
-          <button 
-            onClick={() => scrollTo('contact')}
-            className="px-5 py-3 bg-[#0f172a] border border-[#c5a059]/40 text-[#c5a059] text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-[#c5a059] hover:text-[#050a14] transition-all duration-300 rounded-sm"
-          >
-            Inquire Directly
-          </button>
+          <div className="flex items-center gap-6 border-l border-navy/10 pl-8">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-black text-navy/40 hover:text-gold cursor-pointer transition-colors">FR</span>
+              <span className="text-navy/10">|</span>
+              <span className="text-[10px] font-black text-navy cursor-default">EN</span>
+            </div>
+            
+            <div className="flex items-center gap-4 text-navy/40">
+              <Facebook size={14} className="hover:text-gold cursor-pointer transition-colors" />
+              <Instagram size={14} className="hover:text-gold cursor-pointer transition-colors" />
+              <Linkedin size={14} className="hover:text-gold cursor-pointer transition-colors" />
+              <Twitter size={14} className="hover:text-gold cursor-pointer transition-colors" />
+            </div>
+          </div>
         </div>
       </div>
     </nav>

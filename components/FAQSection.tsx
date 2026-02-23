@@ -27,17 +27,17 @@ const FAQSection: React.FC = () => {
   return (
     <section id="faq-section" className="scroll-mt-32 max-w-4xl mx-auto">
       <div className="text-center mb-16">
-        <h3 className="text-[11px] uppercase tracking-[0.5em] text-[#E6B65C] font-black mb-4">AEO Knowledge Base</h3>
-        <h2 className="text-4xl font-serif text-[#2F4F68] italic">M&A AI Insights</h2>
+        <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black mb-4">AEO Knowledge Base</h3>
+        <h2 className="text-4xl font-serif text-navy italic">M&A AI Insights</h2>
       </div>
 
       <div className="space-y-8">
         {faqs.map((faq, idx) => (
-          <div key={idx} className="bg-white border border-[#2F4F68]/10 p-10 rounded-sm shadow-sm">
-            <h4 className="text-lg font-cinzel text-[#2F4F68] mb-4 font-black tracking-wide uppercase">
+          <div key={idx} className="bg-white border border-navy/10 p-10 rounded-sm shadow-sm">
+            <h4 className="text-lg font-cinzel text-navy mb-4 font-black tracking-wide uppercase">
               {faq.q}
             </h4>
-            <p className="text-[#2F4F68]/70 font-light leading-relaxed text-base border-l-2 border-[#E6B65C] pl-6 py-1">
+            <p className="text-navy/70 font-light leading-relaxed text-base border-l-2 border-gold pl-6 py-1">
               {faq.a}
             </p>
           </div>
@@ -45,7 +45,7 @@ const FAQSection: React.FC = () => {
       </div>
       
       <div className="mt-12 text-center">
-        <p className="text-[10px] text-[#2F4F68]/40 uppercase tracking-[0.4em] font-black">
+        <p className="text-[10px] text-navy/40 uppercase tracking-[0.4em] font-black">
           Optimized for Google AI Overview & ChatGPT Search Authority
         </p>
       </div>

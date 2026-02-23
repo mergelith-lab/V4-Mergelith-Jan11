@@ -1,0 +1,491 @@
+import React, { useState } from 'react';
+import { X, CheckCircle2, ArrowRight, Phone, Calendar, Users, MessageSquare, Zap, ShieldCheck } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+
+interface SectorDetail {
+  title: string;
+  subtitle?: string;
+  sections: {
+    heading: string;
+    items: string[];
+  }[];
+  footer?: string;
+}
+
+const sectorData: Record<string, SectorDetail> = {
+  "Car Dealerships": {
+    title: "Car Dealerships",
+    subtitle: "Elevate customer service, optimize the sales process, and maximize lead conversion.",
+    sections: [
+      {
+        heading: "Boost Sales With AI Agents",
+        items: [
+          "High-Volume Capability: Call 10,000 leads per minute and engage 1,000 customers simultaneously, ensuring maximum outreach and lead coverage.",
+          "Appointment Setting: AI agents can act as dedicated appointment setters, directly booking leads into your CRM system, reducing manual input and ensuring accurate data capture.",
+          "Test Drive Scheduling: Automate the process of organizing and scheduling test drives, handling both inbound requests and outbound calls to existing customers.",
+          "Proactive Sales Engagement: AI-powered cold callers reach out to leads, nurturing potential buyers and increasing conversion rates.",
+          "Live Transfers and Support: Instantly transfer qualified leads to your sales team or provide immediate support for inquiries, ensuring a seamless customer experience."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Cold Callers: Reach potential buyers with personalized offers and promotions.",
+          "Dispatchers: Manage scheduling for test drives, appointments, and more.",
+          "Appointment Setters: Directly book appointments into any CRM, ensuring smooth lead management.",
+          "Live Transfers: Seamlessly connect interested customers to your sales representatives.",
+          "AI Assistants: Provide real-time information and support to potential buyers.",
+          "Customer Service Representatives: Handle post-purchase support, feedback collection, and customer satisfaction surveys."
+        ]
+      }
+    ],
+    footer: "With Conversational AI, car dealerships can elevate their customer service, optimize the sales process, and maximize lead conversion. Deploy our AI agents to ensure every lead is nurtured effectively and efficiently booked into your system."
+  },
+  "Body Shops & Service": {
+    title: "Body Shops & Service",
+    subtitle: "The auto repair industry is highly competitive, making efficient and professional communication with clients essential for success.",
+    sections: [
+      {
+        heading: "Enhancing Client Communication with AI Agents",
+        items: [
+          "24/7 Availability: AI agents provide round-the-clock support, handling inquiries and service requests via phone and other communication channels.",
+          "Appointment Setting: Automate booking for repairs and services, directly integrating into your CRM for seamless management.",
+          "Proactive Updates: Notify customers about repair completion, upcoming maintenance, and special offers.",
+          "Customer Follow-Ups: AI agents can perform follow-up calls to remind clients of necessary services and gather feedback."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Cold Callers: Reach potential clients with promotional offers and new services.",
+          "Dispatchers: Schedule appointments and manage customer queues efficiently.",
+          "Appointment Setters: Book service appointments directly into your CRM, reducing manual work.",
+          "Live Transfers: Connect clients to human representatives for complex inquiries.",
+          "AI Assistants: Provide immediate answers to common questions about services and costs.",
+          "Customer Service Representatives: Manage post-service support and feedback collection."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Reduce Missed Calls: AI handles high volumes, ensuring no client call is missed during peak seasons.",
+          "Unburden Technicians: Allow your team to focus on repairs while AI manages customer interactions.",
+          "Increase Customer Loyalty: Timely and accurate communication enhances customer satisfaction and retention."
+        ]
+      }
+    ],
+    footer: "Deploying AI agents in your auto repair shop can significantly improve customer service, streamline operations, and enhance your business reputation. Leverage our Conversational AI to transform your customer engagement today!"
+  },
+  "Financial Institutions": {
+    title: "Financial Institutions",
+    subtitle: "In the banking industry, maintaining constant and efficient communication with clients is crucial. Mergelith's conversational AI agents provide high-quality support, ensuring customer loyalty through prompt and accurate service.",
+    sections: [
+      {
+        heading: "Optimizing Banking Services with AI Agents",
+        items: [
+          "24/7 Hotline Support: AI agents provide round-the-clock assistance, handling customer inquiries related to account management, loan services, and more, improving the bank's reputation and accessibility.",
+          "Technical Support: Manage technical issues with online banking or mobile applications, providing instant troubleshooting and solutions.",
+          "Financial Consultations: AI agents can offer information on exchange rates, loan options, and more, based on real-time data.",
+          "Appointment Setting: AI agents can book appointments directly into the bank’s CRM for in-branch consultations or loan discussions."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Cold Callers: Reach out to clients with new product offers and promotions.",
+          "Dispatchers: Route calls to specialized departments or representatives.",
+          "Appointment Setters: Book in-person or virtual consultations seamlessly.",
+          "Live Transfers: Connect clients to human agents for complex inquiries.",
+          "AI Assistants: Provide instant answers on account balances, transaction history, and more.",
+          "Customer Service Representatives: Handle complaints, feedback, and post-transaction support."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "High Capacity: Engage with up to 1,000 clients simultaneously, reducing wait times and improving customer satisfaction.",
+          "Improved Efficiency: Free up human agents to handle high-value tasks while AI manages routine inquiries.",
+          "Enhanced Data Security: AI agents follow stringent data protocols to ensure compliance with financial regulations."
+        ]
+      }
+    ],
+    footer: "Deploy AI voice agents in your bank to streamline customer service, increase efficiency, and enhance client satisfaction. Contact us today to learn how our Conversational AI can support your financial institution!"
+  },
+  "Beauty and Wellness Centers": {
+    title: "Beauty and Wellness Centers",
+    subtitle: "In the highly competitive beauty industry, managing client communication is key to building loyalty and driving repeat business. Mergelith's Conversational AI agents can help beauty salons streamline operations, handle appointments, and manage customer relationships effectively.",
+    sections: [
+      {
+        heading: "Optimizing Beauty Salon Services with AI",
+        items: [
+          "24/7 Appointment Scheduling: AI agents handle bookings, cancellations, and reminders across phone, email, and messaging platforms, ensuring no missed opportunities.",
+          "Customer Engagement: Inform clients about new services, promotions, and upcoming appointments.",
+          "Complaint Handling: AI agents manage negative feedback professionally, helping to maintain a positive salon image."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Booking Assistants: Manage appointments and scheduling conflicts.",
+          "Customer Service Representatives: Handle inquiries and complaints.",
+          "AI Assistants: Provide real-time information on services and promotions.",
+          "Outbound Campaigns: Reactivate old clients and promote new offers."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Customer Experience: Efficient responses build loyalty and satisfaction.",
+          "Increased Bookings: AI reminders and proactive engagement drive more appointments.",
+          "Operational Efficiency: Reduce workload on staff, allowing them to focus on in-salon experiences."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to elevate your beauty salon’s customer service, increase bookings, and enhance client loyalty. Contact us today to see how our Conversational AI can support your business!"
+  },
+  "Cargo & Logistics": {
+    title: "Cargo & Logistics",
+    subtitle: "Efficient communication is vital for logistics and cargo delivery companies to manage high volumes of requests and ensure timely delivery. Mergelith's conversational AI agents can support these companies by managing inquiries, tracking shipments, and optimizing delivery operations.",
+    sections: [
+      {
+        heading: "Optimizing Logistics Operations with AI",
+        items: [
+          "24/7 Customer Support: AI agents handle inquiries about delivery status, shipment tracking, and order placement via phone, email, and messaging platforms.",
+          "Order Management: Automate order processing, confirmations, and updates, ensuring no missed requests.",
+          "Route Optimization: AI can assist in coordinating delivery routes and providing real-time updates to drivers and customers.",
+          "Proactive Notifications: Send automated SMS or email alerts regarding delivery status, delays, or changes."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Order Processors: Manage incoming orders and schedule deliveries.",
+          "Logistics Assistants: Track shipments and provide real-time updates.",
+          "AI Assistants: Offer information on delivery options, times, and costs.",
+          "Customer Service Representatives: Handle complaints, feedback, and post-delivery support."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Efficiency: AI agents handle routine inquiries, reducing workload on staff.",
+          "Enhanced Communication: Provide real-time support and updates to customers and couriers.",
+          "Scalable Support: Manage high volumes of requests without additional staffing costs."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to optimize your logistics operations, improve customer satisfaction, and ensure timely delivery. Contact us today to see how our Conversational AI can support your business!"
+  },
+  "Cleaning Companies": {
+    title: "Cleaning Companies",
+    subtitle: "The cleaning industry relies on prompt and professional service to maintain customer satisfaction and loyalty. Mergelith's conversational AI agents can streamline communication and ensure efficient handling of client requests, making your cleaning company more responsive and reliable.",
+    sections: [
+      {
+        heading: "Optimizing Cleaning Services with AI",
+        items: [
+          "24/7 Request Management: AI agents can handle incoming requests via phone, email, or chat, scheduling cleaning services and providing immediate support.",
+          "Appointment Setting: Automatically book and confirm cleaning appointments, directly integrating into your scheduling system.",
+          "Service Recommendations: Provide personalized service packages based on client needs, increasing the average order value.",
+          "Customer Feedback: Collect feedback and handle complaints to continuously improve service quality."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Order Takers: Manage bookings and answer queries about services.",
+          "Dispatchers: Coordinate cleaning teams and logistics efficiently.",
+          "AI Assistants: Provide real-time support and service information.",
+          "Customer Service Representatives: Handle complaints, feedback, and post-service inquiries."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Response Time: Handle high volumes of requests promptly, ensuring no missed opportunities.",
+          "Increased Customer Loyalty: Provide efficient and personalized service to enhance customer satisfaction.",
+          "Reduced Operational Costs: AI agents manage routine tasks, allowing your team to focus on quality control and service delivery."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to optimize your cleaning company's customer service, improve efficiency, and enhance client satisfaction. Contact us today to see how we can support your business growth!"
+  },
+  "Coaching and Consulting": {
+    title: "Coaching and Consulting",
+    subtitle: "In the consulting and coaching industry, effective client communication is key to delivering value and building long-term relationships. Mergelith’s Conversational AI agents can streamline interactions, allowing your experts to focus on high-value consulting tasks.",
+    sections: [
+      {
+        heading: "Enhancing Consulting Services with AI",
+        items: [
+          "24/7 Support Hotline: AI agents can handle inquiries, provide initial consultations, and manage client follow-ups, ensuring continuous availability.",
+          "Omnichannel Support: Engage with clients across phone, email, and messaging platforms, providing consistent and professional assistance.",
+          "Appointment Setting: Schedule consultations and follow-up meetings directly into your CRM, reducing scheduling conflicts and optimizing time management.",
+          "Information Support: AI agents can provide basic advice on frequently asked questions, freeing up consultants for in-depth sessions."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Initial Consultations: Handle introductory calls and gather preliminary client information.",
+          "Appointment Setters: Book consultations and follow-up sessions directly into your scheduling system.",
+          "AI Assistants: Provide support on general inquiries related to taxes, accounting, legal services, and more.",
+          "Customer Service Representatives: Manage client feedback, complaints, and post-consultation support."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Optimized Client Engagement: Ensure all inquiries are addressed promptly, improving client satisfaction.",
+          "Reduced Workload: AI agents handle routine tasks, allowing consultants to focus on complex client needs.",
+          "Scalable Support: Manage increased client traffic without additional staffing costs."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to enhance client communication, optimize your consulting operations, and grow your business. Contact us today to see how our Conversational AI can support your consulting and coaching services!"
+  },
+  "E-Commerce Store": {
+    title: "E-Commerce Store",
+    subtitle: "In the fast-paced world of online retail, providing 24/7 customer support is crucial to managing high volumes of inquiries and boosting sales. Mergelith’s Conversational AI agents can efficiently handle customer interactions across multiple channels, ensuring a seamless shopping experience.",
+    sections: [
+      {
+        heading: "Enhancing E-commerce with AI",
+        items: [
+          "24/7 Multichannel Support: AI agents manage customer inquiries via phone, chat, and messaging platforms, ensuring round-the-clock availability.",
+          "Order Management: Confirm orders, provide delivery updates, and handle returns or exchanges.",
+          "Product Recommendations: Increase the average order value through AI-driven up-selling and cross-selling.",
+          "Customer Feedback: Collect reviews and suggestions post-purchase to enhance service quality."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Order Takers: Handle high volumes of orders and inquiries across multiple platforms.",
+          "Dispatchers: Coordinate deliveries and manage logistics.",
+          "AI Assistants: Provide real-time support and product information.",
+          "Customer Service Representatives: Manage complaints, returns, and feedback."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Increased Conversion Rates: Quick responses and personalized assistance improve customer satisfaction and conversion rates.",
+          "Scalable Operations: Handle large volumes of requests without increasing staffing costs.",
+          "Reduced Operational Costs: AI agents manage routine inquiries, freeing up human resources for complex tasks."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to optimize your online store’s customer service, boost sales, and enhance customer satisfaction. Contact us today to learn how our Conversational AI can support your e-commerce business!"
+  }
+};
+
+const IndustriesWeOptimize: React.FC = () => {
+  const [selectedSector, setSelectedSector] = useState<string | null>(null);
+
+  const industryGroups = [
+    {
+      title: "Professional & Financial",
+      industries: ["Law Firms", "Financial Institutions", "Insurance", "IT Companies", "Coaching and Consulting", "Marketing & Advertising"]
+    },
+    {
+      title: "Real Estate & Logistics",
+      industries: ["Property Management", "Real Estate", "Cargo & Logistics", "Transportation & Logistics"]
+    },
+    {
+      title: "Healthcare & Public",
+      industries: ["Medical Facilities", "Vet Clinics", "Education Facilities", "Gov Institutions & Organizations", "NGO's"]
+    },
+    {
+      title: "Retail & Hospitality",
+      industries: ["Beauty and Wellness Centers", "Floral Stores", "Food Delivery", "E-Commerce Store", "Restaurants", "Car Dealerships"]
+    },
+    {
+      title: "Maintenance & Specialized",
+      industries: ["Body Shops & Service", "Cleaning Companies", "Solar Panel", "Event Organizers"]
+    },
+  ];
+
+  const handleSectorClick = (industry: string) => {
+    if (sectorData[industry]) {
+      setSelectedSector(industry);
+    } else {
+      // For others, we could scroll to contact or show a generic message
+      const contact = document.getElementById('contact');
+      contact?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section id="industries" className="scroll-mt-32 relative">
+      <div className="space-y-24">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="lg:w-1/2 space-y-8">
+            <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Market Coverage</h3>
+            <h2 className="text-5xl md:text-6xl font-serif text-navy italic leading-tight">
+              Industries We <br />
+              <span className="text-gold">Optimize</span>
+            </h2>
+            <p className="text-xl text-navy/70 font-light leading-relaxed border-l-2 border-gold pl-8">
+              Our strength lies in our individuality. Set up by Esther Bryce, the team strives to bring in the best talent in various fields, from architecture to interior design and sales.
+            </p>
+          </div>
+          <div className="lg:w-1/2 relative">
+            <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl border border-navy/10">
+              <img 
+                src="https://picsum.photos/seed/mergelith-office/800/600" 
+                alt="Professional team using computers indoors" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gold/10 blur-2xl rounded-full"></div>
+          </div>
+        </div>
+
+        {/* Industry Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {industryGroups.map((group, idx) => (
+            <div key={idx} className="glass-card p-10 space-y-8 border-navy/5 hover:border-gold/30 transition-all group">
+              <h4 className="text-navy font-cinzel text-xs tracking-[0.4em] uppercase font-black border-b border-gold/20 pb-4 group-hover:text-gold transition-colors">
+                {group.title}
+              </h4>
+              <ul className="space-y-4">
+                {group.industries.map((industry, i) => (
+                  <li key={i}>
+                    <button 
+                      onClick={() => handleSectorClick(industry)}
+                      className="flex items-center gap-3 text-navy/60 hover:text-gold transition-all group/item text-left w-full"
+                    >
+                      <span className="w-1 h-1 bg-gold rounded-full group-hover/item:scale-150 transition-transform"></span>
+                      <span className="text-sm font-medium tracking-wide uppercase text-[10px] border-b border-transparent group-hover/item:border-gold/30">
+                        {industry}
+                      </span>
+                      {sectorData[industry] && (
+                        <ArrowRight size={10} className="opacity-0 group-hover/item:opacity-100 -translate-x-2 group-hover/item:translate-x-0 transition-all" />
+                      )}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Special Image Card */}
+          <div className="lg:col-span-1 relative group overflow-hidden rounded-sm border border-navy/10 shadow-xl aspect-square md:aspect-auto">
+            <img 
+              src="https://picsum.photos/seed/mergelith-woods/800/800" 
+              alt="Forest landscape" 
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/10 transition-all duration-500"></div>
+            <div className="absolute bottom-0 left-0 p-8 w-full">
+              <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-black mb-2">Sector Depth</p>
+              <p className="text-pearl font-serif italic text-xl">Infrastructure & Industrial Precision</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Callout */}
+        <div className="text-center pt-12">
+          <p className="text-[11px] text-navy/30 uppercase tracking-[0.6em] font-black italic">
+            Institutional Growth Systems Across 25+ Global Sectors
+          </p>
+        </div>
+      </div>
+
+      {/* Sector Detail Modal */}
+      <AnimatePresence>
+        {selectedSector && sectorData[selectedSector] && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedSector(null)}
+              className="absolute inset-0 bg-navy/90 backdrop-blur-sm"
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative w-full max-w-4xl max-h-[90vh] bg-pearl rounded-sm shadow-2xl overflow-hidden flex flex-col"
+            >
+              {/* Modal Header */}
+              <div className="p-8 md:p-12 border-b border-navy/10 flex justify-between items-start bg-white">
+                <div className="space-y-4">
+                  <h3 className="text-gold text-[10px] uppercase tracking-[0.5em] font-black">Sector Optimization</h3>
+                  <h2 className="text-4xl md:text-5xl font-serif text-navy italic">{sectorData[selectedSector].title}</h2>
+                  {sectorData[selectedSector].subtitle && (
+                    <p className="text-navy/60 font-light max-w-2xl">{sectorData[selectedSector].subtitle}</p>
+                  )}
+                </div>
+                <button 
+                  onClick={() => setSelectedSector(null)}
+                  className="p-2 hover:bg-navy/5 rounded-full transition-colors text-navy/40 hover:text-navy"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              {/* Modal Content */}
+              <div className="flex-1 overflow-y-auto p-8 md:p-12 space-y-12">
+                <div className="grid md:grid-cols-2 gap-12">
+                  {sectorData[selectedSector].sections.map((section, idx) => (
+                    <div key={idx} className="space-y-6">
+                      <h4 className="text-navy font-cinzel text-xs tracking-[0.3em] uppercase font-black border-l-2 border-gold pl-4">
+                        {section.heading}
+                      </h4>
+                      <ul className="space-y-4">
+                        {section.items.map((item, i) => (
+                          <li key={i} className="flex gap-4 items-start group/li">
+                            <CheckCircle2 size={16} className="text-gold shrink-0 mt-0.5" />
+                            <p className="text-sm text-navy/70 font-light leading-relaxed group-hover/li:text-navy transition-colors">
+                              {item}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                {sectorData[selectedSector].footer && (
+                  <div className="p-8 bg-gold/5 border border-gold/10 rounded-sm">
+                    <p className="text-navy font-serif italic text-lg text-center">
+                      {sectorData[selectedSector].footer}
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Modal Footer */}
+              <div className="p-8 border-t border-navy/5 bg-white flex flex-col md:flex-row justify-between items-center gap-6">
+                <div className="flex gap-8">
+                  <div className="flex items-center gap-2 text-[10px] font-black text-navy/40 uppercase tracking-widest">
+                    <Zap size={12} className="text-gold" />
+                    High-Volume Ready
+                  </div>
+                  <div className="flex items-center gap-2 text-[10px] font-black text-navy/40 uppercase tracking-widest">
+                    <ShieldCheck size={12} className="text-gold" />
+                    CRM Integrated
+                  </div>
+                </div>
+                <button 
+                  onClick={() => {
+                    setSelectedSector(null);
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="btn-primary px-8 py-4 text-[10px] w-full md:w-auto"
+                >
+                  Schedule A Custom Demo
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+};
+
+export default IndustriesWeOptimize;

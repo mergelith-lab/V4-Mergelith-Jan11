@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-cinzel: "Cinzel", serif;
+
+  --color-pearl: #FDFDFD;
+  --color-navy: #001F3F;
+  --color-gold: #D4AF37;
+  --color-gold-light: #E6B65C;
+  --color-navy-light: #2F4F68;
+}
+
+@layer base {
+  body {
+    @apply bg-pearl text-navy font-sans overflow-x-hidden;
+    background: radial-gradient(circle at 50% 50%, #FDFDFD 0%, #F8F9FA 100%);
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-cinzel {
+    font-family: "Cinzel", serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-navy text-white font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-navy transition-all duration-500 rounded-sm shadow-lg transform hover:-translate-y-1;
+  }
+
+  .btn-outline {
+    @apply px-8 py-4 border-2 border-navy/10 bg-transparent text-navy font-bold uppercase tracking-widest text-xs hover:border-gold hover:text-gold transition-all duration-500 rounded-sm;
+  }
+
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  .gold-text {
+    @apply text-gold drop-shadow-sm;
+  }
+
+  .navy-text {
+    @apply text-navy;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #001F3F;
+  border-radius: 4px;
+}

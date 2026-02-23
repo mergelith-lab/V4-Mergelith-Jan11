@@ -9,7 +9,7 @@ interface Message {
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: "Welcome to Mergelith. I am the Institutional Assistant. How may I best support your firm's growth objectives today?" }
+    { role: 'model', text: "Welcome to Mergelith. I am the Institutional Assistant. How may I best support your business growth objectives today?" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -104,49 +104,49 @@ const ChatBot: React.FC = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-10 right-10 z-[60] w-16 h-16 bg-[#2F4F68] rounded-sm shadow-[0_10px_30px_rgba(47,79,104,0.3)] flex items-center justify-center transition-all duration-500 hover:scale-110 active:scale-95 group border-2 border-[#E6B65C]/30"
+        className="fixed bottom-10 right-10 z-[60] w-16 h-16 bg-navy rounded-sm shadow-[0_10px_30px_rgba(0,31,63,0.3)] flex items-center justify-center transition-all duration-500 hover:scale-110 active:scale-95 group border-2 border-gold/30"
         aria-label="Open Assistant"
       >
         {isOpen ? (
-          <svg className="w-8 h-8 text-[#F4F3EF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-8 h-8 text-pearl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
           <div className="relative">
-            <svg className="w-8 h-8 text-[#E6B65C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#E6B65C] rounded-full animate-ping opacity-75"></span>
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-gold rounded-full animate-ping opacity-75"></span>
           </div>
         )}
       </button>
 
-      <div className={`fixed bottom-32 right-10 z-[60] w-[420px] h-[650px] bg-white border border-[#2F4F68]/15 shadow-2xl rounded-sm flex flex-col transition-all duration-500 origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0 pointer-events-none'}`}>
+      <div className={`fixed bottom-32 right-10 z-[60] w-[420px] h-[650px] bg-white border border-navy/15 shadow-2xl rounded-sm flex flex-col transition-all duration-500 origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0 pointer-events-none'}`}>
         {/* Header - Institutional & Bright */}
-        <div className="p-6 border-b border-[#2F4F68]/10 bg-[#F4F3EF] flex items-center justify-between">
+        <div className="p-6 border-b border-navy/10 bg-pearl flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-9 h-9 bg-[#2F4F68] flex items-center justify-center rounded-sm">
-              <span className="text-[#F4F3EF] font-cinzel font-black text-sm">M</span>
+            <div className="w-9 h-9 bg-navy flex items-center justify-center rounded-sm">
+              <span className="text-pearl font-cinzel font-black text-sm">M</span>
             </div>
             <div>
-              <h4 className="text-[11px] font-cinzel uppercase tracking-[0.3em] text-[#2F4F68] leading-none font-black">Institutional Assistant</h4>
-              <p className="text-[9px] uppercase tracking-widest text-[#E6B65C] mt-1.5 font-black">Secure Advisory Channel</p>
+              <h4 className="text-[11px] font-cinzel uppercase tracking-[0.3em] text-navy leading-none font-black">Institutional Assistant</h4>
+              <p className="text-[9px] uppercase tracking-widest text-gold mt-1.5 font-black">Secure Advisory Channel</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-             <span className="text-[9px] text-[#2F4F68]/40 font-mono uppercase font-black tracking-widest">Active</span>
+             <span className="text-[9px] text-navy/40 font-mono uppercase font-black tracking-widest">Active</span>
           </div>
         </div>
 
         {/* Message Thread */}
-        <div ref={scrollRef} className="flex-1 overflow-y-auto p-8 space-y-8 bg-[#F4F3EF]/30 scrollbar-thin scrollbar-thumb-[#2F4F68]/10">
+        <div ref={scrollRef} className="flex-1 overflow-y-auto p-8 space-y-8 bg-pearl/30 scrollbar-thin scrollbar-thumb-navy/10">
           {messages.map((msg, i) => (
             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
               <div className={`max-w-[85%] p-5 text-[13px] leading-relaxed shadow-sm ${
                 msg.role === 'user' 
-                ? 'bg-[#2F4F68] text-[#F4F3EF] rounded-sm rounded-tr-none' 
-                : 'bg-white border border-[#2F4F68]/5 text-[#2F4F68]/90 rounded-sm rounded-tl-none'
+                ? 'bg-navy text-pearl rounded-sm rounded-tr-none' 
+                : 'bg-white border border-navy/5 text-navy/90 rounded-sm rounded-tl-none'
               }`}>
                 {msg.text}
               </div>
@@ -155,14 +155,14 @@ const ChatBot: React.FC = () => {
           
           {showQuickActions && (
             <div className="space-y-3 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <p className="text-[10px] uppercase tracking-[0.4em] text-[#2F4F68]/30 mb-3 font-black ml-1">Priority Service Paths:</p>
+              <p className="text-[10px] uppercase tracking-[0.4em] text-navy/30 mb-3 font-black ml-1">Priority Service Paths:</p>
               {quickActions.map((action) => (
                 <button
                   key={action.id}
                   onClick={() => handleQuickAction(action.prompt)}
-                  className="w-full text-left p-4 text-[10px] uppercase tracking-[0.25em] border border-[#2F4F68]/10 bg-white text-[#2F4F68]/70 hover:bg-[#E6B65C]/10 hover:border-[#E6B65C]/40 transition-all rounded-sm font-black group shadow-sm"
+                  className="w-full text-left p-4 text-[10px] uppercase tracking-[0.25em] border border-navy/10 bg-white text-navy/70 hover:bg-gold/10 hover:border-gold/40 transition-all rounded-sm font-black group shadow-sm"
                 >
-                  <span className="group-hover:text-[#2F4F68] transition-colors">{action.label}</span>
+                  <span className="group-hover:text-navy transition-colors">{action.label}</span>
                 </button>
               ))}
             </div>
@@ -170,11 +170,11 @@ const ChatBot: React.FC = () => {
 
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-white border border-[#2F4F68]/5 p-5 rounded-sm">
+              <div className="bg-white border border-navy/5 p-5 rounded-sm">
                 <div className="flex gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#E6B65C] rounded-full animate-bounce"></span>
-                  <span className="w-1.5 h-1.5 bg-[#E6B65C] rounded-full animate-bounce [animation-delay:0.2s]"></span>
-                  <span className="w-1.5 h-1.5 bg-[#E6B65C] rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                  <span className="w-1.5 h-1.5 bg-gold rounded-full animate-bounce"></span>
+                  <span className="w-1.5 h-1.5 bg-gold rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                  <span className="w-1.5 h-1.5 bg-gold rounded-full animate-bounce [animation-delay:0.4s]"></span>
                 </div>
               </div>
             </div>
@@ -182,7 +182,7 @@ const ChatBot: React.FC = () => {
         </div>
 
         {/* Input Area */}
-        <div className="p-8 border-t border-[#2F4F68]/5 bg-white">
+        <div className="p-8 border-t border-navy/5 bg-white">
           <form 
             onSubmit={(e) => { e.preventDefault(); sendMessage(); }}
             className="flex gap-4"
@@ -195,12 +195,12 @@ const ChatBot: React.FC = () => {
                 if (showQuickActions && e.target.value.length > 0) setShowQuickActions(false);
               }}
               placeholder="Enter secure inquiry..."
-              className="flex-1 bg-[#F4F3EF]/50 border border-[#2F4F68]/15 rounded-sm px-5 py-4 text-sm text-[#2F4F68] placeholder-[#2F4F68]/30 focus:border-[#E6B65C] outline-none transition-all shadow-inner"
+              className="flex-1 bg-pearl/50 border border-navy/15 rounded-sm px-5 py-4 text-sm text-navy placeholder-navy/30 focus:border-gold outline-none transition-all shadow-inner"
             />
             <button
               type="submit"
               disabled={isLoading || !input.trim()}
-              className="px-5 py-4 bg-[#2F4F68] text-white rounded-sm hover:bg-[#E6B65C] hover:text-[#2F4F68] transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
+              className="px-5 py-4 bg-navy text-white rounded-sm hover:bg-gold hover:text-navy transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
             >
               <svg className="w-5 h-5 font-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -208,15 +208,15 @@ const ChatBot: React.FC = () => {
             </button>
           </form>
           <div className="flex items-center justify-between mt-5 px-1">
-            <p className="text-[8px] text-[#2F4F68]/20 uppercase tracking-[0.5em] font-black">
+            <p className="text-[8px] text-navy/20 uppercase tracking-[0.5em] font-black">
               AES-256 Encryption Active
             </p>
             <button 
               onClick={() => {
-                setMessages([{ role: 'model', text: "Session reset. How may I best support your firm's growth objectives today?" }]);
+                setMessages([{ role: 'model', text: "Session reset. How may I best support your business growth objectives today?" }]);
                 setShowQuickActions(true);
               }}
-              className="text-[8px] text-[#2F4F68]/30 uppercase tracking-[0.4em] hover:text-[#E6B65C] transition-colors font-black border-b border-transparent hover:border-[#E6B65C]"
+              className="text-[8px] text-navy/30 uppercase tracking-[0.4em] hover:text-gold transition-colors font-black border-b border-transparent hover:border-gold"
             >
               Reset Protocol
             </button>

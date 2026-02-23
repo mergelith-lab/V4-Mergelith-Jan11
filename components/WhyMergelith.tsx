@@ -46,27 +46,27 @@ const WhyMergelith: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-20">
         <div className="lg:w-2/5">
           <div className="sticky top-32 space-y-8">
-            <h3 className="text-[11px] uppercase tracking-[0.5em] text-[#E6B65C] font-black">The Mergelith Edge</h3>
-            <h2 className="text-5xl md:text-6xl font-serif text-[#2F4F68] leading-tight italic">
+            <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Mergelith Edge</h3>
+            <h2 className="text-5xl md:text-6xl font-serif text-navy leading-tight italic">
               Strategic Superiority
             </h2>
-            <p className="text-[#2F4F68]/70 font-light leading-relaxed text-xl">
+            <p className="text-navy/70 font-light leading-relaxed text-xl">
               In a market where information is asymmetric and time is capital, Mergelith provides the institutional infrastructure that turns AI into your primary competitive advantage. Unlike general agencies, we focus exclusively on M&A workflows.
             </p>
             <div className="pt-6">
-              <div className="h-[3px] w-32 bg-[#E6B65C]/50"></div>
+              <div className="h-[3px] w-32 bg-gold/50"></div>
             </div>
           </div>
         </div>
 
-        <div className="lg:w-3/5 grid md:grid-cols-2 gap-px bg-[#2F4F68]/10 border border-[#2F4F68]/10">
+        <div className="lg:w-3/5 grid md:grid-cols-2 gap-px bg-navy/10 border border-navy/10">
           {advantages.map((adv, idx) => (
-            <div key={idx} className="bg-white p-12 space-y-8 group hover:bg-[#2F4F68]/5 transition-all duration-500">
-              <div className="text-[#E6B65C] p-4 border-2 border-[#E6B65C]/30 w-fit rounded-sm group-hover:bg-[#E6B65C]/10 transition-all">
+            <div key={idx} className="bg-white p-12 space-y-8 group hover:bg-navy/5 transition-all duration-500">
+              <div className="text-gold p-4 border-2 border-gold/30 w-fit rounded-sm group-hover:bg-gold/10 transition-all">
                 {adv.icon}
               </div>
-              <h4 className="text-[#2F4F68] font-cinzel text-base tracking-[0.25em] uppercase font-black">{adv.title}</h4>
-              <p className="text-sm text-[#2F4F68]/60 font-light leading-relaxed group-hover:text-[#2F4F68] transition-colors">
+              <h4 className="text-navy font-cinzel text-base tracking-[0.25em] uppercase font-black">{adv.title}</h4>
+              <p className="text-sm text-navy/60 font-light leading-relaxed group-hover:text-navy transition-colors">
                 {adv.description}
               </p>
             </div>

@@ -47,9 +47,9 @@ const Pillars: React.FC = () => {
   return (
     <section id="pillars" className="scroll-mt-32">
       <div className="text-center mb-20">
-        <h3 className="text-[11px] uppercase tracking-[0.5em] text-[#E6B65C] font-black mb-4">Core Infrastructure</h3>
-        <h2 className="text-5xl font-serif text-[#2F4F68] italic">M&A Service Specializations</h2>
-        <p className="mt-6 text-[#2F4F68]/60 max-w-3xl mx-auto font-light leading-relaxed text-xl">
+        <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black mb-4">Core Infrastructure</h3>
+        <h2 className="text-5xl font-serif text-navy italic">M&A Service Specializations</h2>
+        <p className="mt-6 text-navy/60 max-w-3xl mx-auto font-light leading-relaxed text-xl">
           Institutional AI infrastructure designed specifically for the unique demands of mergers and acquisitions workflows.
         </p>
       </div>
@@ -58,16 +58,16 @@ const Pillars: React.FC = () => {
         {pillars.map((pillar) => (
           <div 
             key={pillar.id}
-            className="border border-[#2F4F68]/10 bg-white p-10 hover:border-[#E6B65C]/60 transition-all duration-500 group relative overflow-hidden rounded-sm shadow-sm flex flex-col"
+            className="border border-navy/10 bg-white p-10 hover:border-gold/60 transition-all duration-500 group relative overflow-hidden rounded-sm shadow-sm flex flex-col"
           >
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-[#E6B65C] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             
-            <div className="mb-8 text-[#E6B65C] transition-transform duration-500 group-hover:scale-110">
+            <div className="mb-8 text-gold transition-transform duration-500 group-hover:scale-110">
               {pillar.icon}
             </div>
             
-            <h4 className="text-lg font-cinzel text-[#2F4F68] mb-4 tracking-wider group-hover:text-[#E6B65C] transition-colors uppercase font-black">{pillar.title}</h4>
-            <p className="text-sm text-[#2F4F68]/60 leading-relaxed font-light group-hover:text-[#2F4F68]/80 flex-1">
+            <h4 className="text-lg font-cinzel text-navy mb-4 tracking-wider group-hover:text-gold transition-colors uppercase font-black">{pillar.title}</h4>
+            <p className="text-sm text-navy/60 leading-relaxed font-light group-hover:text-navy/80 flex-1">
               {pillar.description}
             </p>
           </div>
