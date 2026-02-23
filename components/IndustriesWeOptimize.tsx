@@ -274,6 +274,137 @@ const sectorData: Record<string, SectorDetail> = {
       }
     ],
     footer: "Deploy our AI agents to optimize your online store’s customer service, boost sales, and enhance customer satisfaction. Contact us today to learn how our Conversational AI can support your e-commerce business!"
+  },
+  "Law Firms": {
+    title: "Law Firms",
+    subtitle: "In the legal industry, prompt and accurate communication is essential for managing cases and building client trust. Mergelith's Conversational AI agents can streamline interactions, allowing your legal experts to focus on complex case work.",
+    sections: [
+      {
+        heading: "Optimizing Legal Services with AI",
+        items: [
+          "24/7 Client Support: AI agents handle inquiries, provide initial case assessments, and manage client follow-ups, ensuring round-the-clock availability.",
+          "Appointment Setting: Schedule consultations and court dates directly into your CRM, reducing scheduling conflicts.",
+          "Document Support: AI agents can provide information on filing procedures and document requirements."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Intake Specialists: Handle introductory calls and gather preliminary case information.",
+          "Appointment Setters: Book consultations and follow-up meetings seamlessly.",
+          "AI Assistants: Provide support on general legal inquiries and procedures.",
+          "Customer Service Representatives: Manage client feedback and post-consultation support."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Client Engagement: Ensure all inquiries are addressed promptly, improving client satisfaction.",
+          "Reduced Workload: AI agents handle routine tasks, allowing lawyers to focus on high-value case work.",
+          "Scalable Support: Manage increased client traffic without additional staffing costs."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to enhance client communication, optimize your legal operations, and grow your firm. Contact us today to see how our Conversational AI can support your legal services!"
+  },
+  "Insurance": {
+    title: "Insurance",
+    subtitle: "The insurance industry demands high-volume inquiry management and rapid response times. Mergelith's AI agents streamline claims processing and policy inquiries.",
+    sections: [
+      {
+        heading: "Enhancing Insurance Services with AI",
+        items: [
+          "Claims Assistance: Guide customers through the initial claims reporting process 24/7.",
+          "Policy Information: Provide instant answers regarding coverage, deductibles, and policy terms.",
+          "Renewal Reminders: Proactively reach out to clients for policy renewals and updates.",
+          "Lead Qualification: Screen potential clients and schedule consultations with agents."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Claims Intake Agents: Handle high volumes of incoming claim reports.",
+          "Policy Assistants: Provide real-time support for policy-related questions.",
+          "Renewal Specialists: Manage outbound renewal campaigns and follow-ups.",
+          "Customer Service Representatives: Handle feedback, complaints, and general support."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Faster Claims Processing: Reduce wait times for initial claim reports.",
+          "Increased Retention: Proactive renewal outreach improves customer loyalty.",
+          "Cost Efficiency: Automate routine inquiries to focus human resources on complex cases."
+        ]
+      }
+    ],
+    footer: "Optimize your insurance operations with our Conversational AI. Contact us today to learn more!"
+  },
+  "IT Companies": {
+    title: "IT Companies",
+    subtitle: "In the tech sector, providing rapid technical support and managing service requests is critical. Mergelith's AI agents provide a first line of defense for IT service desks.",
+    sections: [
+      {
+        heading: "Optimizing IT Support with AI",
+        items: [
+          "Level 1 Support: Handle common technical issues like password resets and software access.",
+          "Ticket Management: Create, update, and track support tickets directly in your ITSM tool.",
+          "Service Status Updates: Provide real-time information on system outages or maintenance.",
+          "Appointment Scheduling: Book technical consultations or hardware repair sessions."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Technical Assistants: Provide immediate troubleshooting for common IT issues.",
+          "Service Desk Dispatchers: Route complex tickets to the appropriate technical teams.",
+          "Status Update Bots: Manage high volumes of inquiries during system outages.",
+          "Customer Service Representatives: Handle feedback on support quality and service delivery."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Reduced Ticket Volume: AI handles routine issues, freeing up technicians for complex tasks.",
+          "24/7 Support Availability: Ensure technical assistance is available around the clock.",
+          "Improved User Satisfaction: Rapid response times and instant solutions for common problems."
+        ]
+      }
+    ],
+    footer: "Transform your IT support with Mergelith's Conversational AI. Contact us to see it in action!"
+  },
+  "Marketing & Advertising": {
+    title: "Marketing & Advertising",
+    subtitle: "Agencies need to manage lead intake and client communication efficiently. Mergelith's AI agents act as a bridge between potential clients and your creative team.",
+    sections: [
+      {
+        heading: "Enhancing Agency Operations with AI",
+        items: [
+          "Lead Qualification: Screen inbound inquiries and identify high-potential prospects.",
+          "Appointment Setting: Schedule discovery calls and pitch meetings directly into calendars.",
+          "Client Onboarding: Guide new clients through initial data collection and setup processes.",
+          "Campaign Updates: Provide clients with automated updates on campaign performance and milestones."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Lead Intake Specialists: Handle initial inquiries across multiple channels.",
+          "Appointment Setters: Manage scheduling for discovery and strategy sessions.",
+          "Onboarding Assistants: Collect necessary assets and information from new clients.",
+          "Customer Service Representatives: Manage client feedback and general inquiries."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Higher Conversion Rates: Rapid response to leads increases the likelihood of conversion.",
+          "Streamlined Operations: Automate routine administrative tasks to focus on creativity.",
+          "Enhanced Client Experience: Provide professional and consistent communication 24/7."
+        ]
+      }
+    ],
+    footer: "Scale your agency with Mergelith's Conversational AI. Reach out today for a consultation!"
   }
 };
 
