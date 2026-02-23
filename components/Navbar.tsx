@@ -1,5 +1,4 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -54,19 +53,6 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           </div>
           
           <div className="flex items-center gap-6 border-l border-navy/10 pl-8">
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-black text-navy/40 hover:text-gold cursor-pointer transition-colors">FR</span>
-              <span className="text-navy/10">|</span>
-              <span className="text-[10px] font-black text-navy cursor-default">EN</span>
-            </div>
-            
-            <div className="flex items-center gap-4 text-navy/40">
-              <Facebook size={14} className="hover:text-gold cursor-pointer transition-colors" />
-              <Instagram size={14} className="hover:text-gold cursor-pointer transition-colors" />
-              <Linkedin size={14} className="hover:text-gold cursor-pointer transition-colors" />
-              <Twitter size={14} className="hover:text-gold cursor-pointer transition-colors" />
-            </div>
-
             <a 
               href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
               target="_blank"
