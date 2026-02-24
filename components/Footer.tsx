@@ -1,4 +1,5 @@
 import React from 'react';
+import { Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -55,7 +56,16 @@ const Footer: React.FC = () => {
           <p className="text-[11px] text-navy/20 uppercase tracking-[0.5em] font-black">
             &copy; {new Date().getFullYear()} Mergelith Growth Partners. All Rights Reserved.
           </p>
-          <div className="flex gap-12">
+          <div className="flex gap-12 items-center">
+            <a 
+              href="https://www.linkedin.com/company/mergelith-agency/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-navy/20 hover:text-gold transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={16} />
+            </a>
             <button onClick={() => scrollTo('privacy-protocol')} className="text-[11px] text-navy/20 uppercase tracking-[0.3em] hover:text-gold transition-colors bg-transparent border-none p-0 cursor-pointer font-black">Security Protocol</button>
             <button onClick={() => scrollTo('contact')} className="text-[11px] text-navy/20 uppercase tracking-[0.3em] hover:text-gold transition-colors bg-transparent border-none p-0 cursor-pointer font-black">Terms of Engagement</button>
           </div>

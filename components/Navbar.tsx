@@ -1,4 +1,5 @@
 import React from 'react';
+import { Linkedin } from 'lucide-react';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -53,6 +54,15 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           </div>
           
           <div className="flex items-center gap-6 border-l border-navy/10 pl-8">
+            <a 
+              href="https://www.linkedin.com/company/mergelith-agency/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-navy/40 hover:text-gold transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={18} />
+            </a>
             <a 
               href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
               target="_blank"
