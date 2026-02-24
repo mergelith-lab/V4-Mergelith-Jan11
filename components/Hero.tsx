@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Users, FileText, Search } from 'lucide-react';
+import { Zap, ShieldCheck, Clock, ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -8,29 +8,6 @@ const Hero: React.FC = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const services = [
-    {
-      title: 'AI VOICE RECEPTIONIST',
-      description: 'An AI voice receptionist built by Mergelith answers inbound calls for your business 24/7. It captures customer intent, qualifies relevance, and books meetings directly into your team calendars, preventing lead leakage from missed calls.',
-      icon: <Phone className="w-6 h-6 text-gold" />
-    },
-    {
-      title: 'AI CHATBOTS FOR QUALIFICATION',
-      description: 'Mergelith deploys AI chatbots that pre-qualify leads before human involvement. The chatbot gathers key information, screens for relevance, and routes only qualified opportunities to your team.',
-      icon: <Users className="w-6 h-6 text-gold" />
-    },
-    {
-      title: 'AI DEAL INTAKE SYSTEMS',
-      description: 'Mergelith designs AI-driven lead intake and pre-screening systems that standardize data capture and accelerate initial assessment. These systems eliminate incomplete submissions and ensure consistent qualification.',
-      icon: <FileText className="w-6 h-6 text-gold" />
-    },
-    {
-      title: 'AEO FOR BUSINESS WEBSITES',
-      description: 'Mergelith optimizes business websites for AI-driven search platforms, including Google AI Overviews and ChatGPT Search, so firms are accurately identified, recommended, and cited by AI engines as trusted authorities.',
-      icon: <Search className="w-6 h-6 text-gold" />
-    }
-  ];
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-20 overflow-hidden">
@@ -50,52 +27,60 @@ const Hero: React.FC = () => {
         <div className="space-y-10 mb-20">
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-navy/10 bg-white/50 backdrop-blur-md mb-6 animate-fade-in shadow-sm">
             <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse shadow-[0_0_8px_#D4AF37]"></span>
-            <span className="text-[11px] uppercase tracking-[0.4em] text-navy font-black">Mergelith AI Retrieval Active</span>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-navy font-black">Speed-to-Lead Systems Active</span>
           </div>
           
           <div className="space-y-6">
             <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] text-navy tracking-tight max-w-5xl mx-auto">
-              Revolutionize Your <br />
-              <span className="italic text-gold font-serif drop-shadow-sm">Business Operations with AI</span>
+              Turn Every Inbound Lead Into a <br />
+              <span className="italic text-gold font-serif drop-shadow-sm text-6xl md:text-9xl">Booked Appointment</span>
             </h1>
-            <p className="text-xl md:text-2xl text-navy/70 font-light leading-relaxed max-w-3xl mx-auto">
-              Leverage the power of AI for appointment setting, live transfers, cold calling, and customer service—all in one integrated solution.
-            </p>
+            <div className="space-y-4 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-navy/70 font-light leading-relaxed">
+                We install AI-powered Speed-to-Lead + Missed Inbound Recovery systems that call new leads instantly, qualify them, and book meetings directly onto your calendar.
+              </p>
+              <p className="text-lg md:text-xl text-gold font-medium italic">
+                Stop losing deals to slow follow-up and missed calls.
+              </p>
+            </div>
           </div>
           
           <div className="pt-6 flex flex-col md:flex-row items-center justify-center gap-6">
-            <button 
-              onClick={() => scrollTo('contact')}
-              className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto"
-            >
-              GET STARTED TODAY
-            </button>
             <a 
               href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
               target="_blank"
               rel="noopener noreferrer"
+              className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center"
+            >
+              BOOK A 15-MINUTE DEMO
+            </a>
+            <button 
+              onClick={() => scrollTo('contact')}
               className="btn-secondary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center border border-navy/20 hover:border-gold transition-colors"
             >
-              BOOK A CALL
-            </a>
+              GET A FREE LEAD LEAK AUDIT
+            </button>
           </div>
+
+          <p className="text-[10px] uppercase tracking-[0.3em] text-navy/40 font-bold">
+            Works with your existing forms, ads, website, and CRM. Live in days, not months.
+          </p>
         </div>
 
-        {/* Services Grid - NEW SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
-          {services.map((service, idx) => (
-            <div key={idx} className="bg-white p-8 border border-navy/5 shadow-sm hover:shadow-xl transition-all duration-500 text-left group">
-              <div className="mb-6 p-3 bg-navy/5 w-fit rounded-sm group-hover:bg-gold/10 transition-colors">
-                {service.icon}
-              </div>
-              <h3 className="text-navy font-cinzel text-sm tracking-[0.2em] font-black mb-4 leading-tight">
-                {service.title}
-              </h3>
-              <p className="text-navy/60 text-xs font-light leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
+        {/* Social Proof Strip */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-y border-navy/5 bg-white/30 backdrop-blur-sm rounded-sm">
+          <div className="flex flex-col items-center gap-2">
+            <Clock className="w-5 h-5 text-gold" />
+            <p className="text-navy font-serif italic text-lg">“Instant callback + booking in under 60 seconds”</p>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Zap className="w-5 h-5 text-gold" />
+            <p className="text-navy font-serif italic text-lg">“Recovers missed calls 24/7”</p>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-gold" />
+            <p className="text-navy font-serif italic text-lg">“Increases close rates by 20–40% with speed-to-lead”</p>
+          </div>
         </div>
       </div>
 

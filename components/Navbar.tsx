@@ -13,13 +13,13 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
   };
 
   const navLinks = [
-    { label: 'Quantum AI Tools', id: 'pillars' },
-    { label: 'Industries We Optimize', id: 'industries' },
-    { label: 'Request a Demo', id: 'contact' },
-    { label: 'Meet The Team', id: 'about' },
-    { label: 'FAQ', id: 'faq-section' },
-    { label: 'Privacy Policy', id: 'privacy-protocol' },
-    { label: 'Terms and Conditions', id: 'footer' }
+    { label: 'The Problem', id: 'problem' },
+    { label: 'The Solution', id: 'solution' },
+    { label: 'How It Works', id: 'how-it-works' },
+    { label: 'Systems', id: 'what-we-install' },
+    { label: 'Industries', id: 'industries' },
+    { label: 'Founder', id: 'about' },
+    { label: 'FAQ', id: 'faq' }
   ];
 
   return (

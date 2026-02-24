@@ -8,6 +8,14 @@ import ChatBot from './components/ChatBot.tsx';
 
 import IndustriesWeOptimize from './components/IndustriesWeOptimize.tsx';
 import AboutSection from './components/AboutSection.tsx';
+import ProblemSection from './components/ProblemSection.tsx';
+import SolutionSection from './components/SolutionSection.tsx';
+import HowItWorks from './components/HowItWorks.tsx';
+import WhatWeInstall from './components/WhatWeInstall.tsx';
+import WhySpeedToLead from './components/WhySpeedToLead.tsx';
+import ComplianceIntegrations from './components/ComplianceIntegrations.tsx';
+import WhoThisIsFor from './components/WhoThisIsFor.tsx';
+import FAQSection from './components/FAQSection.tsx';
 
 const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,12 +34,19 @@ const App: React.FC = () => {
       <Navbar isScrolled={isScrolled} />
       
       <main>
-        {/* The Hero now handles primary navigation via its tabs */}
         <Hero />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 space-y-56">
+          <ProblemSection />
+          <SolutionSection />
+          <HowItWorks />
+          <WhatWeInstall />
+          <WhySpeedToLead />
+          <ComplianceIntegrations />
+          <WhoThisIsFor />
           <IndustriesWeOptimize />
           <AboutSection />
+          <FAQSection />
           <ContactSection />
         </div>
       </main>

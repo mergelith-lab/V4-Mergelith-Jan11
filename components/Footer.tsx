@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="space-y-3">
               <p className="text-sm text-navy/60 max-w-xs font-light leading-relaxed">
-                Proprietary AI systems for institutional M&A advisors. Scalability without sacrifice.
+                Revenue systems. Not tools. If you are generating leads, Mergelith makes sure you convert them faster than your competitors.
               </p>
               <div className="pt-2">
                 <p className="text-[11px] text-gold font-black tracking-[0.2em] uppercase">
@@ -35,17 +35,17 @@ const Footer: React.FC = () => {
             <div className="space-y-6">
               <h4 className="text-[11px] uppercase tracking-[0.4em] text-gold font-black">Systems</h4>
               <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0">
-                <li><button onClick={() => scrollTo('pillars')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Sourcing Engine</button></li>
-                <li><button onClick={() => scrollTo('intelligence')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Intelligence Layer</button></li>
-                <li><button onClick={() => scrollTo('engine-optimizations')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Engine v4.0</button></li>
+                <li><button onClick={() => scrollTo('problem')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">The Problem</button></li>
+                <li><button onClick={() => scrollTo('solution')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">The Solution</button></li>
+                <li><button onClick={() => scrollTo('what-we-install')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Systems</button></li>
               </ul>
             </div>
             <div className="space-y-6">
               <h4 className="text-[11px] uppercase tracking-[0.4em] text-gold font-black">Company</h4>
               <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0">
-                <li><button onClick={() => scrollTo('about')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Leadership</button></li>
-                <li><button onClick={() => scrollTo('privacy-protocol')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Security</button></li>
-                <li><button onClick={() => scrollTo('contact')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Advisory</button></li>
+                <li><button onClick={() => scrollTo('about')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Founder</button></li>
+                <li><button onClick={() => scrollTo('faq')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">FAQ</button></li>
+                <li><button onClick={() => scrollTo('contact')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Contact</button></li>
               </ul>
             </div>
           </div>

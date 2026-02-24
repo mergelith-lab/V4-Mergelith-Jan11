@@ -1,101 +1,61 @@
 import React from 'react';
-import { ShieldCheck, MessageSquare, RefreshCw } from 'lucide-react';
+import { MousePointer2, RefreshCw, Target } from 'lucide-react';
 
 const HowItWorks: React.FC = () => {
-  const sections = [
+  const steps = [
     {
-      title: "Cold Calling:",
-      icon: <ShieldCheck className="w-6 h-6 text-gold" />,
-      items: [
-        {
-          label: "Compliance:",
-          text: "Our AI can cold call publicly listed business numbers. For residential or personal lines, prior consent is required."
-        },
-        {
-          label: "Simultaneous Calls:",
-          text: "The AI can dial up to 10,000 leads and engage with 1,000 people simultaneously."
-        },
-        {
-          label: "Short Call Optimization:",
-          text: "Best suited for calls under 10 minutes for optimal performance."
-        }
-      ]
+      number: "01",
+      title: "Capture",
+      desc: "Works with website forms, Facebook/Google lead forms, landing pages, missed calls, and email inquiries.",
+      icon: MousePointer2,
+      tags: ["Forms", "Ads", "Missed Calls"]
     },
     {
-      title: "Handling Objections:",
-      icon: <MessageSquare className="w-6 h-6 text-gold" />,
-      items: [
-        {
-          text: "The AI can address common objections like \"I'm too busy\" or \"I'm not interested\" using its extensive knowledge base."
-        },
-        {
-          text: "Customized responses can be added using the \"knowledge base\" feature, making it adaptable to your unique business needs."
-        }
-      ]
+      number: "02",
+      title: "Convert",
+      desc: "AI calls instantly to confirm intent, ask qualifying questions, route to the right person, and book time on the calendar.",
+      icon: RefreshCw,
+      tags: ["Instant Call", "Qualify", "Book"]
     },
     {
-      title: "Follow-up and Lead Nurturing:",
-      icon: <RefreshCw className="w-6 h-6 text-gold" />,
-      items: [
-        {
-          text: "Follow-up calls can be scheduled based on lead behavior, ensuring timely engagement without overstepping boundaries."
-        },
-        {
-          text: "The AI can handle multiple follow-ups automatically, reducing manual workload."
-        }
-      ]
+      number: "03",
+      title: "Close",
+      desc: "Your team receives booked meetings, lead summaries with qualification scores, recordings, and CRM updates.",
+      icon: Target,
+      tags: ["Meetings", "CRM Sync", "Revenue"]
     }
   ];
 
   return (
-    <section id="how-it-works" className="bg-navy py-32 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="how-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#D4AF37" strokeWidth="0.5"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#how-grid)" />
-        </svg>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="mb-20">
-          <h2 className="text-4xl md:text-6xl font-serif text-pearl italic leading-tight">
-            How Can Our <span className="text-gold">AI Work for You?</span>
-          </h2>
-          <div className="h-1 w-24 bg-gold mt-8"></div>
+    <section id="how-it-works" className="scroll-mt-32">
+      <div className="space-y-20">
+        <div className="text-center space-y-4">
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Process</h3>
+          <h2 className="text-4xl md:text-6xl font-serif text-navy italic">How It Works</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
-          {sections.map((section, idx) => (
-            <div key={idx} className="space-y-8 group">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-white/5 rounded-sm group-hover:bg-gold/10 transition-colors">
-                  {section.icon}
-                </div>
-                <h3 className="text-gold font-cinzel text-sm tracking-[0.2em] font-black uppercase">
-                  {section.title}
-                </h3>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {steps.map((step, idx) => (
+            <div key={idx} className="relative group">
+              <div className="absolute -top-10 -left-4 text-8xl font-serif text-navy/5 select-none group-hover:text-gold/10 transition-colors">
+                {step.number}
               </div>
-
-              <ul className="space-y-6">
-                {section.items.map((item, i) => (
-                  <li key={i} className="flex gap-4 items-start">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold/40 mt-2 shrink-0"></div>
-                    <p className="text-pearl/70 font-light leading-relaxed text-sm">
-                      {item.label && (
-                        <span className="text-pearl font-semibold block mb-1 uppercase tracking-wider text-[10px]">
-                          {item.label}
-                        </span>
-                      )}
-                      {item.text}
-                    </p>
-                  </li>
-                ))}
-              </ul>
+              <div className="relative z-10 space-y-6 pt-8">
+                <div className="w-16 h-16 bg-white border border-navy/5 shadow-sm flex items-center justify-center rounded-sm group-hover:border-gold/30 transition-all">
+                  <step.icon className="w-8 h-8 text-gold" />
+                </div>
+                <h4 className="text-2xl font-serif text-navy italic">{step.title}</h4>
+                <p className="text-navy/60 text-sm font-light leading-relaxed">
+                  {step.desc}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {step.tags.map((tag, i) => (
+                    <span key={i} className="text-[9px] uppercase tracking-widest px-2 py-1 bg-navy/5 text-navy/40 font-black rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
