@@ -405,6 +405,468 @@ const sectorData: Record<string, SectorDetail> = {
       }
     ],
     footer: "Scale your agency with Mergelith's Conversational AI. Reach out today for a consultation!"
+  },
+  "Real Estate": {
+    title: "Real Estate",
+    subtitle: "The real estate market is highly competitive, making efficient communication with clients essential for success. Mergelith's Conversational AI agents can transform your sales and support processes, ensuring every lead is managed effectively.",
+    sections: [
+      {
+        heading: "Enhancing Real Estate Sales with AI",
+        items: [
+          "Round-the-Clock Service: AI agents provide 24/7 support, handling inquiries through phone and text channels, reducing missed opportunities.",
+          "Appointment Setting: Automatically schedule viewings and consultations, directly integrating with your CRM for seamless management.",
+          "Lead Management: Route calls to specific realtors, update client information, and manage follow-ups.",
+          "Proactive Engagement: AI agents can make outbound calls to update client databases, conduct surveys, and inform about new listings."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Cold Callers: Reach out to potential clients with property offers and promotions.",
+          "Dispatchers: Manage scheduling and connect clients to the right realtor.",
+          "Appointment Setters: Book property viewings directly into your CRM.",
+          "Live Transfers: Instantly transfer leads to available agents.",
+          "AI Assistants: Provide property information and initial consultations.",
+          "Customer Service Representatives: Handle inquiries, complaints, and post-transaction support."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Scalable Outreach: Call 10,000 leads per minute and engage 1,000 clients simultaneously.",
+          "Improved Conversion Rates: Efficiently manage incoming leads, reducing missed calls and enhancing customer experience.",
+          "Cost Efficiency: AI agents handle routine tasks, allowing human agents to focus on high-value interactions."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to streamline operations, enhance customer service, and boost your real estate agency’s reputation in the market. Contact us today to see how our Conversational AI can transform your business!"
+  },
+  "Property Management": {
+    title: "Property Management",
+    subtitle: "Property management companies handle a wide range of tenant inquiries, maintenance requests, and administrative tasks. Mergelith's Conversational AI agents can help streamline operations, ensuring efficient management and enhanced tenant satisfaction.",
+    sections: [
+      {
+        heading: "Optimizing Property Management with AI",
+        items: [
+          "24/7 Tenant Support: AI agents handle inquiries about leasing, rent payments, and maintenance requests via phone, email, and messaging platforms.",
+          "Maintenance Management: Automate the scheduling of repairs and inspections.",
+          "Proactive Communication: Send automated rent reminders, lease renewals, and property updates."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Tenant Support Representatives: Handle routine inquiries and complaints.",
+          "Maintenance Coordinators: Schedule repairs and follow-ups.",
+          "AI Assistants: Provide real-time updates on lease terms, rent status, and maintenance progress.",
+          "Outbound Campaigns: Gather tenant feedback and conduct satisfaction surveys."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Efficiency: AI manages routine tasks, reducing workload on staff.",
+          "Scalable Support: Handle high volumes of requests without additional staffing costs.",
+          "Enhanced Tenant Experience: Quick responses build trust and increase tenant satisfaction."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to optimize your property management company’s operations and improve tenant relations. Contact us today to see how our Conversational AI can support your business!"
+  },
+  "Medical Institutions & Facilities": {
+    title: "Medical Institutions & Facilities",
+    subtitle: "In the healthcare sector, efficient communication is critical for patient care and satisfaction. Mergelith's Conversational AI agents provide 24/7 support, ensuring that medical centers can manage appointments, consultations, and patient inquiries seamlessly.",
+    sections: [
+      {
+        heading: "Optimizing Healthcare Services with AI",
+        items: [
+          "24/7 Patient Support: AI agents handle calls and messages round-the-clock, providing information and booking appointments.",
+          "Appointment Scheduling: Automate booking and reminders, reducing no-shows and optimizing clinic schedules.",
+          "Consultation Assistance: AI can offer answers to frequently asked questions and direct patients to the appropriate department or specialist.",
+          "Patient Feedback Collection: Gather patient feedback for quality improvement."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Hotline Support: Manage inquiries and urgent requests.",
+          "Appointment Setters: Schedule and confirm appointments directly in your CRM.",
+          "AI Assistants: Provide information on services, doctors, and clinic hours.",
+          "Customer Service Representatives: Handle post-consultation inquiries and complaints."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Increased Patient Satisfaction: Quick responses and efficient scheduling improve patient experience.",
+          "Cost Efficiency: AI agents manage routine inquiries, reducing the need for additional staff.",
+          "Improved Healthcare Access: 24/7 availability ensures patients can reach the clinic anytime."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to enhance patient care, streamline operations, and improve healthcare delivery. Contact us today to see how our Conversational AI can support your medical center!"
+  },
+  "Travel & Tourism Companies": {
+    title: "Travel & Tourism Companies",
+    subtitle: "Travel companies experience high volumes of inquiries, especially during peak seasons. Mergelith's Conversational AI agents can help manage these demands, handling bookings, answering inquiries, and providing real-time support to enhance customer satisfaction.",
+    sections: [
+      {
+        heading: "Optimizing Travel Services with AI",
+        items: [
+          "24/7 Customer Support: AI agents manage inquiries about destinations, bookings, and tour packages via phone, email, and messaging platforms.",
+          "Booking Management: Automate reservations, confirmations, and updates for seamless transactions.",
+          "Proactive Communication: Send automated reminders and updates for trips, promotions, and travel advisories.",
+          "Emergency Assistance: Provide quick support during travel disruptions or emergencies."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Customer Support Representatives: Manage inquiries and complaints.",
+          "Booking Assistants: Handle reservations and modifications.",
+          "AI Assistants: Provide real-time information on destinations and services.",
+          "Outbound Campaigns: Inform clients about promotions and gather feedback."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Enhanced Customer Experience: Quick and accurate responses build loyalty.",
+          "Operational Efficiency: AI manages routine tasks, reducing workload on staff.",
+          "Scalable Support: Handle high volumes of requests during peak seasons without additional staffing costs."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to elevate your travel company’s customer service, streamline operations, and improve client satisfaction. Contact us today to see how our Conversational AI can support your business!"
+  },
+  "Pet Store": {
+    title: "Pet Store",
+    subtitle: "A call center for pet stores is professional help in servicing customers and increasing sales. A large flow of orders, applications or just advice on products are exactly the cases when a call center for pet stores will be necessary.",
+    sections: [
+      {
+        heading: "Boosting Pet Store Operations with AI",
+        items: [
+          "24/7 Customer Support: AI agents handle inquiries about product availability, order status, and delivery times, ensuring no customer is left waiting.",
+          "Product Recommendations: Assist customers in choosing the right products for their pets, increasing the average order value.",
+          "Order Management: AI agents can confirm orders, provide updates, and handle returns or exchanges.",
+          "Customer Retention: Reach out to previous customers with new offers, promotions, or restocked items."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Cold Callers: Inform customers about new products or promotions.",
+          "Dispatchers: Coordinate deliveries and manage order logistics.",
+          "AI Assistants: Provide real-time support in online chats or via phone.",
+          "Customer Service Representatives: Handle complaints, feedback, and special requests."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Increased Sales: Proactive engagement and personalized recommendations drive higher conversion rates.",
+          "Improved Customer Experience: Quick responses and personalized service build customer loyalty.",
+          "Reduced Operational Costs: AI agents handle routine queries, reducing the need for additional staff."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to enhance your pet store’s customer service, streamline operations, and increase sales. Contact us today to see how we can support your business!"
+  },
+  "Construction Companies": {
+    title: "Construction Companies",
+    subtitle: "Construction companies handle numerous client inquiries daily, making efficient communication crucial. Mergelith's conversational AI agents can help manage client interactions, streamline order processes, and provide support during peak construction seasons.",
+    sections: [
+      {
+        heading: "Optimizing Construction Services with AI",
+        items: [
+          "24/7 Customer Support: AI agents manage inquiries about building materials, services, and order statuses via phone, email, and messaging platforms.",
+          "Order Management: Automate order placement, confirmations, and updates to ensure seamless communication.",
+          "Project Coordination: AI can assist with project updates and communication between clients and contractors."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Customer Support Assistants: Handle inquiries and provide product information.",
+          "Order Processors: Manage incoming orders and schedule deliveries.",
+          "AI Assistants: Offer real-time updates on project timelines and order status.",
+          "Outbound Campaigns: Conduct surveys and gather feedback."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Efficiency: AI manages routine tasks, reducing the workload on staff.",
+          "Scalable Support: Handle high volumes of requests without additional staffing costs.",
+          "Enhanced Customer Experience: Quick and accurate responses increase customer satisfaction."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to optimize your construction company’s customer service, streamline operations, and improve client satisfaction. Contact us today to see how our Conversational AI can support your business!"
+  },
+  "Delivery Services": {
+    title: "Delivery Services",
+    subtitle: "In the fast-paced food delivery industry, efficient communication is crucial for managing orders and providing excellent customer service. Mergelith's Conversational AI agents can help streamline the ordering process and enhance customer satisfaction.",
+    sections: [
+      {
+        heading: "Optimizing Food Delivery with AI Agents",
+        items: [
+          "24/7 Order Management: AI agents can take orders via phone, mobile apps, and messaging platforms, ensuring round-the-clock availability.",
+          "Menu Assistance: Provide customers with detailed menu options, suggest items, and inform them about ongoing promotions, increasing the average order value.",
+          "Order Tracking and Updates: AI agents can offer real-time updates on order status and estimated delivery times.",
+          "Customer Feedback: Collect customer feedback after order delivery to improve service quality."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Order Takers: Handle high volumes of orders across multiple channels.",
+          "Dispatchers: Coordinate with delivery drivers to ensure timely deliveries.",
+          "AI Assistants: Offer menu recommendations and handle inquiries about availability.",
+          "Customer Service Representatives: Address issues like order discrepancies or delays.",
+          "Appointment Setters: Book reservations or catering services."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "High Capacity Management: Handle peak-time orders without missing any customer requests.",
+          "Enhanced Efficiency: AI reduces the burden on human employees, enabling them to focus on quality control.",
+          "Increased Customer Loyalty: Timely, accurate service builds trust and encourages repeat business."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to optimize your food delivery service, manage customer interactions, and ensure timely delivery. Contact us today to learn how our Conversational AI can support your business growth!"
+  },
+  "Flower Shops": {
+    title: "Flower Shops",
+    subtitle: "Flower shops thrive on quick and personalized customer service. Mergelith's Conversational AI agents can help flower shops handle orders, provide bouquet recommendations, and manage deliveries efficiently.",
+    sections: [
+      {
+        heading: "Optimizing Flower Shop Services with AI",
+        items: [
+          "24/7 Customer Support: AI agents handle inquiries about bouquet options, prices, and delivery times via phone, email, and messaging platforms.",
+          "Order Management: Automate order placements, confirmations, and updates, ensuring timely service.",
+          "Proactive Communication: Send automated reminders for special dates, promotions, and order confirmations.",
+          "Complaint Resolution: Manage complaints and provide immediate assistance to maintain customer satisfaction."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Order Processors: Manage incoming orders and schedule deliveries.",
+          "Customer Service Representatives: Handle inquiries and complaints.",
+          "AI Assistants: Provide real-time information on floral arrangements and services.",
+          "Outbound Campaigns: Notify customers about promotions and gather feedback."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Efficiency: AI manages routine tasks, reducing workload on staff.",
+          "Enhanced Customer Experience: Quick and personalized responses build customer loyalty.",
+          "Scalable Support: Handle high volumes of requests without additional staffing costs."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to optimize your flower shop’s customer service, streamline operations, and improve client satisfaction. Contact us today to see how our Conversational AI can support your business!"
+  },
+  "Political Parties": {
+    title: "Political Parties",
+    subtitle: "In political campaigns, effective communication with the electorate is crucial. Mergelith's Conversational AI agents provide seamless support, enabling political parties to engage with voters, handle inquiries, and gather valuable feedback.",
+    sections: [
+      {
+        heading: "Optimizing Political Communication with AI",
+        items: [
+          "24/7 Hotline Support: AI agents manage voter inquiries, provide information on political programs, and offer assistance with registration or voting details.",
+          "Voter Outreach: AI can reach out to voters with personalized messages, event invitations, and campaign updates.",
+          "Survey and Polling: Conduct political surveys and update voter databases efficiently.",
+          "Complaint and Suggestion Management: AI agents handle voter feedback, complaints, and suggestions, ensuring issues are addressed promptly."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Hotline Support: Provide round-the-clock assistance to voters and the electorate.",
+          "Voter Outreach: Engage with voters to promote political programs and increase support.",
+          "Survey Conductors: Collect data on voter opinions and feedback.",
+          "AI Assistants: Offer information on party platforms, candidate details, and events."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Enhanced Voter Engagement: Quick, efficient communication builds trust and strengthens voter relationships.",
+          "Efficient Data Collection: Gather and analyze voter data to refine campaign strategies.",
+          "Cost Efficiency: AI handles routine tasks, reducing the need for additional staffing."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to streamline your party’s communication, engage with voters effectively, and support your campaign efforts. Contact us today to see how our Conversational AI can help your political party!"
+  },
+  "Windows Manufacturing & Installation": {
+    title: "Windows Manufacturing & Installation",
+    subtitle: "In the highly competitive window manufacturing industry, providing exceptional customer service is key to standing out. Mergelith's Conversational AI agents can help streamline communication, handle client inquiries, and improve customer satisfaction.",
+    sections: [
+      {
+        heading: "Optimizing Window Services with AI",
+        items: [
+          "24/7 Customer Support: AI agents can handle inquiries and requests via phone, email, and messaging platforms around the clock, ensuring no opportunity is missed.",
+          "Appointment Scheduling: Automatically schedule consultations, installations, and repairs directly into your CRM, reducing manual work.",
+          "Order Management: Provide real-time updates on order status, delivery dates, and installation schedules.",
+          "Complaint Handling: AI agents can manage complaints, provide immediate support, and escalate issues to the appropriate department."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Order Processors: Manage incoming orders and service requests.",
+          "Appointment Setters: Book consultations and installation dates seamlessly.",
+          "AI Assistants: Offer product recommendations and technical information.",
+          "Customer Service Representatives: Handle complaints, feedback, and post-installation support."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Customer Experience: Quick and efficient responses increase customer satisfaction.",
+          "Operational Efficiency: AI agents handle routine inquiries, allowing staff to focus on complex tasks.",
+          "Enhanced Communication: Provide timely updates and support to clients, suppliers, and partners."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to elevate your window company's customer service, streamline operations, and enhance client satisfaction. Contact us today to see how our Conversational AI can support your business!"
+  },
+  "Event Planners & Organizers": {
+    title: "Event Planners & Organizers",
+    subtitle: "Event organizers need to maximize attendance and ensure a seamless experience for participants. Mergelith's Conversational AI agents can assist with event promotion, attendee management, and post-event feedback collection.",
+    sections: [
+      {
+        heading: "Optimizing Event Management with AI",
+        items: [
+          "24/7 Attendee Support: AI agents handle inquiries about event details, registration, and ticketing via phone, email, and messaging platforms.",
+          "Personalized Invitations: AI agents can reach out to potential attendees, highlight event benefits, and handle RSVPs.",
+          "Post-Event Feedback: Collect attendee feedback to assess event success and improve future experiences.",
+          "Event Updates: Provide real-time updates on schedule changes, speaker information, and venue directions."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Event Promoters: Reach out to targeted audiences and drive registrations.",
+          "Registration Assistants: Manage attendee registration and ticketing.",
+          "AI Assistants: Provide real-time event information and updates.",
+          "Customer Service Representatives: Handle inquiries, complaints, and feedback."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Increased Attendance: Personalized outreach and support drive higher event participation.",
+          "Efficient Communication: AI agents manage high volumes of inquiries, reducing workload on staff.",
+          "Improved Attendee Experience: Real-time support and updates ensure a smooth event experience."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to enhance your event management, optimize communication, and ensure successful events. Contact us today to see how our Conversational AI can support your events!"
+  },
+  "Start Ups & Business Ventures": {
+    title: "Start Ups & Business Ventures",
+    subtitle: "Startups require a strong foundation in customer service to build trust and scale efficiently. Mergelith's Conversational AI agents offer scalable, cost-effective solutions, enabling startups to manage customer interactions professionally without significant investment.",
+    sections: [
+      {
+        heading: "Enhancing Startup Operations with AI",
+        items: [
+          "24/7 Customer Support: AI agents handle inquiries and provide support via phone, email, and messaging platforms.",
+          "Lead Qualification: AI can engage with potential clients, qualifying and prioritizing leads.",
+          "Product Consultation: Offer detailed product or service information to curious prospects.",
+          "Complaint Resolution: AI can manage complaints, ensuring prompt resolutions to maintain a positive image."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Customer Support Assistants: Provide information and resolve common inquiries.",
+          "Lead Nurturing: Engage and qualify potential customers.",
+          "AI Assistants: Handle routine queries and gather customer feedback.",
+          "Outbound Campaigns: Inform clients about new offerings or updates."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Cost Efficiency: AI solutions reduce staffing needs, lowering operational costs.",
+          "Scalable Support: Manage high volumes of requests as the business grows.",
+          "Improved Customer Engagement: Quick, professional responses enhance customer trust and loyalty."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to elevate your startup’s customer service, optimize operations, and support growth. Contact us today to see how our Conversational AI can assist your startup!"
+  },
+  "Telecom Services": {
+    title: "Telecom Services",
+    subtitle: "Efficient communication and prompt support are crucial for Internet and telecom providers. Mergelith's Conversational AI agents offer seamless, 24/7 technical support and customer service, enhancing user experience and loyalty.",
+    sections: [
+      {
+        heading: "Optimizing Telecom Services with AI",
+        items: [
+          "24/7 Technical Support: AI agents handle inquiries related to connections, tariff changes, and payments.",
+          "Complaint Management: AI can efficiently log and manage complaints, ensuring timely resolutions.",
+          "Proactive Notifications: Send automated messages for service outages, maintenance, or balance updates.",
+          "Upselling and Retention: AI can promote higher-tier plans and win back lost customers."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Tech Support: Resolve common technical issues and provide troubleshooting.",
+          "Billing Support: Answer queries on payments, balances, and billing issues.",
+          "Outbound Campaigns: Inform clients about upgrades or new plans.",
+          "Customer Service Representatives: Handle escalations and complex queries."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Improved Customer Experience: Quick issue resolution increases satisfaction.",
+          "Operational Efficiency: AI agents handle routine tasks, freeing up human agents for complex issues.",
+          "Scalable Solutions: Handle high call volumes without additional staffing."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to enhance your customer support, streamline operations, and improve customer satisfaction. Contact us today to see how our Conversational AI can support your telecom business!"
+  },
+  "Solar & Roofing Companies": {
+    title: "Solar & Roofing Companies",
+    subtitle: "Solar and roofing companies handle high volumes of client inquiries related to installation, cost, and service options. Mergelith's Conversational AI agents provide scalable, 24/7 support to streamline these interactions, enhancing customer satisfaction.",
+    sections: [
+      {
+        heading: "Optimizing Solar & Roofing Services with AI",
+        items: [
+          "24/7 Client Support: AI agents handle inquiries on installation, pricing, and service details across phone, email, and messaging platforms.",
+          "Appointment Scheduling: Automate bookings for consultations and installations.",
+          "Proactive Communication: Send updates on project timelines, inspections, and maintenance."
+        ]
+      },
+      {
+        heading: "Deployment of AI Agents",
+        items: [
+          "Customer Support Representatives: Handle inquiries and complaints.",
+          "Appointment Assistants: Manage consultation and installation schedules.",
+          "AI Assistants: Provide real-time information on services, warranties, and financing options.",
+          "Outbound Campaigns: Conduct follow-ups, promotions, and gather feedback."
+        ]
+      },
+      {
+        heading: "Key Benefits",
+        items: [
+          "Enhanced Efficiency: AI manages routine tasks, reducing workload on staff.",
+          "Scalable Support: Handle high volumes of requests without additional staffing costs.",
+          "Improved Customer Experience: Quick, accurate responses improve client satisfaction."
+        ]
+      }
+    ],
+    footer: "Deploy our AI agents to elevate your solar or roofing company’s customer service, streamline operations, and improve client engagement. Contact us today to see how our Conversational AI can support your business!"
   }
 };
 
@@ -414,23 +876,23 @@ const IndustriesWeOptimize: React.FC = () => {
   const industryGroups = [
     {
       title: "Professional & Financial",
-      industries: ["Law Firms", "Financial Institutions", "Insurance", "IT Companies", "Coaching and Consulting", "Marketing & Advertising"]
+      industries: ["Law Firms", "Financial Institutions", "Insurance", "IT Companies", "Coaching and Consulting", "Marketing & Advertising", "Start Ups & Business Ventures", "Telecom Services"]
     },
     {
       title: "Real Estate & Logistics",
-      industries: ["Property Management", "Real Estate", "Cargo & Logistics", "Transportation & Logistics"]
+      industries: ["Property Management", "Real Estate", "Cargo & Logistics", "Transportation & Logistics", "Travel & Tourism Companies"]
     },
     {
       title: "Healthcare & Public",
-      industries: ["Medical Facilities", "Vet Clinics", "Education Facilities", "Gov Institutions & Organizations", "NGO's"]
+      industries: ["Medical Institutions & Facilities", "Vet Clinics", "Political Parties"]
     },
     {
       title: "Retail & Hospitality",
-      industries: ["Beauty and Wellness Centers", "Floral Stores", "Food Delivery", "E-Commerce Store", "Restaurants", "Car Dealerships"]
+      industries: ["Beauty and Wellness Centers", "Flower Shops", "Delivery Services", "E-Commerce Store", "Car Dealerships", "Pet Store"]
     },
     {
       title: "Maintenance & Specialized",
-      industries: ["Body Shops & Service", "Cleaning Companies", "Solar Panel", "Event Organizers"]
+      industries: ["Body Shops & Service", "Cleaning Companies", "Solar & Roofing Companies", "Event Planners & Organizers", "Construction Companies", "Windows Manufacturing & Installation"]
     },
   ];
 
