@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 interface SectorDetail {
   title: string;
   subtitle?: string;
+  imageUrl?: string;
   sections: {
     heading: string;
     items: string[];
@@ -740,6 +741,7 @@ const sectorData: Record<string, SectorDetail> = {
   "Event Planners & Organizers": {
     title: "Event Planners & Organizers",
     subtitle: "Event organizers need to maximize attendance and ensure a seamless experience for participants. Mergelith's Conversational AI agents can assist with event promotion, attendee management, and post-event feedback collection.",
+    imageUrl: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80",
     sections: [
       {
         heading: "Optimizing Event Management with AI",
@@ -880,7 +882,7 @@ const IndustriesWeOptimize: React.FC = () => {
     },
     {
       title: "Real Estate & Logistics",
-      industries: ["Property Management", "Real Estate", "Cargo & Logistics", "Transportation & Logistics", "Travel & Tourism Companies"]
+      industries: ["Property Management", "Real Estate", "Cargo & Logistics", "Travel & Tourism Companies"]
     },
     {
       title: "Healthcare & Public",
@@ -995,6 +997,17 @@ const IndustriesWeOptimize: React.FC = () => {
 
               {/* Modal Content */}
               <div className="flex-1 overflow-y-auto p-8 md:p-12 space-y-12">
+                {sectorData[selectedSector].imageUrl && (
+                  <div className="relative h-64 md:h-80 w-full rounded-sm overflow-hidden mb-12">
+                    <img 
+                      src={sectorData[selectedSector].imageUrl} 
+                      alt={sectorData[selectedSector].title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-navy/20" />
+                  </div>
+                )}
                 <div className="grid md:grid-cols-2 gap-12">
                   {sectorData[selectedSector].sections.map((section, idx) => (
                     <div key={idx} className="space-y-6">
