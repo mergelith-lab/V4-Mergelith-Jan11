@@ -39,7 +39,7 @@ const ContactSection: React.FC = () => {
           
           <div className="flex flex-col items-center gap-14">
             <div className="group transition-transform hover:scale-105 duration-500">
-              <p className="text-[11px] uppercase tracking-[0.6em] text-gold font-black mb-6">Immediate Advisory Line</p>
+              <p className="text-[11px] uppercase tracking-[0.6em] text-gold font-black mb-6">Southern California &bull; Immediate Advisory Line</p>
               <a 
                 href="tel:714-477-7490" 
                 className="text-5xl md:text-7xl font-serif text-navy hover:text-gold transition-all italic tracking-tighter"

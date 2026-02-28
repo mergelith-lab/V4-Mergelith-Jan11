@@ -114,7 +114,7 @@ const AISEOServices: React.FC = () => {
               The Evolution of Authority
             </h3>
             <p className="text-navy/70 font-light leading-relaxed">
-              Traditional SEO focused on ranking in a list of blue links. <span className="text-navy font-semibold">AI SEO gets you featured inside the answer itself.</span> This means your brand is the one being recommended when a potential client asks for the definitive expert in your space.
+              Traditional SEO focused on ranking in a list of blue links. <span className="text-navy font-semibold">AI SEO gets you featured inside the answer itself.</span> This means your brand is the one being recommended when a potential client asks for the definitive expert in your space—whether they are searching globally or locally in Southern California.
             </p>
           </div>
         </div>

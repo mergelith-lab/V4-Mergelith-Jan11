@@ -18,7 +18,7 @@ const AboutSection: React.FC = () => {
             </p>
             <div className="pt-4">
               <p className="text-navy font-black tracking-[0.2em] text-xs uppercase">Sasha Aleksic</p>
-              <p className="text-gold text-[10px] uppercase tracking-[0.3em] font-medium mt-1">Founder of Mergelith</p>
+              <p className="text-gold text-[10px] uppercase tracking-[0.3em] font-medium mt-1">Founder of Mergelith &bull; Southern California</p>
             </div>
           </div>
           

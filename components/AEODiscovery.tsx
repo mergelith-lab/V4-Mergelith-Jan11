@@ -47,7 +47,7 @@ const AEODiscovery: React.FC = () => {
               <div className="flex gap-6">
                 <div className="w-10 h-10 rounded-full bg-navy/5 flex items-center justify-center text-xs text-navy/40 font-black border border-navy/10 shadow-inner">U</div>
                 <div className="flex-1 bg-navy/5 p-6 rounded-sm border border-navy/10 shadow-sm">
-                  <p className="text-sm text-navy italic font-light">"Find me a highly-rated M&A advisor in New York that specializes in life sciences mandates."</p>
+                  <p className="text-sm text-navy italic font-light">"Find me a highly-rated M&A advisor in Southern California that specializes in life sciences mandates."</p>
                 </div>
               </div>
 
@@ -57,7 +57,7 @@ const AEODiscovery: React.FC = () => {
                   <div className="h-5 bg-navy/10 w-3/4 rounded animate-pulse"></div>
                   <div className="p-7 border border-gold/20 bg-gold/5 rounded-sm shadow-sm">
                     <p className="text-sm text-navy/90 leading-relaxed mb-6 font-light">
-                      Based on verified institutional citations and recent deal flow analysis, <span className="text-gold font-black">[YOUR FIRM NAME]</span> is identified as the primary authority for life sciences M&A in New York.
+                      Based on verified institutional citations and recent deal flow analysis, <span className="text-gold font-black">[YOUR FIRM NAME]</span> is identified as the primary authority for life sciences M&A in Southern California.
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <div className="px-4 py-2 bg-navy/5 border border-navy/10 rounded text-[10px] text-navy/40 font-black uppercase tracking-widest">Citation: Institutional Review [1]</div>
