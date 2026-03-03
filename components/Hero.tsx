@@ -32,15 +32,12 @@ const Hero: React.FC = () => {
           
           <div className="space-y-6">
             <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] text-navy tracking-tight max-w-5xl mx-auto">
-              Turn Every Inbound Lead Into a <br />
-              <span className="italic text-gold font-serif drop-shadow-sm text-6xl md:text-9xl">Booked Appointment</span>
+              Have AI <br />
+              <span className="italic text-gold font-serif drop-shadow-sm text-6xl md:text-9xl">answer your calls</span>
             </h1>
             <div className="space-y-4 max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl text-navy/70 font-light leading-relaxed">
-                We install AI-powered Speed-to-Lead + Missed Inbound Recovery systems that call new leads instantly, qualify them, and book meetings directly onto your calendar.
-              </p>
-              <p className="text-lg md:text-xl text-gold font-medium italic">
-                Stop losing deals to slow follow-up and missed calls.
+                Stop losing deals to slow follow-up and missed calls. We install AI-powered systems that handle your inbound instantly.
               </p>
             </div>
           </div>
