@@ -35,7 +35,8 @@ const inclusions = [
   "Brand Mention Monitoring across LLMs",
   "FAQ & Featured Snippet Engineering",
   "Knowledge Panel Management",
-  "Monthly AI Visibility Index Reporting"
+  "Monthly AI Visibility Index Reporting",
+  "SOC2 & ISO 27001 Compliant Strategy"
 ];
 
 const steps = [

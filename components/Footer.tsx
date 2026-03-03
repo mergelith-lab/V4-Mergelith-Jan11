@@ -57,6 +57,10 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Mergelith Growth Partners. All Rights Reserved.
           </p>
           <div className="flex gap-12 items-center">
+            <div className="flex gap-3">
+              <span className="px-2 py-0.5 border border-navy/10 rounded text-[8px] font-black text-navy/30 uppercase tracking-widest">SOC2</span>
+              <span className="px-2 py-0.5 border border-navy/10 rounded text-[8px] font-black text-navy/30 uppercase tracking-widest">ISO 27001</span>
+            </div>
             <a 
               href="https://www.linkedin.com/company/mergelith-agency/?viewAsMember=true"
               target="_blank"

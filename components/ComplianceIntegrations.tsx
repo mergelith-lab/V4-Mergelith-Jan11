@@ -37,6 +37,20 @@ const ComplianceIntegrations: React.FC = () => {
               </li>
             ))}
           </ul>
+
+          <div className="pt-6 border-t border-navy/5">
+            <h4 className="text-[10px] uppercase tracking-[0.3em] text-gold font-black mb-4">Security Standards</h4>
+            <div className="flex flex-wrap gap-4">
+              <div className="flex items-center gap-3 px-4 py-2 bg-navy/5 border border-navy/10 rounded-sm">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+                <span className="text-[11px] font-black text-navy uppercase tracking-widest">SOC2 Type II</span>
+              </div>
+              <div className="flex items-center gap-3 px-4 py-2 bg-navy/5 border border-navy/10 rounded-sm">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+                <span className="text-[11px] font-black text-navy uppercase tracking-widest">ISO 27001</span>
+              </div>
+            </div>
+          </div>
           
           <p className="text-[10px] text-navy/40 italic leading-relaxed">
             For reactivation campaigns, existing business relationships can reduce risk versus cold outreach. (Compliance varies by jurisdiction and use case.)

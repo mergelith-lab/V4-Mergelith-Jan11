@@ -65,10 +65,10 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Social Proof Strip */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-y border-navy/5 bg-white/30 backdrop-blur-sm rounded-sm">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-12 border-y border-navy/5 bg-white/30 backdrop-blur-sm rounded-sm">
           <div className="flex flex-col items-center gap-2">
             <Clock className="w-5 h-5 text-gold" />
-            <p className="text-navy font-serif italic text-lg">“Instant callback + booking in under 60 seconds”</p>
+            <p className="text-navy font-serif italic text-lg">“Instant callback in &lt; 60s”</p>
           </div>
           <div className="flex flex-col items-center gap-2">
             <Zap className="w-5 h-5 text-gold" />
@@ -76,7 +76,14 @@ const Hero: React.FC = () => {
           </div>
           <div className="flex flex-col items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-gold" />
-            <p className="text-navy font-serif italic text-lg">“Increases close rates by 20–40% with speed-to-lead”</p>
+            <p className="text-navy font-serif italic text-lg">“SOC2 & ISO 27001 Compliant”</p>
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <div className="flex gap-2">
+              <div className="px-2 py-0.5 border border-navy/20 rounded text-[9px] font-black text-navy/40 uppercase tracking-tighter">SOC2</div>
+              <div className="px-2 py-0.5 border border-navy/20 rounded text-[9px] font-black text-navy/40 uppercase tracking-tighter">ISO 27001</div>
+            </div>
+            <p className="text-navy font-serif italic text-lg">“Enterprise-Grade Security”</p>
           </div>
         </div>
       </div>

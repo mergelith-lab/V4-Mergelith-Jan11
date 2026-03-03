@@ -20,7 +20,7 @@ const benefits = [
   },
   {
     title: "Compliance & Security",
-    desc: "Our AI follows strict compliance for cold calling business numbers, ensuring your operations remain within legal boundaries.",
+    desc: "Our AI follows strict compliance for cold calling business numbers, ensuring your operations remain within legal boundaries. SOC2 & ISO 27001 compliant infrastructure.",
     icon: ShieldCheck
   }
 ];
