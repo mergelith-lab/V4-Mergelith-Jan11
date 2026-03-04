@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, Type } from "@google/genai";
 
 interface Message {
   role: 'user' | 'model';
@@ -55,6 +55,23 @@ const ChatBot: React.FC = () => {
     try {
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       
+      const submitInquiryTool = {
+        functionDeclarations: [{
+          name: "submitInquiry",
+          description: "Submit the collected visitor information to Mergelith partners.",
+          parameters: {
+            type: Type.OBJECT,
+            properties: {
+              name: { type: Type.STRING, description: "Full Name of the visitor" },
+              firm: { type: Type.STRING, description: "Firm or Institution Name" },
+              email: { type: Type.STRING, description: "Professional Email Address" },
+              objective: { type: Type.STRING, description: "Primary growth objective or service of interest" }
+            },
+            required: ["name", "firm", "email", "objective"]
+          }
+        }]
+      };
+
       const systemInstruction = `
         You are the Mergelith Institutional Assistant. Mergelith provides AI growth systems for M&A firms.
         Your goal is to be professional, discreet, and efficient.
@@ -72,7 +89,12 @@ const ChatBot: React.FC = () => {
 
         Tone: High-end, institutional, slightly formal, and helpful.
         If the user provides information, acknowledge it professionally.
-        Once you have all 4 pieces of information, tell them: "Your credentials have been verified and directed to Sasha Aleksic (mergelith@gmail.com). A Mergelith Partner will contact you at your institutional email within 2 business hours to finalize the demo or installation environment."
+        
+        Once you have collected ALL 4 pieces of information, you MUST call the 'submitInquiry' tool.
+        Do NOT tell them you have sent it until the tool has been called.
+        
+        After calling the tool, tell them: "Your credentials have been verified and securely transmitted to Sasha Aleksic (sasha@mergelith.com). A Mergelith Partner will contact you at your institutional email within 2 business hours to finalize the demo or installation environment."
+        
         Do not use emojis. Use "M&A" instead of "mergers and acquisitions".
       `;
 
@@ -87,8 +109,50 @@ const ChatBot: React.FC = () => {
         config: {
           systemInstruction: systemInstruction,
           temperature: 0.7,
+          tools: [submitInquiryTool]
         },
       });
+
+      // Check for function calls
+      const functionCalls = response.functionCalls;
+      if (functionCalls && functionCalls.length > 0) {
+        const call = functionCalls[0];
+        if (call.name === "submitInquiry") {
+          const args = call.args as any;
+          
+          // Send to backend
+          try {
+            const apiResponse = await fetch('/api/send-inquiry', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(args)
+            });
+            
+            if (apiResponse.ok) {
+              console.log("Inquiry sent successfully to backend");
+            }
+          } catch (e) {
+            console.error("Failed to send inquiry to backend:", e);
+          }
+
+          // Generate a follow-up response acknowledging the submission
+          const followUp = await ai.models.generateContent({
+            model: 'gemini-3-flash-preview',
+            contents: [
+              ...contents,
+              { role: 'model', parts: [{ functionCall: call }] },
+              { role: 'user', parts: [{ functionResponse: { name: "submitInquiry", response: { success: true } } }] }
+            ],
+            config: {
+              systemInstruction: systemInstruction,
+            }
+          });
+          
+          const modelText = followUp.text || "Your credentials have been verified and securely transmitted to Sasha Aleksic (sasha@mergelith.com). A Mergelith Partner will contact you at your institutional email within 2 business hours.";
+          setMessages([...newMessages, { role: 'model', text: modelText }]);
+          return;
+        }
+      }
 
       const modelText = response.text || "I apologize, my secure link was momentarily interrupted. Could you repeat your last point?";
       setMessages([...newMessages, { role: 'model', text: modelText }]);
