@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI, Type, ThinkingLevel } from "@google/genai";
 
 interface Message {
   role: 'user' | 'model';
@@ -9,7 +9,7 @@ interface Message {
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: "Welcome to Mergelith. I am the Institutional Assistant. How may I best support your business growth objectives today?" }
+    { role: 'model', text: "Excellent. Our Voice AI Receptionist is highly effective for ensuring 24/7 high-velocity lead capture for your firms. To properly direct your inquiry and prepare for our discussion, could you please provide your full name?" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +53,12 @@ const ChatBot: React.FC = () => {
     setShowQuickActions(false);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+      if (!apiKey) {
+        throw new Error("Secure Advisory Link (API Key) not established.");
+      }
+      
+      const ai = new GoogleGenAI({ apiKey });
       
       const submitInquiryTool = {
         functionDeclarations: [{
@@ -104,12 +109,13 @@ const ChatBot: React.FC = () => {
       }));
 
       const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-3.1-pro-preview',
         contents: contents,
         config: {
           systemInstruction: systemInstruction,
           temperature: 0.7,
-          tools: [submitInquiryTool]
+          tools: [submitInquiryTool],
+          thinkingConfig: { thinkingLevel: ThinkingLevel.LOW }
         },
       });
 
@@ -137,7 +143,7 @@ const ChatBot: React.FC = () => {
 
           // Generate a follow-up response acknowledging the submission
           const followUp = await ai.models.generateContent({
-            model: 'gemini-3-flash-preview',
+            model: 'gemini-3.1-pro-preview',
             contents: [
               ...contents,
               { role: 'model', parts: [{ functionCall: call }] },
@@ -145,6 +151,7 @@ const ChatBot: React.FC = () => {
             ],
             config: {
               systemInstruction: systemInstruction,
+              thinkingConfig: { thinkingLevel: ThinkingLevel.LOW }
             }
           });
           
@@ -158,7 +165,8 @@ const ChatBot: React.FC = () => {
       setMessages([...newMessages, { role: 'model', text: modelText }]);
     } catch (error) {
       console.error("Chat Error:", error);
-      setMessages([...newMessages, { role: 'model', text: "Discretionary Protocol Error: Connection interrupted. Please use our Priority Advisory Line if the issue persists." }]);
+      const errorMessage = error instanceof Error ? error.message : "Connection interrupted";
+      setMessages([...newMessages, { role: 'model', text: `Discretionary Protocol Error: ${errorMessage}. Please use our Priority Advisory Line if the issue persists.` }]);
     } finally {
       setIsLoading(false);
     }
@@ -277,7 +285,7 @@ const ChatBot: React.FC = () => {
             </p>
             <button 
               onClick={() => {
-                setMessages([{ role: 'model', text: "Session reset. How may I best support your business growth objectives today?" }]);
+                setMessages([{ role: 'model', text: "Excellent. Our Voice AI Receptionist is highly effective for ensuring 24/7 high-velocity lead capture for your firms. To properly direct your inquiry and prepare for our discussion, could you please provide your full name?" }]);
                 setShowQuickActions(true);
               }}
               className="text-[8px] text-navy/30 uppercase tracking-[0.4em] hover:text-gold transition-colors font-black border-b border-transparent hover:border-gold"
