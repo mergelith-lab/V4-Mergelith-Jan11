@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
               </p>
               <div className="pt-2">
                 <p className="text-[11px] text-gold font-black tracking-[0.2em] uppercase">
-                  Southern California &bull; ADVISORY: <a href="tel:714-477-7490" className="hover:text-navy transition-colors">714-477-7490</a>
+                  Lake Elsinore, California &bull; ADVISORY: <a href="tel:714-477-7490" className="hover:text-navy transition-colors">714-477-7490</a>
                 </p>
               </div>
             </div>
