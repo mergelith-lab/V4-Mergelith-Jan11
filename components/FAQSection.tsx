@@ -24,6 +24,10 @@ const FAQSection: React.FC = () => {
     {
       question: "Is this just a receptionist bot?",
       answer: "No. This is a revenue engine focused specifically on speed-to-lead, booking, and conversion performance. It's engineered for ROI, not just answering phones."
+    },
+    {
+      question: "Where is Mergelith located?",
+      answer: "Mergelith is headquartered in Lake Elsinore, California. We serve high-growth firms locally in the Inland Empire and Southern California, as well as institutional clients across the United States."
     }
   ];
 
