@@ -51,12 +51,6 @@ const Hero: React.FC = () => {
             >
               BOOK A 15-MINUTE DEMO
             </a>
-            <button 
-              onClick={() => scrollTo('contact')}
-              className="btn-secondary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center border border-navy/20 hover:border-gold transition-colors"
-            >
-              GET A FREE LEAD LEAK AUDIT
-            </button>
           </div>
 
           <p className="text-[10px] uppercase tracking-[0.3em] text-navy/40 font-bold">

@@ -25,7 +25,7 @@ const testimonials = [
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="relative py-24">
+    <section id="results" className="relative py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-20">
           <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Institutional Trust</h3>
