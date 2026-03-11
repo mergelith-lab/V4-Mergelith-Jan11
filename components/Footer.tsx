@@ -44,6 +44,7 @@ const Footer: React.FC = () => {
             <div className="space-y-6">
               <h4 className="text-[11px] uppercase tracking-[0.4em] text-gold font-black">Company</h4>
               <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0">
+                <li><button onClick={() => scrollTo('blog')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Intelligence</button></li>
                 <li><button onClick={() => scrollTo('about')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Founder</button></li>
                 <li><button onClick={() => scrollTo('faq')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">FAQ</button></li>
                 <li><button onClick={() => scrollTo('contact')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Contact</button></li>

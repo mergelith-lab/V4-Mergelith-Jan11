@@ -20,6 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
     { label: 'Systems', id: 'what-we-install' },
     { label: 'AI SEO', id: 'ai-seo' },
     { label: 'Industries', id: 'industries' },
+    { label: 'Intelligence', id: 'blog' },
     { label: 'Founder', id: 'about' },
     { label: 'FAQ', id: 'faq' }
   ];

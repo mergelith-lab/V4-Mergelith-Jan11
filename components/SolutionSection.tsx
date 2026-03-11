@@ -60,7 +60,7 @@ const SolutionSection: React.FC = () => {
         <div className="lg:w-1/2 relative">
           <div className="aspect-square rounded-sm overflow-hidden shadow-2xl border border-navy/10 relative z-10">
             <img 
-              src="https://picsum.photos/seed/mergelith-solution/1000/1000" 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" 
               alt="AI Conversion Engine" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

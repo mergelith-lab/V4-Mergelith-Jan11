@@ -7,6 +7,7 @@ import BackgroundGraphics from './components/BackgroundGraphics.tsx';
 import ChatBot from './components/ChatBot.tsx';
 
 import IndustriesWeOptimize from './components/IndustriesWeOptimize.tsx';
+import BlogSection from './components/BlogSection.tsx';
 import AboutSection from './components/AboutSection.tsx';
 import ProblemSection from './components/ProblemSection.tsx';
 import SolutionSection from './components/SolutionSection.tsx';
@@ -17,6 +18,7 @@ import WhySpeedToLead from './components/WhySpeedToLead.tsx';
 import ComplianceIntegrations from './components/ComplianceIntegrations.tsx';
 import WhoThisIsFor from './components/WhoThisIsFor.tsx';
 import Testimonials from './components/Testimonials.tsx';
+import CaseStudySection from './components/CaseStudySection.tsx';
 import FAQSection from './components/FAQSection.tsx';
 
 const App: React.FC = () => {
@@ -48,6 +50,8 @@ const App: React.FC = () => {
           <ComplianceIntegrations />
           <WhoThisIsFor />
           <IndustriesWeOptimize />
+          <BlogSection />
+          <CaseStudySection />
           <Testimonials />
           <AboutSection />
           <FAQSection />
