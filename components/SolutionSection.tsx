@@ -7,7 +7,8 @@ const SolutionSection: React.FC = () => {
     "Qualifies with a short conversation",
     "Books the appointment automatically",
     "Connects hot leads to a rep in real time",
-    "Sends SMS/email follow-up to confirm"
+    "Sends SMS/email follow-up to confirm",
+    "Intercepts & Routes Fraud/Spam (e.g. Google Verification)"
   ];
 
   return (
@@ -53,6 +54,16 @@ const SolutionSection: React.FC = () => {
               >
                 BOOK A DEMO
               </a>
+            </div>
+
+            <div className="mt-12 p-8 bg-gold/5 border border-gold/20 rounded-sm space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-gold font-black">Advanced Routing Protocol</p>
+              </div>
+              <p className="text-navy/70 text-sm font-light italic leading-relaxed">
+                "If the system detects an urgent Google Listing Verification or Voice Search alert, it automatically executes a priority bypass—routing the call directly to your secure line at <span className="text-navy font-bold">714-882-0984</span> for immediate resolution."
+              </p>
             </div>
           </div>
         </div>
