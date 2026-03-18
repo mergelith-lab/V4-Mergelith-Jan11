@@ -53,9 +53,24 @@ const ChatBot: React.FC = () => {
     setShowQuickActions(false);
 
     try {
-      const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
-      if (!apiKey) {
-        throw new Error("Secure Advisory Link (API Key) not established.");
+      // Access the API key from the environment
+      let apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+      
+      // If key is missing, check if platform key selection is available
+      if ((!apiKey || apiKey === "") && typeof window !== 'undefined' && (window as any).aistudio) {
+        const hasKey = await (window as any).aistudio.hasSelectedApiKey();
+        if (!hasKey) {
+          await (window as any).aistudio.openSelectKey();
+          // After opening, the key should be available in process.env.API_KEY on next attempt
+          // For this attempt, we might still fail, but we've prompted the user.
+          throw new Error("Please select an API key in the configuration dialog to continue.");
+        }
+        // If they have selected it, it might be in process.env.API_KEY now
+        apiKey = process.env.API_KEY;
+      }
+
+      if (!apiKey || apiKey === "") {
+        throw new Error("Secure Advisory Link (API Key) not established. Please ensure the GEMINI_API_KEY is configured in your environment settings.");
       }
       
       const ai = new GoogleGenAI({ apiKey });
