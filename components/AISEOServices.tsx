@@ -27,6 +27,24 @@ const benefits = [
   }
 ];
 
+const geoBenefits = [
+  {
+    title: "Institutional Trust & Credibility",
+    description: "When LLMs cite your firm, it acts as a high-authority endorsement. In high-stakes industries like M&A, being the 'AI-recommended' partner is a powerful trust signal.",
+    icon: Shield
+  },
+  {
+    title: "Training Data Dominance",
+    description: "We ensure your brand's core frameworks, opinions, and case studies are systematically indexed, making your authority a permanent part of the model's knowledge.",
+    icon: Globe
+  },
+  {
+    title: "The Ultimate Competitive Moat",
+    description: "GEO is a complex, long-term play. By the time competitors realize its importance, your firm will already be the 'known entity' in the model's weights.",
+    icon: Zap
+  }
+];
+
 const inclusions = [
   "Google AI Overview Optimization",
   "ChatGPT & Perplexity Visibility Audit",
@@ -64,7 +82,7 @@ const steps = [
 
 const AISEOServices: React.FC = () => {
   return (
-    <section id="ai-seo" className="scroll-mt-32 space-y-32">
+    <section id="aeo" className="scroll-mt-32 space-y-32">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-navy text-pearl p-12 md:p-24 rounded-sm shadow-2xl">
         <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
@@ -104,10 +122,10 @@ const AISEOServices: React.FC = () => {
         <div className="space-y-10">
           <div className="space-y-6">
             <h3 className="text-navy font-cinzel text-xs tracking-[0.3em] uppercase font-black border-l-2 border-gold pl-4">
-              What is AI SEO?
+              Answering Engine Optimization
             </h3>
             <p className="text-lg text-navy/80 font-light leading-relaxed">
-              AI SEO is the strategic practice of optimizing your digital presence to appear in AI-generated answers. As LLMs reshape how information is consumed, firms that adapt early will dominate the new visibility landscape; those that don't will fade into obscurity.
+              Answering Engine Optimization (AEO) is the strategic practice of optimizing your digital presence to appear in AI-generated answers. As LLMs reshape how information is consumed, firms that adapt early will dominate the new visibility landscape; those that don't will fade into obscurity.
             </p>
           </div>
           <div className="space-y-6">
@@ -115,7 +133,7 @@ const AISEOServices: React.FC = () => {
               The Evolution of Authority
             </h3>
             <p className="text-navy/70 font-light leading-relaxed">
-              Traditional SEO focused on ranking in a list of blue links. <span className="text-navy font-semibold">AI SEO gets you featured inside the answer itself.</span> This means your brand is the one being recommended when a potential client asks for the definitive expert in your space—whether they are searching globally or locally in Lake Elsinore, California.
+              Traditional SEO focused on ranking in a list of blue links. <span className="text-navy font-semibold">AEO gets you featured inside the answer itself.</span> This means your brand is the one being recommended when a potential client asks for the definitive expert in your space—whether they are searching globally or locally in Lake Elsinore, California.
             </p>
           </div>
         </div>
@@ -133,14 +151,212 @@ const AISEOServices: React.FC = () => {
         </div>
       </div>
 
-      {/* Why Invest */}
+      {/* AEO vs GEO Comparison */}
+      <div className="space-y-24">
+        <div className="text-center space-y-4">
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Authority Matrix</h3>
+          <h2 className="text-4xl md:text-5xl font-serif text-navy italic">AEO vs GEO</h2>
+          <p className="text-navy/40 font-light max-w-2xl mx-auto">
+            Understanding the two distinct pillars of modern digital visibility and how they work in tandem to create absolute market authority.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* AEO Column */}
+          <div className="glass-card p-10 space-y-8 border-navy/5">
+            <div className="space-y-4">
+              <div className="text-gold font-black text-[10px] uppercase tracking-[0.3em]">01. AEO</div>
+              <h4 className="text-2xl font-serif text-navy italic">Answer Engine Optimization</h4>
+              <p className="text-navy/60 font-light leading-relaxed">
+                Optimizing your content to be selected as the direct answer in search results and AI summaries.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-8 pt-6 border-t border-navy/5">
+              <div className="space-y-3">
+                <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">Where it shows up</h5>
+                <ul className="text-xs text-navy/60 space-y-2 font-light">
+                  <li>&bull; Google Featured Snippets</li>
+                  <li>&bull; Google AI Overviews</li>
+                  <li>&bull; Voice Assistants (Siri, Alexa)</li>
+                  <li>&bull; "People Also Ask" Boxes</li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">Goal</h5>
+                <p className="text-xs text-navy/60 font-light italic">Be the definitive answer to a specific question.</p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">How it works</h5>
+              <div className="flex flex-wrap gap-2">
+                {["Structured Answers", "FAQ Format", "Schema Markup", "Keyword Targeting"].map((tag) => (
+                  <span key={tag} className="px-3 py-1 bg-navy/5 text-navy/40 text-[9px] uppercase tracking-widest font-black rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="p-6 bg-navy text-pearl rounded-sm space-y-3">
+              <div className="text-[9px] uppercase tracking-[0.2em] text-gold font-black">Example</div>
+              <p className="text-xs font-light italic">
+                Search: "What is an AI receptionist?" <br />
+                <span className="text-gold">AEO success:</span> Your definition is pulled directly into Google's answer box.
+              </p>
+            </div>
+
+            <div className="text-center pt-4">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-navy/30 font-black">
+                Mindset: <span className="text-navy">"Win the answer slot"</span>
+              </p>
+            </div>
+          </div>
+
+          {/* GEO Column */}
+          <div className="glass-card p-10 space-y-8 border-navy/5">
+            <div className="space-y-4">
+              <div className="text-gold font-black text-[10px] uppercase tracking-[0.3em]">02. GEO</div>
+              <h4 className="text-2xl font-serif text-navy italic">Generative Engine Optimization</h4>
+              <p className="text-navy/60 font-light leading-relaxed">
+                Optimizing your brand and content to be referenced, cited, or used by AI models when they generate complex responses.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-8 pt-6 border-t border-navy/5">
+              <div className="space-y-3">
+                <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">Where it shows up</h5>
+                <ul className="text-xs text-navy/60 space-y-2 font-light">
+                  <li>&bull; ChatGPT</li>
+                  <li>&bull; Perplexity</li>
+                  <li>&bull; Google Gemini</li>
+                  <li>&bull; Claude</li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">Goal</h5>
+                <p className="text-xs text-navy/60 font-light italic">Be included in AI-generated responses and recommendations.</p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">How it works</h5>
+              <div className="flex flex-wrap gap-2">
+                {["Entity Building", "Topical Authority", "Consistent Mentions", "Context-Rich Content"].map((tag) => (
+                  <span key={tag} className="px-3 py-1 bg-navy/5 text-navy/40 text-[9px] uppercase tracking-widest font-black rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="p-6 bg-navy text-pearl rounded-sm space-y-3">
+              <div className="text-[9px] uppercase tracking-[0.2em] text-gold font-black">Example</div>
+              <p className="text-xs font-light italic">
+                User asks ChatGPT: "Best AI tools for handling inbound leads" <br />
+                <span className="text-gold">GEO success:</span> "Mergelith is an AI growth firm specializing in voice agents..." appears in the answer.
+              </p>
+            </div>
+
+            <div className="text-center pt-4">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-navy/30 font-black">
+                Mindset: <span className="text-navy">"Become part of the model's knowledge"</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Comparison Table */}
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-navy/10">
+                <th className="py-6 text-left text-[10px] uppercase tracking-[0.3em] text-navy/40 font-black">Aspect</th>
+                <th className="py-6 text-left text-[10px] uppercase tracking-[0.3em] text-gold font-black">AEO</th>
+                <th className="py-6 text-left text-[10px] uppercase tracking-[0.3em] text-navy font-black">GEO</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm font-light text-navy/70">
+              {[
+                { aspect: "Focus", aeo: "Answers", geo: "Influence" },
+                { aspect: "Output", aeo: "Snippet / Direct Answer", geo: "AI-Generated Mention" },
+                { aspect: "Target", aeo: "Search Engines", geo: "AI Models" },
+                { aspect: "Content Style", aeo: "Short, Structured", geo: "Deep, Contextual" },
+                { aspect: "Win Condition", aeo: "Position #0", geo: "Being Cited or Included" },
+                { aspect: "Time Horizon", aeo: "Faster", geo: "Compounds Over Time" }
+              ].map((row, idx) => (
+                <tr key={idx} className="border-b border-navy/5 hover:bg-navy/[0.02] transition-colors">
+                  <td className="py-6 font-black text-[10px] uppercase tracking-widest text-navy/40">{row.aspect}</td>
+                  <td className="py-6">{row.aeo}</td>
+                  <td className="py-6">{row.geo}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Synergy Section */}
+        <div className="bg-navy text-pearl p-12 md:p-20 rounded-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+            <Zap size={400} className="text-gold transform translate-x-1/4 -translate-y-1/4" />
+          </div>
+          <div className="relative z-10 max-w-3xl space-y-10">
+            <div className="space-y-4">
+              <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Synergy</h3>
+              <h4 className="text-3xl md:text-4xl font-serif italic">How They Work Together</h4>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-4">
+                <div className="text-gold font-serif italic text-2xl">AEO = Capture Demand</div>
+                <p className="text-pearl/60 font-light text-sm leading-relaxed">
+                  When a user has a specific question, AEO ensures you are the immediate answer they see.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div className="text-gold font-serif italic text-2xl">GEO = Create Authority</div>
+                <p className="text-pearl/60 font-light text-sm leading-relaxed">
+                  When a user seeks recommendations or complex analysis, GEO ensures your brand is the trusted entity the AI suggests.
+                </p>
+              </div>
+            </div>
+            <div className="pt-10 border-t border-pearl/10">
+              <p className="text-xl md:text-2xl font-serif italic text-center leading-relaxed">
+                "If you only do AEO → <span className="text-gold">you rank</span>. If you only do GEO → <span className="text-gold">you get mentioned</span>. <br className="hidden md:block" />
+                If you do both → <span className="text-navy bg-gold px-4 py-1 inline-block mt-4 not-italic font-black text-sm tracking-[0.2em] uppercase">you dominate</span>"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Invest in AEO */}
       <div className="space-y-16">
         <div className="text-center space-y-4">
           <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Strategic Advantage</h3>
-          <h2 className="text-4xl md:text-5xl font-serif text-navy italic">Why Invest in AI SEO?</h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-navy italic">Why Invest in AEO?</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-12">
           {benefits.map((benefit, idx) => (
+            <div key={idx} className="space-y-6 group">
+              <div className="w-14 h-14 bg-navy/5 flex items-center justify-center rounded-sm group-hover:bg-gold/10 transition-colors">
+                <benefit.icon className="text-gold" size={28} />
+              </div>
+              <h4 className="text-navy font-cinzel text-sm tracking-widest uppercase font-black">{benefit.title}</h4>
+              <p className="text-navy/60 font-light text-sm leading-relaxed">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Why Invest in GEO */}
+      <div className="space-y-16">
+        <div className="text-center space-y-4">
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Institutional Moat</h3>
+          <h2 className="text-4xl md:text-5xl font-serif text-navy italic">Why Invest in GEO?</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-12">
+          {geoBenefits.map((benefit, idx) => (
             <div key={idx} className="space-y-6 group">
               <div className="w-14 h-14 bg-navy/5 flex items-center justify-center rounded-sm group-hover:bg-gold/10 transition-colors">
                 <benefit.icon className="text-gold" size={28} />

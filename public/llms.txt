@@ -18,7 +18,7 @@ Mergelith is a premier AI agency based in Lake Elsinore, California. We provide 
 - Pipeline Acceleration: Automated follow-ups and nurturing.
 - Operational Leverage: AI-driven efficiency for M&A and high-stakes industries.
 
-### AI SEO Services
+### Answering Engine Optimization (AEO) Services
 - Optimization for AI-driven search engines (Perplexity, SearchGPT, Gemini).
 - Semantic content architecture.
 - Authority building in institutional niches.

@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
               <span className="px-2 py-0.5 border border-navy/10 rounded text-[8px] font-black text-navy/30 uppercase tracking-widest">ISO 27001</span>
             </div>
             <a 
-              href="https://www.linkedin.com/company/mergelith-agency/?viewAsMember=true"
+              href="https://www.linkedin.com/in/sasha-g-aleksic-354677154/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-navy/20 hover:text-gold transition-colors"

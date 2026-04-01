@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
     { label: 'The Solution', id: 'solution' },
     { label: 'How It Works', id: 'how-it-works' },
     { label: 'Systems', id: 'what-we-install' },
-    { label: 'AI SEO', id: 'ai-seo' },
+    { label: 'AEO', id: 'aeo' },
     { label: 'Industries', id: 'industries' },
     { label: 'Intelligence', id: 'blog' },
     { label: 'Founder', id: 'about' },
@@ -57,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           
           <div className="flex items-center gap-6 border-l border-navy/10 pl-8">
             <a 
-              href="https://www.linkedin.com/company/mergelith-agency/?viewAsMember=true"
+              href="https://www.linkedin.com/in/sasha-g-aleksic-354677154/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-navy/40 hover:text-gold transition-colors"
