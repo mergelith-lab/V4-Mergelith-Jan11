@@ -8,33 +8,30 @@ const blogPosts = [
     title: "Most CGT Companies Are Invisible in AI Search — Here’s Why and How to Fix It",
     excerpt: "Most CGT companies are doing everything right—scientifically. But AI search cannot find them. If AI cannot find you, you are not even in the conversation. Learn how to shift from ranking to being selected.",
     date: "March 28, 2026",
-    author: "Sasha Aleksic",
+    author: "Mergelith Team",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&q=80&w=800",
-    category: "AEO Strategy",
-    url: "https://www.linkedin.com/pulse/most-cgt-companies-invisible-ai-search-heres-why-how-fix-aleksic-pyeyc/"
+    category: "AEO Strategy"
   },
   {
-    id: 'ai-voice-agent-case-study',
-    title: "The $186K Reactivation: How AI Voice Agents are Rescuing 'Dead' CRM Leads",
-    excerpt: "Most businesses are sitting on a goldmine of dormant leads. Discover how a multi-location Med Spa used institutional AI to reactivate their database and increase appointments by 42%.",
-    date: "March 11, 2026",
-    author: "Sasha Aleksic",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=800",
-    category: "Case Study",
-    url: "https://www.linkedin.com/pulse/outbound-ai-agents-turning-your-database-revenue-engine-aleksic-wbdtc/"
+    id: 'geo-moat',
+    title: "GEO: The New Competitive Moat for Institutional Advisory",
+    excerpt: "Traditional rankings are no longer enough. To win in 2026, firms must ensure their brand is embedded in the training data of major AI models. Learn the GEO strategy for institutional growth.",
+    date: "March 15, 2026",
+    author: "Mergelith Team",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+    category: "GEO Strategy"
   },
   {
     id: 'growth-systems',
     title: "Growth Isn't More Leads; It's Better Systems",
     excerpt: "The bottleneck for most high-growth firms isn't lead generation—it's lead activation. Learn why institutional systems beat marketing spend every single time.",
     date: "March 08, 2026",
-    author: "Sasha Aleksic",
+    author: "Mergelith Team",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    category: "Strategy",
-    url: "https://www.linkedin.com/pulse/growth-isnt-more-leads-its-better-systems-sasha-g-aleksic-dwmzc/"
+    category: "Strategy"
   }
 ];
 

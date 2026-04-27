@@ -15,7 +15,7 @@ const PrivacyProtocol: React.FC = () => {
         </div>
 
         <p className="text-navy/70 text-2xl font-light leading-relaxed max-w-3xl mx-auto">
-          In high-stakes M&A, your data is your alpha. We operate under a "Zero-Knowledge" infrastructure, ensuring your proprietary deal flow never trains public models.
+          In high-stakes advisory, your data is your alpha. We operate under a "Zero-Knowledge" infrastructure, ensuring your proprietary data never trains public models.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 text-left">

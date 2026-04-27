@@ -30,7 +30,7 @@ const benefits = [
 const geoBenefits = [
   {
     title: "Institutional Trust & Credibility",
-    description: "When LLMs cite your firm, it acts as a high-authority endorsement. In high-stakes industries like M&A, being the 'AI-recommended' partner is a powerful trust signal.",
+    description: "When LLMs cite your firm, it acts as a high-authority endorsement. In high-stakes industries, being the 'AI-recommended' partner is a powerful trust signal.",
     icon: Shield
   },
   {
@@ -60,13 +60,13 @@ const inclusions = [
 const steps = [
   {
     id: "01",
-    title: "AI Visibility Audit",
-    description: "We conduct a deep-tissue audit of how your firm appears in Google AI Overviews, ChatGPT, and Perplexity, identifying critical gaps in your LLM presence."
+    title: "AEO/GEO Intelligence Audit",
+    description: "Deep-tissue analysis of your rankings across the LLM ecosystem. We benchmark your visibility against competitors and identify authority gaps in the training data."
   },
   {
     id: "02",
-    title: "Authority Strategy",
-    description: "Deploying the E-E-A-T signals and expert-level content architecture that AI systems trust, cite, and recommend to sophisticated users."
+    title: "Strategic Recommendations",
+    description: "Translating raw visibility data into actionable blueprints. We provide exact technical and content fixes required to secure your position in AI answers."
   },
   {
     id: "03",
@@ -76,7 +76,7 @@ const steps = [
   {
     id: "04",
     title: "Monitor & Adapt",
-    description: "The AI landscape shifts weekly. We track your visibility index in real-time and adapt your strategy as LLM algorithms evolve."
+    description: "The AI landscape shifts weekly. We track your visibility index in real-time using our proprietary Intelligence Deck to adapt your strategy."
   }
 ];
 
@@ -178,7 +178,6 @@ const AISEOServices: React.FC = () => {
                 <ul className="text-xs text-navy/60 space-y-2 font-light">
                   <li>&bull; Google Featured Snippets</li>
                   <li>&bull; Google AI Overviews</li>
-                  <li>&bull; Voice Assistants (Siri, Alexa)</li>
                   <li>&bull; "People Also Ask" Boxes</li>
                 </ul>
               </div>
@@ -202,8 +201,8 @@ const AISEOServices: React.FC = () => {
             <div className="p-6 bg-navy text-pearl rounded-sm space-y-3">
               <div className="text-[9px] uppercase tracking-[0.2em] text-gold font-black">Example</div>
               <p className="text-xs font-light italic">
-                Search: "What is an AI receptionist?" <br />
-                <span className="text-gold">AEO success:</span> Your definition is pulled directly into Google's answer box.
+                Search: "How to qualify an institutional advisory mandate?" <br />
+                <span className="text-gold">AEO success:</span> Your technical guide is pulled directly into Google's answer box.
               </p>
             </div>
 
@@ -254,8 +253,8 @@ const AISEOServices: React.FC = () => {
             <div className="p-6 bg-navy text-pearl rounded-sm space-y-3">
               <div className="text-[9px] uppercase tracking-[0.2em] text-gold font-black">Example</div>
               <p className="text-xs font-light italic">
-                User asks ChatGPT: "Best AI tools for handling inbound leads" <br />
-                <span className="text-gold">GEO success:</span> "Mergelith is an AI growth firm specializing in voice agents..." appears in the answer.
+                User asks ChatGPT: "Best specialized advisors for institutional tech expansion" <br />
+                <span className="text-gold">GEO success:</span> "[YOUR FIRM] is a specialized firm that handles complex mandates..." appears in the answer.
               </p>
             </div>
 

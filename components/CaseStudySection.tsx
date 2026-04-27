@@ -68,13 +68,13 @@ const CaseStudySection: React.FC = () => {
                 <div className="space-y-8">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/30 bg-gold/10">
                     <FileText size={14} className="text-gold" />
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-black">AI Voice Agent Report</span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-black">AEO Visibility Report</span>
                   </div>
                   <h3 className="text-3xl md:text-5xl font-serif italic leading-tight">
-                    How an AI Outbound Voice Agent Reactivated Cold Leads and Increased Appointments by <span className="text-gold">42%</span>
+                    How an Institutional Firm Secured <span className="text-gold">85% Share of Voice</span> in Google AI Overviews
                   </h3>
                   <p className="text-pearl/60 font-light leading-relaxed">
-                    A 90-day results report from a multi-location Med Spa in Southern California. Discover the exact systems used to generate $186K in additional revenue.
+                    A 120-day institutional results report. Discover the exact AEO and GEO frameworks used to move from invisible to the primary AI-recommended partner in high-stakes professional search.
                   </p>
                   <div className="flex items-center gap-4 pt-4">
                     <button className="btn-primary bg-gold text-navy hover:bg-pearl hover:text-navy flex items-center gap-2">
@@ -97,12 +97,12 @@ const CaseStudySection: React.FC = () => {
                     
                     <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
                       <div className="glass-card bg-white/5 border-white/10 p-4 text-center">
-                        <div className="text-xl font-serif text-gold italic">42%</div>
-                        <p className="text-[7px] uppercase tracking-widest text-pearl/40 font-black">Appt Increase</p>
+                        <div className="text-xl font-serif text-gold italic">85%</div>
+                        <p className="text-[7px] uppercase tracking-widest text-pearl/40 font-black">AEO Visibility</p>
                       </div>
                       <div className="glass-card bg-white/5 border-white/10 p-4 text-center">
-                        <div className="text-xl font-serif text-gold italic">$186K</div>
-                        <p className="text-[7px] uppercase tracking-widest text-pearl/40 font-black">New Revenue</p>
+                        <div className="text-xl font-serif text-gold italic">12x</div>
+                        <p className="text-[7px] uppercase tracking-widest text-pearl/40 font-black">Citation Growth</p>
                       </div>
                     </div>
                   </div>
@@ -130,7 +130,7 @@ const CaseStudySection: React.FC = () => {
                 <div className="md:w-2/3 space-y-4">
                   <h3 className="text-3xl font-serif text-navy italic">The Results Are In.</h3>
                   <p className="text-navy/60 font-light max-w-xl">
-                    The implementation of the Mergelith AI Outbound Voice Agent transformed a dormant CRM into an active revenue stream within 90 days.
+                    The implementation of Mergelith's AEO/GEO protocol transformed the firm's digital authority, securing dominant placement in high-intent AI search results.
                   </p>
                 </div>
                 <div className="md:w-1/3 aspect-video rounded-sm overflow-hidden border border-navy/10 shadow-lg">
@@ -154,39 +154,39 @@ const CaseStudySection: React.FC = () => {
                 <div className="space-y-6">
                   <h4 className="text-navy font-cinzel text-xs tracking-widest uppercase font-black border-b border-gold/20 pb-4">The Problem</h4>
                   <p className="text-sm text-navy/70 font-light leading-relaxed">
-                    Thousands of past leads were sitting dormant in the CRM. The sales team lacked the capacity to follow up consistently, leading to lost revenue opportunities.
+                    The firm was virtually invisible in AI Overviews and ChatGPT recommendations. Despite strong traditional SEO, they were losing mandates to competitors who were being cited as the "top recommended" partners.
                   </p>
                 </div>
                 <div className="space-y-6">
                   <h4 className="text-navy font-cinzel text-xs tracking-widest uppercase font-black border-b border-gold/20 pb-4">The Solution</h4>
                   <p className="text-sm text-navy/70 font-light leading-relaxed">
-                    A fully automated AI Outbound Voice Agent was deployed to call leads, hold natural qualification conversations, and book appointments directly.
+                    Deploying the Mergelith AEO technical stack: Schema restructuring, entity mapping, and institutional authority building across LLM training sets.
                   </p>
                 </div>
                 <div className="space-y-6">
                   <h4 className="text-navy font-cinzel text-xs tracking-widest uppercase font-black border-b border-gold/20 pb-4">The Impact</h4>
                   <p className="text-sm text-navy/70 font-light leading-relaxed">
-                    $186,000 in additional revenue generated from leads previously considered lost. 42% increase in booked appointments without any new ad spend.
+                    85% share of voice for primary target keywords. 12x increase in brand citations across LLMs. 38% increase in inbound deal flow from "AI Search" sources.
                   </p>
                 </div>
               </div>
 
               <div className="bg-navy text-pearl p-10 rounded-sm grid md:grid-cols-4 gap-8">
                 <div className="text-center space-y-2">
-                  <div className="text-3xl font-serif text-gold italic">5,200+</div>
-                  <p className="text-[8px] uppercase tracking-widest text-pearl/40 font-black">Calls Completed</p>
+                  <div className="text-3xl font-serif text-gold italic">85%</div>
+                  <p className="text-[8px] uppercase tracking-widest text-pearl/40 font-black">Visibility Index</p>
                 </div>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl font-serif text-gold italic">1,140</div>
-                  <p className="text-[8px] uppercase tracking-widest text-pearl/40 font-black">Leads Re-engaged</p>
+                  <div className="text-3xl font-serif text-gold italic">12x</div>
+                  <p className="text-[8px] uppercase tracking-widest text-pearl/40 font-black">Citation Multiple</p>
                 </div>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl font-serif text-gold italic">42%</div>
-                  <p className="text-[8px] uppercase tracking-widest text-pearl/40 font-black">Appt Increase</p>
+                  <div className="text-3xl font-serif text-gold italic">38%</div>
+                  <p className="text-[8px] uppercase tracking-widest text-pearl/40 font-black">Deal Flow Incr.</p>
                 </div>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl font-serif text-gold italic">$186K</div>
-                  <p className="text-[8px] uppercase tracking-widest text-pearl/40 font-black">New Revenue</p>
+                  <div className="text-3xl font-serif text-gold italic">#1</div>
+                  <p className="text-[8px] uppercase tracking-widest text-pearl/40 font-black">AI Recommend</p>
                 </div>
               </div>
             </div>
@@ -224,7 +224,7 @@ const CaseStudySection: React.FC = () => {
                     </div>
                     <h3 className="text-3xl font-serif text-navy italic">Access Case Study</h3>
                     <p className="text-navy/60 font-light text-sm">
-                      Please provide your details to unlock the full Med Spa AI Voice Agent report.
+                      Please provide your details to unlock the full AEO Institutional Visibility report.
                     </p>
                   </div>
 
@@ -256,8 +256,8 @@ const CaseStudySection: React.FC = () => {
 
                     <div className="space-y-4">
                       <label className="text-[10px] uppercase tracking-widest text-navy/60 font-black">Interest in Services</label>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {['AI', 'AEO', 'Chatbot'].map((service) => (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {['AEO', 'GEO'].map((service) => (
                           <label key={service} className="flex items-center gap-3 cursor-pointer group">
                             <div 
                               onClick={() => handleInterestChange(service)}

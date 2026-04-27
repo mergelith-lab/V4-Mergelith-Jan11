@@ -3,12 +3,12 @@ import { CheckCircle2 } from 'lucide-react';
 
 const SolutionSection: React.FC = () => {
   const features = [
-    "Calls new leads instantly (30–60 seconds)",
-    "Qualifies with a short conversation",
-    "Books the appointment automatically",
-    "Connects hot leads to a rep in real time",
-    "Sends SMS/email follow-up to confirm",
-    "Intercepts & Routes Fraud/Spam (e.g. Google Verification)"
+    "Pitch decks built to close -- not just to impress",
+    "Battle cards your sales team will actually use in the field",
+    "Brand kits that make you look like the obvious choice",
+    "GTM strategy documents that map your path to more customers",
+    "Campaign briefs that translate your offer into a growth plan",
+    "All delivered in 48 hours. Fixed price. No surprises."
   ];
 
   return (
@@ -18,15 +18,15 @@ const SolutionSection: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Solution</h3>
             <h2 className="text-4xl md:text-6xl font-serif text-navy italic leading-tight">
-              A Revenue-Driven Inbound <br />
-              <span className="text-gold">Conversion Engine</span>
+              A Commercial Strategist <br />
+              <span className="text-gold">on Retainer.</span>
             </h2>
-            <p className="text-navy/40 text-sm italic">(Not just a receptionist)</p>
+            <p className="text-navy/40 text-sm italic">(For Less Than One Freelance Invoice)</p>
           </div>
           
           <div className="space-y-6">
             <p className="text-xl text-navy/70 font-light leading-relaxed border-l-2 border-gold pl-8">
-              When someone contacts you, our system responds immediately:
+              Mergelith is a Marketing-as-a-Service platform built by a 20+ year corporate commercial strategist. The same systematic approach that scaled global companies — now applied to your business.
             </p>
             
             <ul className="space-y-4">
@@ -40,8 +40,8 @@ const SolutionSection: React.FC = () => {
 
             <div className="pt-8">
               <p className="text-2xl font-serif text-navy italic leading-relaxed">
-                You do not buy “AI calling.” <br />
-                <span className="text-gold">You buy more closed revenue per lead.</span>
+                Mergelith delivers — <br />
+                <span className="text-gold">you deploy.</span>
               </p>
             </div>
 
@@ -52,28 +52,28 @@ const SolutionSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="btn-primary px-10 py-4 text-[10px] tracking-widest inline-block"
               >
-                BOOK A DEMO
+                START YOUR FIRST REQUEST
               </a>
             </div>
 
             <div className="mt-12 p-8 bg-gold/5 border border-gold/20 rounded-sm space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-gold font-black">Advanced Routing Protocol</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-gold font-black">Corporate Strategy Active</p>
               </div>
               <p className="text-navy/70 text-sm font-light italic leading-relaxed">
-                "If the system detects an urgent Google Listing Verification or Voice Search alert, it automatically executes a priority bypass—routing the call directly to your secure line at <span className="text-navy font-bold">714-882-0984</span> for immediate resolution."
+                "Your deliverable arrives as a Google Doc, PDF, or PowerPoint. Complex deliverables include a Loom walkthrough. You review, request any revisions, and execute."
               </p>
             </div>
           </div>
         </div>
 
         <div className="lg:w-1/2 relative">
-          <div className="aspect-square rounded-sm overflow-hidden shadow-2xl border border-navy/10 relative z-10">
+          <div className="aspect-square rounded-sm overflow-hidden shadow-2xl border border-navy/10 relative z-10 text-center flex items-center justify-center bg-navy/5">
             <img 
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" 
-              alt="AI Conversion Engine" 
-              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800" 
+              alt="AEO Protocol Illustration" 
+              className="w-full h-full object-cover opacity-80"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-navy/20 mix-blend-multiply"></div>

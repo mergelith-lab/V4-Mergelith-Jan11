@@ -1,5 +1,7 @@
 import React from 'react';
-import { Zap, ShieldCheck, Clock, ArrowRight } from 'lucide-react';
+import { Zap, ShieldCheck, Clock, ArrowRight, LineChart } from 'lucide-react';
+
+import PricingGridTable from './PricingGridTable.tsx';
 
 const Hero: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -27,57 +29,58 @@ const Hero: React.FC = () => {
         <div className="space-y-10 mb-20">
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-navy/10 bg-white/50 backdrop-blur-md mb-6 animate-fade-in shadow-sm">
             <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse shadow-[0_0_8px_#D4AF37]"></span>
-            <span className="text-[11px] uppercase tracking-[0.4em] text-navy font-black">AI Agency &bull; Lake Elsinore, CA</span>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-navy font-black">Marketing-as-a-Service &bull; Lake Elsinore, CA</span>
           </div>
           
           <div className="space-y-6">
             <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] text-navy tracking-tight max-w-5xl mx-auto">
-              Have AI <br />
-              <span className="italic text-gold font-serif drop-shadow-sm text-6xl md:text-9xl">answer your calls</span>
+              Corporate-Grade Marketing. <br />
+              <span className="italic text-gold font-serif drop-shadow-sm text-6xl md:text-9xl">Delivered in 48 Hours.</span>
             </h1>
             <div className="space-y-4 max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl text-navy/70 font-light leading-relaxed">
-                Stop losing deals to slow follow-up and missed calls. We install AI-powered systems that handle your inbound instantly.
+                Stop losing deals to competitors with better materials. Get pitch decks, brand kits, battle cards, and campaign briefs built by a commercial strategist — without the agency price tag, the slow timeline, or the contract.
               </p>
             </div>
           </div>
           
           <div className="pt-6 flex flex-col md:flex-row items-center justify-center gap-6">
             <a 
-              href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
+              href="https://calendly.com/sasha-g-aleksic/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center"
             >
-              BOOK A 15-MINUTE DEMO
+              BOOK A STRATEGY CALL
             </a>
           </div>
 
-          <p className="text-[10px] uppercase tracking-[0.3em] text-navy/40 font-bold">
-            Works with your existing forms, ads, website, and CRM. Live in days, not months.
-          </p>
+          <div className="pt-12">
+            <h2 className="text-[10px] uppercase tracking-[0.5em] text-gold font-black mb-8">Service Tiers & Deliverables</h2>
+            <PricingGridTable />
+          </div>
         </div>
 
         {/* Social Proof Strip */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-12 border-y border-navy/5 bg-white/30 backdrop-blur-sm rounded-sm">
           <div className="flex flex-col items-center gap-2">
-            <Clock className="w-5 h-5 text-gold" />
-            <p className="text-navy font-serif italic text-lg">“Instant callback in &lt; 60s”</p>
+            <Zap className="w-5 h-5 text-gold" />
+            <p className="text-navy font-serif italic text-lg">“48-Hour Turnaround”</p>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <Zap className="w-5 h-5 text-gold" />
-            <p className="text-navy font-serif italic text-lg">“Recovers missed calls 24/7”</p>
+            <LineChart className="w-5 h-5 text-gold" />
+            <p className="text-navy font-serif italic text-lg">“Fixed Monthly Price”</p>
           </div>
           <div className="flex flex-col items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-gold" />
-            <p className="text-navy font-serif italic text-lg">“SOC2 & ISO 27001 Compliant”</p>
+            <p className="text-navy font-serif italic text-lg">“No Long-Term Contracts”</p>
           </div>
           <div className="flex flex-col items-center gap-3">
             <div className="flex gap-2">
-              <div className="px-2 py-0.5 border border-navy/20 rounded text-[9px] font-black text-navy/40 uppercase tracking-tighter">SOC2</div>
-              <div className="px-2 py-0.5 border border-navy/20 rounded text-[9px] font-black text-navy/40 uppercase tracking-tighter">ISO 27001</div>
+              <div className="px-2 py-0.5 border border-navy/20 rounded text-[9px] font-black text-navy/40 uppercase tracking-tighter">B2B</div>
+              <div className="px-2 py-0.5 border border-navy/20 rounded text-[9px] font-black text-navy/40 uppercase tracking-tighter">Growth</div>
             </div>
-            <p className="text-navy font-serif italic text-lg">“Enterprise-Grade Security”</p>
+            <p className="text-navy font-serif italic text-lg">“Scale With Precision”</p>
           </div>
         </div>
       </div>

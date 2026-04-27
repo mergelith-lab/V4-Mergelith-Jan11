@@ -1,26 +1,26 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { TrendingUp, UserMinus, Zap, ShieldCheck } from 'lucide-react';
+import { TrendingUp, Award, Zap, ShieldCheck } from 'lucide-react';
 
 const benefits = [
   {
-    title: "Reducing Lost Calls",
-    desc: "Track AI Operator load and follow up on missed calls. Optimally allocate resources and ensure no lead is ignored.",
-    icon: UserMinus
+    title: "AI Search Dominance",
+    desc: "Achieve the highest Visibility Index in your niche. Ensure your firm is the top recommended result in AI Overviews.",
+    icon: Award
   },
   {
-    title: "Increasing Efficiency",
-    desc: "Distribution of calls to AI Operators and automated information delivery speeds up processing of incoming inquiries.",
+    title: "LLM Institutionalization",
+    desc: "Embed your brand authority directly into the training datasets of major LLMs, securing your long-term digital moat.",
     icon: Zap
   },
   {
-    title: "Improving Calling Efficiency",
-    desc: "Intelligent algorithms skip answering machines and distribute calls to free agents, optimizing mass outreach.",
+    title: "Citation Growth",
+    desc: "Systematically increase the number of high-authority citations your firm receives from generative engines.",
     icon: TrendingUp
   },
   {
-    title: "Compliance & Security",
-    desc: "Our AI follows strict compliance for cold calling business numbers, ensuring your operations remain within legal boundaries. SOC2 & ISO 27001 compliant infrastructure.",
+    title: "Compliance & Integrity",
+    desc: "Our AEO framework follows all ethical guidelines for search transparency and entity validation. SOC2 compliant infrastructure.",
     icon: ShieldCheck
   }
 ];
@@ -58,18 +58,18 @@ const Benefits: React.FC = () => {
             <div>
               <h2 className="text-[10px] uppercase tracking-[0.5em] text-[#64FFDA] font-bold mb-4">The Impact</h2>
               <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-                Empowering Businesses with Cutting-Edge AI
+                Future-Proofing Your Institutional Authority
               </h3>
               <p className="text-[#8892B0] text-lg font-light leading-relaxed">
-                Our AI Voice Agents analyze customer inquiries and provide instant information, significantly reducing the load on your employees so they can focus on complex problem-solving.
+                As search shifts from lists of links to generative answers, Mergelith ensures your firm remains at the center of the conversation. We optimize for the models that drive modern decision-making.
               </p>
             </div>
             
             <div className="p-8 glass-card rounded-2xl bg-gradient-to-br from-[#64FFDA]/10 to-transparent border-[#64FFDA]/20">
-              <div className="text-4xl font-display font-bold text-white mb-2">10,000+</div>
-              <p className="text-[#64FFDA] text-xs uppercase tracking-widest font-bold mb-4">Leads Dialed Simultaneously</p>
+              <div className="text-4xl font-display font-bold text-white mb-2">100+</div>
+              <p className="text-[#64FFDA] text-xs uppercase tracking-widest font-bold mb-4">AEO Data Points Analyzed Weekly</p>
               <p className="text-[#8892B0] text-sm font-light">
-                Scale your outreach like never before. Our infrastructure handles massive volumes without sacrificing quality or connection.
+                We track every shift in AI search behavior to keep your firm ahead of the curve. Scaling your authority requires deep, data-driven intelligence.
               </p>
             </div>
           </motion.div>

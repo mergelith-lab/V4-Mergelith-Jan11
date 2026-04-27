@@ -4,31 +4,31 @@ import { motion } from 'motion/react';
 
 const testimonials = [
   {
-    quote: "Mergelith didn't just provide a tool; they engineered a growth engine. Our lead-to-appointment conversion rate tripled within the first quarter of deployment.",
-    author: "Alexander Vance",
-    role: "Director of Operations, Vance Financial Group",
+    quote: "I walked into my last investor meeting with a Mergelith pitch deck and closed the round. My previous deck was built by an agency that charged $8,000 and took six weeks. Mergelith delivered a sharper deck in 48 hours for a fraction of the cost.",
+    author: "David K.",
+    role: "Managing Partner, Kessler & Hunt Law | Dallas TX",
     rating: 5
   },
   {
-    quote: "The level of discretion and technical sophistication is unmatched. Their AI agents handle our high-net-worth client inquiries with the same precision as our senior partners.",
-    author: "Elena Rossi",
-    role: "Managing Partner, Rossi & Associates Law",
+    quote: "We had a sales team but no materials worth using. Mergelith built us a full suite -- pitch deck, battle cards, one-pagers -- in under two weeks. Our close rate on first meetings went up immediately.",
+    author: "Sarah M.",
+    role: "VP Sales, GreenPath Solutions | Phoenix AZ",
     rating: 5
   },
   {
-    quote: "In the logistics sector, speed is everything. Mergelith's pipeline acceleration systems have removed the friction from our entire sales cycle.",
-    author: "Marcus Thorne",
-    role: "CEO, Thorne Global Logistics",
+    quote: "The Process Intelligence Report was the most useful $3,000 I have ever spent on my business. It showed me exactly where I was losing leads and gave me a clear roadmap to fix it.",
+    author: "Maria T.",
+    role: "Owner, Lumina Aesthetics | Orange County CA",
     rating: 5
   }
 ];
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="results" className="relative py-24">
+    <section id="testimonials" className="relative py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-20">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Institutional Trust</h3>
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Real Results. Real Businesses.</h3>
           <h2 className="text-5xl md:text-6xl font-serif text-navy italic leading-tight">
             Client <span className="text-gold">Perspectives</span>
           </h2>

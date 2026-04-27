@@ -1,16 +1,9 @@
 import React from 'react';
-import { Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <footer className="bg-pearl border-t border-navy/10 py-24">
+    <footer className="bg-pearl border-t border-navy/10 py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-16">
           <div className="space-y-6">
@@ -22,11 +15,11 @@ const Footer: React.FC = () => {
             </div>
             <div className="space-y-3">
               <p className="text-sm text-navy/60 max-w-xs font-light leading-relaxed">
-                Revenue systems. Not tools. If you are generating leads, Mergelith makes sure you convert them faster than your competitors.
+                Marketing-as-a-Service platform for high-stakes businesses. Corporate-grade marketing materials delivered in 48 hours.
               </p>
               <div className="pt-2">
                 <p className="text-[11px] text-gold font-black tracking-[0.2em] uppercase">
-                  Lake Elsinore, California &bull; ADVISORY: <a href="tel:714-477-7490" className="hover:text-navy transition-colors">714-477-7490</a>
+                  Lake Elsinore, California &bull; ADVISORY: <a href="tel:7148820984" className="hover:text-navy transition-colors">714-882-0984</a>
                 </p>
               </div>
             </div>
@@ -34,20 +27,26 @@ const Footer: React.FC = () => {
 
           <div className="grid grid-cols-2 gap-20">
             <div className="space-y-6">
-              <h4 className="text-[11px] uppercase tracking-[0.4em] text-gold font-black">Systems</h4>
-              <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0">
-                <li><button onClick={() => scrollTo('problem')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">The Problem</button></li>
-                <li><button onClick={() => scrollTo('solution')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">The Solution</button></li>
-                <li><button onClick={() => scrollTo('what-we-install')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Systems</button></li>
+              <h4 className="text-[11px] uppercase tracking-[0.4em] text-gold font-black">Engagement</h4>
+              <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0 font-medium tracking-widest text-[10px] uppercase">
+                <li><Link to="/how-it-works" className="hover:text-navy transition-colors">How It Works</Link></li>
+                <li><Link to="/pricing" className="hover:text-navy transition-colors">Pricing</Link></li>
+                <li><Link to="/services" className="hover:text-navy transition-colors">Services</Link></li>
               </ul>
             </div>
             <div className="space-y-6">
-              <h4 className="text-[11px] uppercase tracking-[0.4em] text-gold font-black">Company</h4>
-              <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0">
-                <li><button onClick={() => scrollTo('blog')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Intelligence</button></li>
-                <li><button onClick={() => scrollTo('about')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Founder</button></li>
-                <li><button onClick={() => scrollTo('faq')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">FAQ</button></li>
-                <li><button onClick={() => scrollTo('contact')} className="hover:text-navy transition-colors bg-transparent border-none p-0 cursor-pointer text-sm font-medium uppercase tracking-widest text-left">Contact</button></li>
+              <h4 className="text-[11px] uppercase tracking-[0.4em] text-gold font-black">Links</h4>
+              <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0 font-medium tracking-widest text-[10px] uppercase">
+                <li><Link to="/get-started" className="hover:text-navy transition-colors">Get Started</Link></li>
+                <li><a 
+                      href="https://calendly.com/sasha-g-aleksic/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-navy transition-colors text-gold"
+                    >
+                      Book Meeting
+                    </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -55,24 +54,13 @@ const Footer: React.FC = () => {
 
         <div className="mt-28 pt-10 border-t border-navy/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[11px] text-navy/20 uppercase tracking-[0.5em] font-black">
-            &copy; {new Date().getFullYear()} Mergelith Growth Partners. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Mergelith. All Rights Reserved.
           </p>
           <div className="flex gap-12 items-center">
             <div className="flex gap-3">
-              <span className="px-2 py-0.5 border border-navy/10 rounded text-[8px] font-black text-navy/30 uppercase tracking-widest">SOC2</span>
-              <span className="px-2 py-0.5 border border-navy/10 rounded text-[8px] font-black text-navy/30 uppercase tracking-widest">ISO 27001</span>
+              <span className="px-2 py-0.5 border border-navy/10 rounded text-[8px] font-black text-navy/40 uppercase tracking-widest">B2B Growth</span>
+              <span className="px-2 py-0.5 border border-navy/10 rounded text-[8px] font-black text-navy/40 uppercase tracking-widest">Strategy</span>
             </div>
-            <a 
-              href="https://www.linkedin.com/in/sasha-g-aleksic-354677154/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-navy/20 hover:text-gold transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={16} />
-            </a>
-            <button onClick={() => scrollTo('privacy-protocol')} className="text-[11px] text-navy/20 uppercase tracking-[0.3em] hover:text-gold transition-colors bg-transparent border-none p-0 cursor-pointer font-black">Security Protocol</button>
-            <button onClick={() => scrollTo('contact')} className="text-[11px] text-navy/20 uppercase tracking-[0.3em] hover:text-gold transition-colors bg-transparent border-none p-0 cursor-pointer font-black">Terms of Engagement</button>
           </div>
         </div>
       </div>

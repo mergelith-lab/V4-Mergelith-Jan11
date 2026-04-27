@@ -5,24 +5,21 @@ const HowItWorks: React.FC = () => {
   const steps = [
     {
       number: "01",
-      title: "Capture",
-      desc: "Works with website forms, Facebook/Google lead forms, landing pages, missed calls, and email inquiries.",
-      icon: MousePointer2,
-      tags: ["Forms", "Ads", "Missed Calls"]
+      title: "Submit Your Request",
+      desc: "Log in and submit your request in any format -- a one-line description or a full brief. No templates required. Tell us what you need and what business outcome it serves.",
+      icon: MousePointer2
     },
     {
       number: "02",
-      title: "Convert",
-      desc: "AI calls instantly to confirm intent, ask qualifying questions, route to the right person, and book time on the calendar.",
-      icon: RefreshCw,
-      tags: ["Instant Call", "Qualify", "Book"]
+      title: "We Build It in 48 Hours",
+      desc: "Mergelith reviews your request and confirms scope. The deliverable is built in 48 hours -- a corporate-grade document designed to get you more customers. One active task at a time.",
+      icon: RefreshCw
     },
     {
       number: "03",
-      title: "Close",
-      desc: "Your team receives booked meetings, lead summaries with qualification scores, recordings, and CRM updates.",
-      icon: Target,
-      tags: ["Meetings", "CRM Sync", "Revenue"]
+      title: "Receive & Execute",
+      desc: "Your deliverable arrives as a Google Doc, PDF, or PowerPoint. Review, request any revisions, and execute. Mergelith delivers -- you deploy.",
+      icon: Target
     }
   ];
 
@@ -30,8 +27,9 @@ const HowItWorks: React.FC = () => {
     <section id="how-it-works" className="scroll-mt-32">
       <div className="space-y-20">
         <div className="text-center space-y-4">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Process</h3>
-          <h2 className="text-4xl md:text-6xl font-serif text-navy italic">How It Works</h2>
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Velocity</h3>
+          <h2 className="text-4xl md:text-6xl font-serif text-navy italic">Three Steps. No Agency Overhead.</h2>
+          <p className="text-navy/60 font-light">No retainer lock-ins. No onboarding calls that go nowhere. No waiting six weeks for a deck.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -48,13 +46,6 @@ const HowItWorks: React.FC = () => {
                 <p className="text-navy/60 text-sm font-light leading-relaxed">
                   {step.desc}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {step.tags.map((tag, i) => (
-                    <span key={i} className="text-[9px] uppercase tracking-widest px-2 py-1 bg-navy/5 text-navy/40 font-black rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}

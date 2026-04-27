@@ -12,7 +12,7 @@ async function startServer() {
 
   app.use(express.json());
 
-  // API route to handle chatbot inquiries
+  // API route to handle institutional inquiries
   app.post("/api/send-inquiry", (req, res) => {
     const { name, firm, email, objective } = req.body;
     
@@ -35,7 +35,7 @@ async function startServer() {
 
     res.json({ 
       success: true, 
-      message: "Inquiry successfully transmitted to Sasha Aleksic." 
+      message: "Inquiry successfully transmitted to the Mergelith Strategy Team." 
     });
   });
 

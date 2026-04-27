@@ -3,19 +3,19 @@ import { CheckCircle2, Package } from 'lucide-react';
 
 const WhoThisIsFor: React.FC = () => {
   const fits = [
-    "Generate inbound leads from ads or website forms",
-    "Miss calls or respond slowly",
-    "Have a sales team that cannot keep up",
-    "Want more booked appointments without hiring SDRs",
-    "Have a large old CRM you are not monetizing"
+    "You are an established authority but appear invisible in ChatGPT or Perplexity results.",
+    "Your competitors are capturing the 'Answer Slot' in Google AI Overviews.",
+    "You want to track your AI Visibility Index across 17+ generative engines.",
+    "You need to protect your institutional brand from AI hallucinations or misattribution.",
+    "You want a long-term digital moat by encoding your brand into LLM training data."
   ];
 
   const deliverables = [
-    "AI call flows and qualification logic",
-    "Booking + routing rules",
-    "Calendar + CRM integration",
-    "Follow-up sequences (SMS/email)",
-    "Reporting dashboard (speed-to-lead, booking rate, show rate)"
+    "AEO Integrity Audit & Visibility Scorecard",
+    "Structured Entity Mapping (Schema Architecture)",
+    "GEO Protocol Implementation for LLM Citations",
+    "Competitor AI Benchmarking & Gap Analysis",
+    "Real-Time AEO Intelligence Dashboard"
   ];
 
   return (
@@ -32,15 +32,21 @@ const WhoThisIsFor: React.FC = () => {
               </h2>
             </div>
             <p className="text-xl text-navy/70 font-light leading-relaxed border-l-2 border-gold pl-8">
-              You are a fit if you are generating leads but struggling with the conversion gap.
+              Mergelith is for anyone who wants to monitor their AI visibility and systematically improve how major models perceive and recommend their brand.
             </p>
           </div>
           
           <div className="lg:w-1/2 grid grid-cols-1 gap-6">
-            {fits.map((fit, idx) => (
-              <div key={idx} className="flex items-start gap-4 p-6 bg-white border border-navy/5 shadow-sm hover:shadow-md transition-all">
-                <CheckCircle2 className="w-5 h-5 text-gold shrink-0 mt-1" />
-                <p className="text-navy font-medium">{fit}</p>
+            {[
+              "You want to know exactly what ChatGPT or Perplexity says about your brand.",
+              "You see competitors capturing the 'Answer Slot' in AI search results.",
+              "You want to track your AI Visibility Index across 17+ generative engines.",
+              "You need to protect your authority from AI hallucinations or misattribution.",
+              "You want a long-term digital moat by encoding your brand into LLM training data."
+            ].map((fit, idx) => (
+              <div key={idx} className="flex items-start gap-4 p-6 bg-white border border-navy/5 shadow-sm hover:shadow-md transition-all group">
+                <CheckCircle2 className="w-5 h-5 text-gold shrink-0 mt-1 group-hover:scale-110 transition-transform" />
+                <p className="text-navy font-medium leading-relaxed">{fit}</p>
               </div>
             ))}
           </div>
@@ -53,19 +59,19 @@ const WhoThisIsFor: React.FC = () => {
               <div className="w-16 h-16 bg-white/10 flex items-center justify-center rounded-sm">
                 <Package className="w-8 h-8 text-gold" />
               </div>
-              <h3 className="text-4xl font-serif italic">What You Get</h3>
-              <p className="text-pearl/60 font-light">Delivered as a done-for-you revenue system. We handle the engineering, you handle the closings.</p>
+              <h3 className="text-4xl font-serif italic">The AEO/GEO Stack</h3>
+              <p className="text-pearl/60 font-light">Delivered as a technical protocol that embeds your firm into the generative web. We own the optics; you own the authority.</p>
               <div className="pt-6">
-                <p className="text-[10px] uppercase tracking-[0.4em] text-gold font-black">Launch Timeline</p>
-                <p className="text-xl font-serif italic mt-2">Typically days, not months.</p>
+                <p className="text-[10px] uppercase tracking-[0.4em] text-gold font-black">Implementation Timeline</p>
+                <p className="text-xl font-serif italic mt-2">Active intelligence in 14 days.</p>
               </div>
             </div>
             
             <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
               {deliverables.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-sm">
+                <div key={idx} className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-sm hover:border-gold/30 transition-colors">
                   <div className="w-2 h-2 bg-gold rounded-full"></div>
-                  <span className="text-sm font-light">{item}</span>
+                  <span className="text-sm font-light tracking-wide">{item}</span>
                 </div>
               ))}
             </div>

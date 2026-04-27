@@ -1,5 +1,5 @@
 {
-  "name": "v4-mergelith---ai-growth-for-m&a3",
+  "name": "mergelith-institutional-ai",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,6 +17,7 @@
     "motion": "^12.34.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "react-router-dom": "^7.14.2",
     "tailwindcss": "^4.2.0",
     "tsx": "^4.21.0"
   },

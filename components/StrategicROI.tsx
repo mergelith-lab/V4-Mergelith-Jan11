@@ -1,41 +1,41 @@
 import React from 'react';
-import { TrendingUp, Zap, Trophy } from 'lucide-react';
+import { TrendingUp, Zap, Trophy, BarChart3 } from 'lucide-react';
 
-const WhySpeedToLead: React.FC = () => {
+const StrategicROI: React.FC = () => {
   const points = [
     {
-      title: "Catch Buyers at Peak Intent",
-      desc: "When you call quickly, you engage the lead while their problem is top-of-mind.",
+      title: "Secure the Answer Slot",
+      desc: "Being the direct answer in Google AI Overviews and ChatGPT Search eliminates the need for 'more ads'. You own the intent.",
       icon: Zap
     },
     {
-      title: "Beat Competitors to First Contact",
-      desc: "50% of sales go to the vendor that responds first. Speed is your competitive edge.",
+      title: "Establish Institutional Moats",
+      desc: "Encoding your brand into LLM training data creates a competitive advantage that traditional SEO cannot replicate.",
       icon: Trophy
     },
     {
-      title: "Reduce Lead Decay Dramatically",
-      desc: "Lead quality drops by 10x after just 5 minutes. We stop the bleeding.",
+      title: "Real-Time Intelligence",
+      desc: "Track your AI Visibility Index. If you aren't measuring your presence in generative results, you are flying blind.",
       icon: TrendingUp
     }
   ];
 
   return (
-    <section id="why-speed-to-lead" className="scroll-mt-32">
+    <section id="strategic-roi" className="scroll-mt-32">
       <div className="bg-navy p-12 md:p-24 rounded-sm relative overflow-hidden">
         {/* Decorative background text */}
         <div className="absolute top-0 right-0 text-[200px] font-serif text-white/5 select-none pointer-events-none leading-none -translate-y-1/4 translate-x-1/4">
-          ROI
+          AEO
         </div>
 
         <div className="relative z-10 space-y-16">
           <div className="max-w-3xl space-y-6">
             <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Performance</h3>
             <h2 className="text-4xl md:text-6xl font-serif text-pearl italic leading-tight">
-              Why This Produces <br />
-              <span className="text-gold">Huge ROI</span>
+              Why AEO Produces <br />
+              <span className="text-gold">Sustained ROI</span>
             </h2>
-            <p className="text-pearl/60 text-xl font-serif italic">"Speed Wins Deals"</p>
+            <p className="text-pearl/60 text-xl font-serif italic">"Visibility Wins Deals"</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -54,8 +54,8 @@ const WhySpeedToLead: React.FC = () => {
 
           <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
             <p className="text-pearl/80 text-xl font-light max-w-xl">
-              Most businesses do not need more leads. <br />
-              <span className="text-gold font-serif italic">They need faster conversion.</span>
+              Most firms do not need more content. <br />
+              <span className="text-gold font-serif italic">They need better AI distribution.</span>
             </p>
             <a 
               href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
@@ -63,7 +63,7 @@ const WhySpeedToLead: React.FC = () => {
               rel="noopener noreferrer"
               className="btn-primary bg-gold text-navy hover:bg-pearl px-10 py-4 text-[10px] tracking-widest"
             >
-              FIX MY LEAD RESPONSE SYSTEM
+              REQUEST AEO STRATEGY
             </a>
           </div>
         </div>
@@ -72,4 +72,4 @@ const WhySpeedToLead: React.FC = () => {
   );
 };
 
-export default WhySpeedToLead;
+export default StrategicROI;

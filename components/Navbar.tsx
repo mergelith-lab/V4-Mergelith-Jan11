@@ -1,28 +1,18 @@
 import React from 'react';
-import { Linkedin } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 interface NavbarProps {
   isScrolled: boolean;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+  const location = useLocation();
+  
   const navLinks = [
-    { label: 'The Problem', id: 'problem' },
-    { label: 'The Solution', id: 'solution' },
-    { label: 'How It Works', id: 'how-it-works' },
-    { label: 'Systems', id: 'what-we-install' },
-    { label: 'AEO', id: 'aeo' },
-    { label: 'Industries', id: 'industries' },
-    { label: 'Intelligence', id: 'blog' },
-    { label: 'Founder', id: 'about' },
-    { label: 'FAQ', id: 'faq' }
+    { label: 'Home', path: '/' },
+    { label: 'How It Works', path: '/how-it-works' },
+    { label: 'Pricing', path: '/pricing' },
+    { label: 'Services', path: '/services' }
   ];
 
   return (
@@ -32,47 +22,46 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
         : 'bg-transparent py-6'
     }`}>
       <div className="max-w-[1800px] mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <div className="w-9 h-9 bg-navy flex items-center justify-center rounded-sm shadow-md">
-            <span className="text-pearl font-cinzel font-bold text-lg">M</span>
+        <Link to="/" className="flex items-center gap-3 cursor-pointer group">
+          <div className="w-9 h-9 bg-navy flex items-center justify-center rounded-sm shadow-md group-hover:bg-gold transition-colors">
+            <span className="text-pearl font-cinzel font-bold text-lg group-hover:text-navy">M</span>
           </div>
           <div className="hidden xl:block">
             <h1 className="font-cinzel text-base tracking-[0.2em] font-bold text-navy leading-none">MERGELITH</h1>
-            <p className="text-[9px] tracking-[0.3em] text-gold uppercase font-black">Growth Partners</p>
+            <p className="text-[9px] tracking-[0.3em] text-gold uppercase font-black">Marketing-as-a-Service</p>
           </div>
-        </div>
+        </Link>
 
         <div className="flex items-center gap-8">
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link, idx) => (
-              <button 
+              <Link 
                 key={idx}
-                onClick={() => scrollTo(link.id)}
-                className="text-[9px] uppercase tracking-widest text-navy/60 hover:text-gold transition-colors font-black bg-transparent border-none cursor-pointer whitespace-nowrap"
+                to={link.path}
+                className={`text-[9px] uppercase tracking-widest transition-colors font-black whitespace-nowrap ${
+                  location.pathname === link.path ? 'text-gold' : 'text-navy/60 hover:text-gold'
+                }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
           </div>
           
           <div className="flex items-center gap-6 border-l border-navy/10 pl-8">
             <a 
-              href="https://www.linkedin.com/in/sasha-g-aleksic-354677154/"
+              href="https://calendly.com/sasha-g-aleksic/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-navy/40 hover:text-gold transition-colors"
-              aria-label="LinkedIn"
+              className="text-[9px] uppercase tracking-widest text-gold font-black hover:text-navy transition-colors"
             >
-              <Linkedin size={18} />
+              Book Call
             </a>
-            <a 
-              href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/get-started"
               className="btn-primary px-6 py-2.5 text-[9px] tracking-[0.2em] whitespace-nowrap"
             >
-              BOOK A CALL
-            </a>
+              START REQUEST
+            </Link>
           </div>
         </div>
       </div>
