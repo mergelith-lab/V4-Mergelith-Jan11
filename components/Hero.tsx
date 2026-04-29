@@ -34,30 +34,23 @@ const Hero: React.FC = () => {
           
           <div className="space-y-6">
             <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] text-navy tracking-tight max-w-5xl mx-auto">
-              Corporate-Grade Marketing. <br />
-              <span className="italic text-gold font-serif drop-shadow-sm text-6xl md:text-9xl">Delivered in 48 Hours.</span>
+              Tired of Your Marketing Agency? <br />
+              <span className="italic text-gold font-serif drop-shadow-sm text-6xl md:text-9xl">You're Not Alone.</span>
             </h1>
             <div className="space-y-4 max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl text-navy/70 font-light leading-relaxed">
-                Stop losing deals to competitors with better materials. Get pitch decks, brand kits, battle cards, and campaign briefs built by a commercial strategist — without the agency price tag, the slow timeline, or the contract.
+                Most small businesses are stuck choosing between agencies that overcharge, freelancers who disappear, and doing it themselves with no time. There's a better option.
               </p>
             </div>
           </div>
           
           <div className="pt-6 flex flex-col md:flex-row items-center justify-center gap-6">
             <a 
-              href="https://calendly.com/sasha-g-aleksic/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#how-it-works"
               className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center"
             >
-              BOOK A STRATEGY CALL
+              See How Mergelith Works →
             </a>
-          </div>
-
-          <div className="pt-12">
-            <h2 className="text-[10px] uppercase tracking-[0.5em] text-gold font-black mb-8">Service Tiers & Deliverables</h2>
-            <PricingGridTable />
           </div>
         </div>
 

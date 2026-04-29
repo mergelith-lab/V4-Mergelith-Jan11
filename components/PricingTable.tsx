@@ -5,7 +5,7 @@ const PricingTable: React.FC = () => {
   const tiers = [
     {
       name: "Standard",
-      price: "$999",
+      price: "$997",
       period: "/month",
       desc: "For businesses that need a steady pipeline of high-quality commercial documents.",
       features: [

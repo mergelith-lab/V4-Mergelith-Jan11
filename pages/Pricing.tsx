@@ -1,6 +1,6 @@
 import React from 'react';
 import PricingGridTable from '../components/PricingGridTable.tsx';
-import PricingTable from '../components/PricingTable.tsx';
+import ComparisonSection from '../components/ComparisonSection.tsx';
 import { Target, Scale, Briefcase, Home as HomeIcon, HardHat } from 'lucide-react';
 
 const Pricing: React.FC = () => {
@@ -35,9 +35,9 @@ const Pricing: React.FC = () => {
     <div className="pt-32 pb-32 space-y-32">
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
         <div className="space-y-4">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Engagement Modals</h3>
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Engagement Models</h3>
           <h1 className="text-5xl md:text-8xl font-serif italic text-navy leading-tight">
-            Three Tiers. Fixed Pricing. <br />
+            Simple. Transparent. <br />
             <span className="text-gold">No Surprises.</span>
           </h1>
           <p className="text-xl md:text-2xl text-navy/60 font-light max-w-3xl mx-auto">
@@ -48,62 +48,10 @@ const Pricing: React.FC = () => {
         <PricingGridTable />
       </section>
 
-      {/* Side-by-Side Cost Comparison (PDF Page 15) */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-navy p-12 md:p-16 rounded-sm text-pearl overflow-x-auto">
-          <h2 className="text-3xl font-serif italic text-gold mb-12">Standard $999/Month vs. The Alternatives</h2>
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b border-white/10">
-                <th className="py-4 font-normal text-pearl/40">Category</th>
-                <th className="py-4 font-black tracking-widest text-gold text-[10px] uppercase">Mergelith Standard</th>
-                <th className="py-4 font-normal text-pearl/40">In-House Hire</th>
-                <th className="py-4 font-normal text-pearl/40">Agency</th>
-                <th className="py-4 font-normal text-pearl/40">Freelancer</th>
-              </tr>
-            </thead>
-            <tbody className="text-sm">
-              <tr className="border-b border-white/10">
-                <td className="py-6 font-bold uppercase tracking-widest text-[10px]">Monthly Cost</td>
-                <td className="py-6 text-gold font-black">$999</td>
-                <td className="py-6 text-pearl/60">$5K-$10K+</td>
-                <td className="py-6 text-pearl/60">$3K-$15K+</td>
-                <td className="py-6 text-pearl/60">$1K-$4K</td>
-              </tr>
-              <tr className="border-b border-white/10">
-                <td className="py-6 font-bold uppercase tracking-widest text-[10px]">Turnaround</td>
-                <td className="py-6 text-gold font-black">48 Hours</td>
-                <td className="py-6 text-pearl/60">Days to Weeks</td>
-                <td className="py-6 text-pearl/60">Weeks</td>
-                <td className="py-6 text-pearl/60">Varies</td>
-              </tr>
-              <tr className="border-b border-white/10">
-                <td className="py-6 font-bold uppercase tracking-widest text-[10px]">Contract</td>
-                <td className="py-6 text-gold font-black">None</td>
-                <td className="py-6 text-pearl/60">Employment</td>
-                <td className="py-6 text-pearl/60">6-12 Months</td>
-                <td className="py-6 text-pearl/60">Per Project</td>
-              </tr>
-              <tr className="border-b border-white/10">
-                <td className="py-6 font-bold uppercase tracking-widest text-[10px]">Coverage</td>
-                <td className="py-6 text-gold font-black">Full-Stack</td>
-                <td className="py-6 text-pearl/60">1 Person</td>
-                <td className="py-6 text-pearl/60">1 Specialty</td>
-                <td className="py-6 text-pearl/60">1 Skill</td>
-              </tr>
-              <tr>
-                <td className="py-6 font-bold uppercase tracking-widest text-[10px]">Price Predictability</td>
-                <td className="py-6 text-gold font-black">Fixed</td>
-                <td className="py-6 text-pearl/60">Salary + Benefits</td>
-                <td className="py-6 text-pearl/60">Retainer + Extras</td>
-                <td className="py-6 text-pearl/60">Invoice Surprise</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      {/* Reusing the Comparison Section from Home */}
+      <ComparisonSection />
 
-      {/* ROI Framing (PDF Page 16) */}
+      {/* ROI Framing */}
       <section className="bg-navy/5 py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           <div className="text-center space-y-4">
@@ -143,7 +91,7 @@ const Pricing: React.FC = () => {
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
            <a href="https://calendly.com/sasha-g-aleksic/30min" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-5 text-sm tracking-widest">
-             START WITH STANDARD
+             BOOK A STRATEGY CALL
            </a>
            <a href="https://calendly.com/sasha-g-aleksic/30min" target="_blank" rel="noopener noreferrer" className="text-navy/60 text-[10px] uppercase font-black tracking-[0.3em] border-b border-navy/20 hover:text-gold transition-colors">
               Schedule discovery call

@@ -1,26 +1,36 @@
 import React from 'react';
-import { AlertCircle, EyeOff, Search, Database, Globe } from 'lucide-react';
+import { AlertCircle, EyeOff, Search, Database, Globe, X } from 'lucide-react';
 
 const ProblemSection: React.FC = () => {
   const problems = [
     {
-      title: "Agencies Are Expensive",
-      desc: "Typical agencies charge $5K-$15K/month and take six weeks before delivering the first asset. You pay for their overhead, not your growth.",
+      title: "Opaque Retainers",
+      desc: "Retainers of $3,000–$10,000/month with no clear deliverables tied to that number.",
       icon: EyeOff
     },
     {
-      title: "Freelancers Are Unreliable",
-      desc: "Freelancers quote low but often disappear mid-project or deliver materials that don't match your brand's institutional quality.",
+      title: "The Speed Trap",
+      desc: "Waiting 2–4 weeks for a single revised deck or one-pager while your market moves without you.",
       icon: AlertCircle
     },
     {
-      title: "In-House Hires Are Slow",
-      desc: "A full-time hire costs $7K+/month with a 90-day ramp before they are truly productive. Plus benefits, taxes, and management debt.",
+      title: "Strategy over Substance",
+      desc: "Paying for 'strategy sessions' instead of actual materials that move the needle in meetings.",
       icon: Search
     },
     {
-      title: "DIY Costs You Revenue",
-      desc: "Spending your own hours on marketing materials is a poor use of your commercial time and leads to inconsistent branding that erodes trust.",
+      title: "The Personnel Bait-and-Switch",
+      desc: "Working with a junior account manager while the senior person they pitched is nowhere to be found.",
+      icon: Database
+    },
+    {
+      title: "Generic Outputs",
+      desc: "Getting generic templates that don't reflect your actual business, product, or institutional customer.",
+      icon: Globe
+    },
+    {
+      title: "The Contract Lock",
+      desc: "Locked into 6–12 month contracts with no exit clause, even if your results are non-existent.",
       icon: Database
     }
   ];
@@ -29,22 +39,22 @@ const ProblemSection: React.FC = () => {
     <section id="problem" className="scroll-mt-32">
       <div className="space-y-16">
         <div className="max-w-3xl space-y-6">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Revenue Gap</h3>
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Status Quo</h3>
           <h2 className="text-4xl md:text-6xl font-serif text-navy italic leading-tight">
-            You Are Losing Deals You <span className="text-gold">Should Be Winning</span>
+            What Small Business Owners <span className="text-gold">Tell Us About Their Agency</span>
           </h2>
           <p className="text-navy/60 text-lg">
-            The materials your competitors walk into rooms with are not magic. They are the product of a systematic approach you are currently missing.
+            Before switching to Mergelith, most of our clients were dealing with at least one (often all) of these legacy agency frustrations.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {problems.map((problem, idx) => (
             <div key={idx} className="bg-white p-8 border border-navy/5 shadow-sm hover:shadow-md transition-all group">
-              <div className="mb-6 p-3 bg-navy/5 w-fit rounded-sm group-hover:bg-gold/10 transition-colors">
-                <problem.icon className="w-6 h-6 text-gold" />
+              <div className="mb-6 p-2 w-fit bg-red-50 rounded-full">
+                <X className="w-5 h-5 text-red-500" strokeWidth={3} />
               </div>
-              <h4 className="text-navy font-cinzel text-sm tracking-[0.2em] font-black mb-4 uppercase">
+              <h4 className="text-navy font-serif text-xl italic mb-4">
                 {problem.title}
               </h4>
               <p className="text-navy/60 text-sm font-light leading-relaxed">
@@ -55,8 +65,8 @@ const ProblemSection: React.FC = () => {
         </div>
 
         <div className="bg-navy text-pearl p-12 rounded-sm text-center space-y-4">
-          <p className="text-2xl md:text-3xl font-serif italic">
-            "Every week without the right materials is a week you are leaving revenue on the table."
+          <p className="text-2xl md:text-3xl font-serif italic max-w-4xl mx-auto">
+            "These aren't edge cases. They're the standard agency model — built around agency economics, not your results."
           </p>
         </div>
       </div>

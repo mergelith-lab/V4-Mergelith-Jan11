@@ -3,83 +3,58 @@ import { CheckCircle2 } from 'lucide-react';
 
 const SolutionSection: React.FC = () => {
   const features = [
-    "Pitch decks built to close -- not just to impress",
-    "Battle cards your sales team will actually use in the field",
-    "Brand kits that make you look like the obvious choice",
-    "GTM strategy documents that map your path to more customers",
-    "Campaign briefs that translate your offer into a growth plan",
-    "All delivered in 48 hours. Fixed price. No surprises."
+    {
+      title: "48-Hour Turnaround",
+      desc: "Submit your task on Monday morning. Have a corporate-grade deliverable in your inbox by Wednesday. No chasing, no status updates, no delays."
+    },
+    {
+      title: "Flat Monthly Retainer",
+      desc: "One price. No surprise invoices. No billable hours. No 'that's out of scope.' You know exactly what you're paying every month."
+    },
+    {
+      title: "Built by a Commercial Strategist",
+      desc: "Every deliverable is built by a senior marketing executive who has driven 5× portfolio growth and managed $21M+ in revenue — not a junior designer following a brief."
+    },
+    {
+      title: "No Long Contracts",
+      desc: "Month-to-month, cancel anytime. We earn your business every 30 days. That's how confident we are in the quality of our work."
+    },
+    {
+      title: "One Active Task at a Time",
+      desc: "We don't juggle 40 clients simultaneously. One task, full focus, 48 hours. The bottleneck is never Mergelith."
+    },
+    {
+      title: "You Execute, We Build",
+      desc: "We build the materials. You close the deals. No hand-holding, no campaign management fees — just the corporate-grade documents that win business."
+    }
   ];
 
   return (
     <section id="solution" className="scroll-mt-32">
-      <div className="flex flex-col lg:flex-row gap-16 items-center">
-        <div className="lg:w-1/2 space-y-8">
-          <div className="space-y-4">
-            <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Solution</h3>
-            <h2 className="text-4xl md:text-6xl font-serif text-navy italic leading-tight">
-              A Commercial Strategist <br />
-              <span className="text-gold">on Retainer.</span>
-            </h2>
-            <p className="text-navy/40 text-sm italic">(For Less Than One Freelance Invoice)</p>
-          </div>
-          
-          <div className="space-y-6">
-            <p className="text-xl text-navy/70 font-light leading-relaxed border-l-2 border-gold pl-8">
-              Mergelith is a Marketing-as-a-Service platform built by a 20+ year corporate commercial strategist. The same systematic approach that scaled global companies — now applied to your business.
-            </p>
-            
-            <ul className="space-y-4">
-              {features.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-3 group">
-                  <CheckCircle2 className="w-5 h-5 text-gold shrink-0" />
-                  <span className="text-navy/80 font-medium group-hover:text-navy transition-colors">{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="pt-8">
-              <p className="text-2xl font-serif text-navy italic leading-relaxed">
-                Mergelith delivers — <br />
-                <span className="text-gold">you deploy.</span>
-              </p>
-            </div>
-
-            <div className="pt-4">
-              <a 
-                href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary px-10 py-4 text-[10px] tracking-widest inline-block"
-              >
-                START YOUR FIRST REQUEST
-              </a>
-            </div>
-
-            <div className="mt-12 p-8 bg-gold/5 border border-gold/20 rounded-sm space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-gold font-black">Corporate Strategy Active</p>
-              </div>
-              <p className="text-navy/70 text-sm font-light italic leading-relaxed">
-                "Your deliverable arrives as a Google Doc, PDF, or PowerPoint. Complex deliverables include a Loom walkthrough. You review, request any revisions, and execute."
-              </p>
-            </div>
-          </div>
+      <div className="space-y-16">
+        <div className="max-w-3xl space-y-6 text-center mx-auto mb-20">
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Advantage</h3>
+          <h2 className="text-4xl md:text-6xl font-serif text-navy italic leading-tight">
+            Why Small Businesses Switch to <span className="text-gold">Mergelith</span>
+          </h2>
         </div>
 
-        <div className="lg:w-1/2 relative">
-          <div className="aspect-square rounded-sm overflow-hidden shadow-2xl border border-navy/10 relative z-10 text-center flex items-center justify-center bg-navy/5">
-            <img 
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800" 
-              alt="AEO Protocol Illustration" 
-              className="w-full h-full object-cover opacity-80"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-navy/20 mix-blend-multiply"></div>
-          </div>
-          <div className="absolute -top-10 -right-10 w-48 h-48 bg-gold/10 blur-3xl rounded-full"></div>
-          <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-navy/5 blur-3xl rounded-full"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {features.map((feature, idx) => (
+            <div key={idx} className="space-y-6 p-8 border border-navy/5 bg-white shadow-sm hover:shadow-md transition-all">
+              <div className="w-12 h-0.5 bg-gold"></div>
+              <h4 className="text-2xl font-serif text-navy italic leading-tight">
+                {feature.title}
+              </h4>
+              <p className="text-navy/60 text-sm font-light leading-relaxed">
+                {feature.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="pt-12 text-center text-navy/40 text-sm italic font-light">
+           "Mergelith delivers — you deploy."
         </div>
       </div>
     </section>

@@ -46,8 +46,6 @@ const BlogSection: React.FC = () => {
   const handlePostClick = (post: typeof blogPosts[0]) => {
     if (post.category === 'Case Study') {
       scrollTo('case-study');
-    } else if (post.url) {
-      window.open(post.url, '_blank', 'noopener,noreferrer');
     }
   };
 

@@ -11,7 +11,7 @@ const FAQSection: React.FC = () => {
     },
     {
       question: "What is the difference between Standard and Growth?",
-      answer: "Standard ($999/month) covers core execution deliverables: slide decks, pitch decks, brand kits, battle cards, infographics, and one-pagers. Growth ($1,999/month) adds GTM strategy documents, campaign briefs, SEO/AEO/GEO reports, and 4 social posts per month. Both tiers: 1 active task at a time, 48-hour turnaround, month-to-month."
+      answer: "Standard ($997/month) covers core execution deliverables: slide decks, pitch decks, brand kits, battle cards, infographics, and one-pagers. Growth ($1,999/month) adds GTM strategy documents, campaign briefs, SEO/AEO/GEO reports, and weekly social media posts. Both tiers: 1 active task at a time, 48-hour turnaround, month-to-month."
     },
     {
       question: "What is the Process Intelligence Report?",
@@ -67,23 +67,14 @@ const FAQSection: React.FC = () => {
             <h3 className="text-3xl font-serif text-navy italic">Stop Showing Up to Meetings Underprepared.</h3>
             <p className="text-navy/60 font-light">Your competitors have the materials. You could too -- in 48 hours.</p>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center">
             <a 
-              href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
+              href="https://calendly.com/sasha-g-aleksic/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center"
             >
-              START YOUR FIRST REQUEST
-            </a>
-            <p className="text-navy/40 font-serif italic">or</p>
-            <a 
-              href="https://api.leadconnectorhq.com/widget/bookings/mergelith-calendar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-navy font-black text-[10px] uppercase tracking-widest border-b-2 border-gold pb-1 hover:text-gold transition-colors"
-            >
-              Book a 15-minute call
+              BOOK A STRATEGY CALL
             </a>
           </div>
         </div>
