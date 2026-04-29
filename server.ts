@@ -2,6 +2,7 @@ import express from "express";
 import { createServer as createViteServer } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
+import compression from "compression";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -9,6 +10,9 @@ const __dirname = path.dirname(__filename);
 async function startServer() {
   const app = express();
   const PORT = 3000;
+
+  // Use compression to reduce response payload size
+  app.use(compression());
 
   app.use(express.json());
 
@@ -24,23 +28,17 @@ async function startServer() {
     console.log(`Objective: ${objective}`);
     console.log("------------------------------------------");
 
-    // In a real scenario, you would use a service like SendGrid or Resend here.
-    // Example:
-    // await resend.emails.send({
-    //   from: 'Mergelith Assistant <assistant@mergelith.com>',
-    //   to: 'sasha@mergelith.com',
-    //   subject: `New Institutional Inquiry: ${firm}`,
-    //   text: `Name: ${name}\nEmail: ${email}\nFirm: ${firm}\nObjective: ${objective}`
-    // });
-
     res.json({ 
       success: true, 
       message: "Inquiry successfully transmitted to the Mergelith Strategy Team." 
     });
   });
 
-  // Serve static files from public directory
-  app.use(express.static(path.join(__dirname, "public")));
+  // Serve static files from public directory with cache headers
+  app.use(express.static(path.join(__dirname, "public"), {
+    maxAge: "1d",
+    index: false
+  }));
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
@@ -50,8 +48,13 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    // Serve static files in production
-    app.use(express.static(path.join(__dirname, "dist")));
+    // Serve static files in production with long-term caching
+    app.use(express.static(path.join(__dirname, "dist"), {
+      maxAge: "1y",
+      immutable: true,
+      index: false
+    }));
+    
     app.get("*", (req, res) => {
       res.sendFile(path.join(__dirname, "dist", "index.html"));
     });

@@ -5,7 +5,7 @@ const IntelligenceSection: React.FC = () => {
     <section id="intelligence" className="scroll-mt-32">
       <div className="flex flex-col lg:flex-row gap-20 items-center">
         <div className="lg:w-1/2 space-y-10">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Deal Flow Intelligence</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Deal Flow Intelligence</p>
           <h2 className="text-5xl md:text-6xl font-serif text-navy leading-tight">
             Precision sourcing that <br />
             <span className="italic">never sleeps.</span>
@@ -37,24 +37,24 @@ const IntelligenceSection: React.FC = () => {
               <div className="flex justify-between items-center mb-10 border-b border-navy/10 pb-6">
                 <div className="flex items-center gap-3">
                   <div className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse"></div>
-                  <span className="text-[11px] uppercase tracking-[0.3em] text-navy/40 font-black">System Status: Monitoring</span>
+                  <span className="text-[11px] uppercase tracking-[0.3em] text-navy/60 font-black">System Status: Monitoring</span>
                 </div>
-                <div className="text-[10px] text-navy/30 font-mono tracking-[0.3em]">SECURE_INSTANCE_892</div>
+                <div className="text-[10px] text-navy/60 font-mono tracking-[0.3em]">SECURE_INSTANCE_892</div>
               </div>
 
               <div className="space-y-8">
                 <div className="p-6 bg-navy/5 border border-navy/5 rounded-sm">
-                  <div className="text-[10px] text-gold uppercase tracking-[0.2em] mb-2 font-black">Signal Detected</div>
+                  <div className="text-[10px] text-gold-dark uppercase tracking-[0.2em] mb-2 font-black">Signal Detected</div>
                   <div className="text-sm font-mono text-navy italic">"Detecting Sell-Side Mandate: Confirmed &gt;$50M valuation. Initiating conflict check..."</div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="p-6 bg-navy/5 border border-navy/5 rounded-sm">
-                    <div className="text-[10px] text-navy/30 uppercase mb-3 tracking-widest font-black">Confidence Score</div>
+                    <div className="text-[10px] text-navy/60 uppercase mb-3 tracking-widest font-black">Confidence Score</div>
                     <div className="text-3xl font-serif text-navy italic">99.2<span className="text-gold text-sm">%</span></div>
                   </div>
                   <div className="p-6 bg-navy/5 border border-navy/5 rounded-sm">
-                    <div className="text-[10px] text-navy/30 uppercase mb-3 tracking-widest font-black">Deal Velocity</div>
+                    <div className="text-[10px] text-navy/60 uppercase mb-3 tracking-widest font-black">Deal Velocity</div>
                     <div className="text-3xl font-serif text-navy italic">Extreme</div>
                   </div>
                 </div>

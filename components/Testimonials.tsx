@@ -28,7 +28,7 @@ const Testimonials: React.FC = () => {
     <section id="testimonials" className="relative py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-20">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Real Results. Real Businesses.</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Real Results. Real Businesses.</p>
           <h2 className="text-5xl md:text-6xl font-serif text-navy italic leading-tight">
             Client <span className="text-gold">Perspectives</span>
           </h2>
@@ -59,9 +59,9 @@ const Testimonials: React.FC = () => {
                 </p>
                 <footer className="space-y-2">
                   <cite className="font-cinzel text-xs tracking-[0.2em] font-black text-navy not-italic block">
-                    {t.author}
+                     {t.author}
                   </cite>
-                  <span className="text-[10px] uppercase tracking-widest text-navy/40 font-medium block">
+                  <span className="text-[10px] uppercase tracking-widest text-navy/60 font-medium block">
                     {t.role}
                   </span>
                 </footer>
@@ -71,7 +71,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         <div className="mt-24 text-center">
-          <p className="text-[11px] text-navy/30 uppercase tracking-[0.6em] font-black italic">
+          <p className="text-[11px] text-navy/60 uppercase tracking-[0.6em] font-black italic">
             Trusted by 50+ Institutional Partners Worldwide
           </p>
         </div>

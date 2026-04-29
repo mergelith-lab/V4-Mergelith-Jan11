@@ -38,7 +38,7 @@ const ReportsDashboard: React.FC = () => {
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white p-8 border border-navy/5 shadow-sm rounded-sm">
-                <p className="text-[10px] uppercase tracking-widest text-navy/40 font-black mb-2">Aggregated Visibility</p>
+                <p className="text-[10px] uppercase tracking-widest text-navy/60 font-black mb-2">Aggregated Visibility</p>
                 <div className="text-4xl font-serif text-navy italic">84.2%</div>
                 <div className="flex items-center gap-2 mt-4 text-emerald-600">
                   <TrendingUp size={16} />
@@ -46,17 +46,17 @@ const ReportsDashboard: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white p-8 border border-navy/5 shadow-sm rounded-sm">
-                <p className="text-[10px] uppercase tracking-widest text-navy/40 font-black mb-2">Answer Confidence</p>
+                <p className="text-[10px] uppercase tracking-widest text-navy/60 font-black mb-2">Answer Confidence</p>
                 <div className="text-4xl font-serif text-navy italic">High</div>
                 <div className="flex items-center gap-2 mt-4 text-gold">
                   <ShieldCheck size={16} />
-                  <span className="text-xs font-bold font-sans text-navy/60 uppercase tracking-wider">Institutional Standard</span>
+                  <span className="text-xs font-bold font-sans text-navy/70 uppercase tracking-wider">Institutional Standard</span>
                 </div>
               </div>
               <div className="bg-white p-8 border border-navy/5 shadow-sm rounded-sm">
-                <p className="text-[10px] uppercase tracking-widest text-navy/40 font-black mb-2">Authority Delta</p>
+                <p className="text-[10px] uppercase tracking-widest text-navy/60 font-black mb-2">Authority Delta</p>
                 <div className="text-4xl font-serif text-navy italic">+3.1</div>
-                <div className="flex items-center gap-2 mt-4 text-navy/40">
+                <div className="flex items-center gap-2 mt-4 text-navy/60">
                   <AlertCircle size={16} />
                   <span className="text-xs font-bold font-sans">Semantic Gap: 12%</span>
                 </div>
@@ -92,9 +92,10 @@ const ReportsDashboard: React.FC = () => {
         return (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <h4 className="text-2xl font-serif italic text-navy">AI Search Snapshots</h4>
-                <p className="text-navy/60 font-light leading-relaxed">
+                <div className="space-y-6">
+                  <h3 className="text-[10px] uppercase tracking-widest text-navy/60 font-black">Snapshots</h3>
+                  <h3 className="text-2xl font-serif italic text-navy">AI Search Snapshots</h3>
+                  <p className="text-navy/60 font-light leading-relaxed">
                   We capture and track the visual layout of AI Overviews (SGE) for your core keywords. Our system monitors if you're in the carousel, the citation blocks, or the primary summary text.
                 </p>
                 <ul className="space-y-4">
@@ -254,9 +255,9 @@ const ReportsDashboard: React.FC = () => {
     <section id="reports" className="scroll-mt-32">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-4 mb-20">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Mergelith Dashboard</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Mergelith Dashboard</p>
           <h2 className="text-5xl md:text-6xl font-serif text-navy italic">AEO Intelligence Deck</h2>
-          <p className="text-navy/40 font-light max-w-2xl mx-auto text-lg leading-relaxed pt-4">
+          <p className="text-navy/60 font-light max-w-2xl mx-auto text-lg leading-relaxed pt-4">
             The same advanced reporting used by the world's most sophisticated institutional advisory firms. Track, measure, and dominate the AI visibility landscape.
           </p>
         </div>

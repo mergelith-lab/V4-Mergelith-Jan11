@@ -12,6 +12,8 @@
   "dependencies": {
     "@google/genai": "^1.38.0",
     "@tailwindcss/vite": "^4.2.0",
+    "@types/compression": "^1.8.1",
+    "compression": "^1.8.1",
     "express": "^5.2.1",
     "lucide-react": "^0.575.0",
     "motion": "^12.34.3",

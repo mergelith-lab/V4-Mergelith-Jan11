@@ -33,7 +33,7 @@ const SystemsGrid: React.FC = () => {
     <section id="systems" className="scroll-mt-32">
       <div className="space-y-16">
         <div className="max-w-3xl space-y-6">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">What We Install</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">What We Install</p>
           <h2 className="text-4xl md:text-6xl font-serif text-navy italic leading-tight">
             Done-for-you <span className="text-gold">Conversion Systems</span>
           </h2>
@@ -47,12 +47,12 @@ const SystemsGrid: React.FC = () => {
                 <div className="p-4 bg-navy/5 w-fit rounded-sm group-hover:bg-gold/10 transition-colors">
                   <system.icon className="w-8 h-8 text-gold" />
                 </div>
-                <h4 className="text-2xl font-serif text-navy italic">{system.title}</h4>
+                <h3 className="text-2xl font-serif text-navy italic">{system.title}</h3>
                 <p className="text-navy/60 text-sm font-light leading-relaxed">
                   {system.desc}
                 </p>
                 <div className="pt-4 border-t border-navy/5">
-                  <p className="text-[10px] uppercase tracking-widest text-navy/40 font-black mb-2">Best For:</p>
+                  <p className="text-[10px] uppercase tracking-widest text-navy/60 font-black mb-2">Best For:</p>
                   <p className="text-navy/80 text-xs font-medium">{system.bestFor}</p>
                 </div>
               </div>

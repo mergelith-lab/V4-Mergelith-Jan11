@@ -90,7 +90,7 @@ const AISEOServices: React.FC = () => {
         </div>
         
         <div className="relative z-10 max-w-4xl space-y-8">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Answer Engine Optimization</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Answer Engine Optimization</p>
           <h2 className="text-5xl md:text-7xl font-serif italic leading-tight">
             Be Found Where <br />
             <span className="text-gold">Search Is Heading</span>
@@ -110,7 +110,7 @@ const AISEOServices: React.FC = () => {
         {stats.map((stat, idx) => (
           <div key={idx} className="glass-card p-8 text-center space-y-4 border-navy/5">
             <div className="text-4xl md:text-5xl font-serif text-gold italic">{stat.value}</div>
-            <p className="text-[10px] uppercase tracking-widest text-navy/40 font-black leading-relaxed">
+            <p className="text-[10px] uppercase tracking-widest text-navy/60 font-black leading-relaxed">
               {stat.label}
             </p>
           </div>
@@ -138,7 +138,7 @@ const AISEOServices: React.FC = () => {
           </div>
         </div>
         <div className="glass-card p-10 space-y-8 border-gold/20 bg-gold/5">
-          <h4 className="text-navy font-cinzel text-xs tracking-[0.2em] uppercase font-black">Strategic Overlap</h4>
+          <h3 className="text-navy font-cinzel text-xs tracking-[0.2em] uppercase font-black">Strategic Overlap</h3>
           <p className="text-sm text-navy/60 font-light italic leading-relaxed">
             The fundamentals still matter. High-quality content, strong E-E-A-T signals, and authoritative backlinks are the bedrock. The difference lies in how content is structured for LLM ingestion and how brand authority is systematically built across the AI ecosystem.
           </p>
@@ -154,9 +154,9 @@ const AISEOServices: React.FC = () => {
       {/* AEO vs GEO Comparison */}
       <div className="space-y-24">
         <div className="text-center space-y-4">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Authority Matrix</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">The Authority Matrix</p>
           <h2 className="text-4xl md:text-5xl font-serif text-navy italic">AEO vs GEO</h2>
-          <p className="text-navy/40 font-light max-w-2xl mx-auto">
+          <p className="text-navy/60 font-light max-w-2xl mx-auto">
             Understanding the two distinct pillars of modern digital visibility and how they work in tandem to create absolute market authority.
           </p>
         </div>
@@ -165,8 +165,8 @@ const AISEOServices: React.FC = () => {
           {/* AEO Column */}
           <div className="glass-card p-10 space-y-8 border-navy/5">
             <div className="space-y-4">
-              <div className="text-gold font-black text-[10px] uppercase tracking-[0.3em]">01. AEO</div>
-              <h4 className="text-2xl font-serif text-navy italic">Answer Engine Optimization</h4>
+              <div className="text-gold-dark font-black text-[10px] uppercase tracking-[0.3em]">01. AEO</div>
+              <h3 className="text-2xl font-serif text-navy italic">Answer Engine Optimization</h3>
               <p className="text-navy/60 font-light leading-relaxed">
                 Optimizing your content to be selected as the direct answer in search results and AI summaries.
               </p>
@@ -174,7 +174,7 @@ const AISEOServices: React.FC = () => {
 
             <div className="grid sm:grid-cols-2 gap-8 pt-6 border-t border-navy/5">
               <div className="space-y-3">
-                <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">Where it shows up</h5>
+                <h4 className="text-[10px] uppercase tracking-widest text-navy font-black">Where it shows up</h4>
                 <ul className="text-xs text-navy/60 space-y-2 font-light">
                   <li>&bull; Google Featured Snippets</li>
                   <li>&bull; Google AI Overviews</li>
@@ -182,16 +182,16 @@ const AISEOServices: React.FC = () => {
                 </ul>
               </div>
               <div className="space-y-3">
-                <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">Goal</h5>
+                <h4 className="text-[10px] uppercase tracking-widest text-navy font-black">Goal</h4>
                 <p className="text-xs text-navy/60 font-light italic">Be the definitive answer to a specific question.</p>
               </div>
             </div>
 
             <div className="space-y-4">
-              <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">How it works</h5>
+              <h4 className="text-[10px] uppercase tracking-widest text-navy font-black">How it works</h4>
               <div className="flex flex-wrap gap-2">
                 {["Structured Answers", "FAQ Format", "Schema Markup", "Keyword Targeting"].map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-navy/5 text-navy/40 text-[9px] uppercase tracking-widest font-black rounded-full">
+                  <span key={tag} className="px-3 py-1 bg-navy/5 text-navy/60 text-[9px] uppercase tracking-widest font-black rounded-full">
                     {tag}
                   </span>
                 ))}
@@ -207,7 +207,7 @@ const AISEOServices: React.FC = () => {
             </div>
 
             <div className="text-center pt-4">
-              <p className="text-[10px] uppercase tracking-[0.4em] text-navy/30 font-black">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-navy/60 font-black">
                 Mindset: <span className="text-navy">"Win the answer slot"</span>
               </p>
             </div>
@@ -216,8 +216,8 @@ const AISEOServices: React.FC = () => {
           {/* GEO Column */}
           <div className="glass-card p-10 space-y-8 border-navy/5">
             <div className="space-y-4">
-              <div className="text-gold font-black text-[10px] uppercase tracking-[0.3em]">02. GEO</div>
-              <h4 className="text-2xl font-serif text-navy italic">Generative Engine Optimization</h4>
+              <div className="text-gold-dark font-black text-[10px] uppercase tracking-[0.3em]">02. GEO</div>
+              <h3 className="text-2xl font-serif text-navy italic">Generative Engine Optimization</h3>
               <p className="text-navy/60 font-light leading-relaxed">
                 Optimizing your brand and content to be referenced, cited, or used by AI models when they generate complex responses.
               </p>
@@ -225,7 +225,7 @@ const AISEOServices: React.FC = () => {
 
             <div className="grid sm:grid-cols-2 gap-8 pt-6 border-t border-navy/5">
               <div className="space-y-3">
-                <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">Where it shows up</h5>
+                <h4 className="text-[10px] uppercase tracking-widest text-navy font-black">Where it shows up</h4>
                 <ul className="text-xs text-navy/60 space-y-2 font-light">
                   <li>&bull; ChatGPT</li>
                   <li>&bull; Perplexity</li>
@@ -234,16 +234,16 @@ const AISEOServices: React.FC = () => {
                 </ul>
               </div>
               <div className="space-y-3">
-                <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">Goal</h5>
+                <h4 className="text-[10px] uppercase tracking-widest text-navy font-black">Goal</h4>
                 <p className="text-xs text-navy/60 font-light italic">Be included in AI-generated responses and recommendations.</p>
               </div>
             </div>
 
             <div className="space-y-4">
-              <h5 className="text-[10px] uppercase tracking-widest text-navy font-black">How it works</h5>
+              <h4 className="text-[10px] uppercase tracking-widest text-navy font-black">How it works</h4>
               <div className="flex flex-wrap gap-2">
                 {["Entity Building", "Topical Authority", "Consistent Mentions", "Context-Rich Content"].map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-navy/5 text-navy/40 text-[9px] uppercase tracking-widest font-black rounded-full">
+                  <span key={tag} className="px-3 py-1 bg-navy/5 text-navy/60 text-[9px] uppercase tracking-widest font-black rounded-full">
                     {tag}
                   </span>
                 ))}
@@ -259,7 +259,7 @@ const AISEOServices: React.FC = () => {
             </div>
 
             <div className="text-center pt-4">
-              <p className="text-[10px] uppercase tracking-[0.4em] text-navy/30 font-black">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-navy/60 font-black">
                 Mindset: <span className="text-navy">"Become part of the model's knowledge"</span>
               </p>
             </div>
@@ -271,8 +271,8 @@ const AISEOServices: React.FC = () => {
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b border-navy/10">
-                <th className="py-6 text-left text-[10px] uppercase tracking-[0.3em] text-navy/40 font-black">Aspect</th>
-                <th className="py-6 text-left text-[10px] uppercase tracking-[0.3em] text-gold font-black">AEO</th>
+                <th className="py-6 text-left text-[10px] uppercase tracking-[0.3em] text-navy/60 font-black">Aspect</th>
+                <th className="py-6 text-left text-[10px] uppercase tracking-[0.3em] text-gold-dark font-black">AEO</th>
                 <th className="py-6 text-left text-[10px] uppercase tracking-[0.3em] text-navy font-black">GEO</th>
               </tr>
             </thead>
@@ -286,7 +286,7 @@ const AISEOServices: React.FC = () => {
                 { aspect: "Time Horizon", aeo: "Faster", geo: "Compounds Over Time" }
               ].map((row, idx) => (
                 <tr key={idx} className="border-b border-navy/5 hover:bg-navy/[0.02] transition-colors">
-                  <td className="py-6 font-black text-[10px] uppercase tracking-widest text-navy/40">{row.aspect}</td>
+                  <td className="py-6 font-black text-[10px] uppercase tracking-widest text-navy/60">{row.aspect}</td>
                   <td className="py-6">{row.aeo}</td>
                   <td className="py-6">{row.geo}</td>
                 </tr>
@@ -332,7 +332,7 @@ const AISEOServices: React.FC = () => {
       {/* Why Invest in AEO */}
       <div className="space-y-16">
         <div className="text-center space-y-4">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Strategic Advantage</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Strategic Advantage</p>
           <h2 className="text-4xl md:text-5xl font-serif text-navy italic">Why Invest in AEO?</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-12">
@@ -341,7 +341,7 @@ const AISEOServices: React.FC = () => {
               <div className="w-14 h-14 bg-navy/5 flex items-center justify-center rounded-sm group-hover:bg-gold/10 transition-colors">
                 <benefit.icon className="text-gold" size={28} />
               </div>
-              <h4 className="text-navy font-cinzel text-sm tracking-widest uppercase font-black">{benefit.title}</h4>
+              <h3 className="text-navy font-cinzel text-sm tracking-widest uppercase font-black">{benefit.title}</h3>
               <p className="text-navy/60 font-light text-sm leading-relaxed">{benefit.description}</p>
             </div>
           ))}
@@ -351,7 +351,7 @@ const AISEOServices: React.FC = () => {
       {/* Why Invest in GEO */}
       <div className="space-y-16">
         <div className="text-center space-y-4">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Institutional Moat</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Institutional Moat</p>
           <h2 className="text-4xl md:text-5xl font-serif text-navy italic">Why Invest in GEO?</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-12">
@@ -360,7 +360,7 @@ const AISEOServices: React.FC = () => {
               <div className="w-14 h-14 bg-navy/5 flex items-center justify-center rounded-sm group-hover:bg-gold/10 transition-colors">
                 <benefit.icon className="text-gold" size={28} />
               </div>
-              <h4 className="text-navy font-cinzel text-sm tracking-widest uppercase font-black">{benefit.title}</h4>
+              <h3 className="text-navy font-cinzel text-sm tracking-widest uppercase font-black">{benefit.title}</h3>
               <p className="text-navy/60 font-light text-sm leading-relaxed">{benefit.description}</p>
             </div>
           ))}
@@ -371,7 +371,7 @@ const AISEOServices: React.FC = () => {
       <div className="bg-pearl border border-navy/5 p-12 md:p-20 rounded-sm">
         <div className="grid lg:grid-cols-2 gap-20">
           <div className="space-y-8">
-            <h3 className="text-3xl md:text-4xl font-serif text-navy italic">Comprehensive AI <br />Optimization Suite</h3>
+            <h2 className="text-3xl md:text-4xl font-serif text-navy italic">Comprehensive AI <br />Optimization Suite</h2>
             <p className="text-navy/60 font-light">
               Everything your firm needs to dominate AI search, managed end-to-end by our institutional optimization team.
             </p>
@@ -395,7 +395,7 @@ const AISEOServices: React.FC = () => {
       {/* Our Process */}
       <div className="space-y-20">
         <div className="text-center space-y-4">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Methodology</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Methodology</p>
           <h2 className="text-4xl md:text-5xl font-serif text-navy italic">The Execution Path</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -405,9 +405,9 @@ const AISEOServices: React.FC = () => {
                 {step.id}
               </div>
               <div className="space-y-6 relative z-10">
-                <h4 className="text-navy font-cinzel text-xs tracking-widest uppercase font-black border-b border-gold/20 pb-4">
+                <h3 className="text-navy font-cinzel text-xs tracking-widest uppercase font-black border-b border-gold/20 pb-4">
                   {step.title}
-                </h4>
+                </h3>
                 <p className="text-navy/60 font-light text-sm leading-relaxed">
                   {step.description}
                 </p>

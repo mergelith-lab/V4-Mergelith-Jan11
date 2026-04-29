@@ -39,7 +39,7 @@ const FAQSection: React.FC = () => {
     <section id="faq" className="scroll-mt-32">
       <div className="max-w-4xl mx-auto space-y-16">
         <div className="text-center space-y-4">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Inquiries</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Inquiries</p>
           <h2 className="text-4xl md:text-6xl font-serif text-navy italic">Everything You Are Wondering. Answered Directly.</h2>
         </div>
 

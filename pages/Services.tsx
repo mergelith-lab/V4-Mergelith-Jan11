@@ -72,7 +72,7 @@ const Services: React.FC = () => {
     <div className="pt-32 pb-32 space-y-32">
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Our Capabilities</h3>
+        <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Our Capabilities</p>
         <h1 className="text-5xl md:text-8xl font-serif italic text-navy leading-tight">
           Every Deliverable. <br />
           <span className="text-gold">One Subscription. Always in 48 Hours.</span>
@@ -86,7 +86,7 @@ const Services: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         <div className="flex items-center gap-4">
           <div className="h-px bg-gold/30 flex-1"></div>
-          <h3 className="text-[12px] uppercase tracking-[0.4em] text-navy font-black whitespace-nowrap">Core Execution Deliverables</h3>
+          <h2 className="text-[12px] uppercase tracking-[0.4em] text-navy font-black whitespace-nowrap">Core Execution Deliverables</h2>
           <div className="h-px bg-gold/30 flex-1"></div>
         </div>
 
@@ -97,11 +97,11 @@ const Services: React.FC = () => {
                 <s.icon size={24} strokeWidth={1} />
               </div>
               <div className="space-y-4">
-                <h4 className="text-2xl font-serif text-navy italic">{s.title}</h4>
+                <h3 className="text-2xl font-serif text-navy italic">{s.title}</h3>
                 <p className="text-navy/60 text-sm italic leading-relaxed">{s.desc}</p>
                 <ul className="space-y-2 pt-4">
                   {s.details.map((d, i) => (
-                    <li key={i} className="text-[10px] uppercase tracking-widest text-navy/40 font-bold flex items-center gap-2">
+                    <li key={i} className="text-[10px] uppercase tracking-widest text-navy/60 font-bold flex items-center gap-2">
                        <span className="w-1 h-1 bg-gold rounded-full"></span>
                        {d}
                     </li>
@@ -117,7 +117,7 @@ const Services: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         <div className="flex items-center gap-4">
           <div className="h-px bg-gold/30 flex-1"></div>
-          <h3 className="text-[12px] uppercase tracking-[0.4em] text-gold font-black whitespace-nowrap">Growth Tier: Strategic Deliverables</h3>
+          <h2 className="text-[12px] uppercase tracking-[0.4em] text-gold-dark font-black whitespace-nowrap">Growth Tier: Strategic Deliverables</h2>
           <div className="h-px bg-gold/30 flex-1"></div>
         </div>
 
@@ -128,11 +128,11 @@ const Services: React.FC = () => {
                 <s.icon size={32} strokeWidth={1} />
               </div>
               <div className="space-y-4">
-                <h4 className="text-2xl font-serif text-pearl italic capitalize">{s.title}</h4>
+                <h3 className="text-2xl font-serif text-pearl italic capitalize">{s.title}</h3>
                 <p className="text-pearl/60 text-sm italic leading-relaxed font-light">{s.desc}</p>
                 <div className="grid grid-cols-2 gap-x-8 gap-y-2 pt-4">
                   {s.details.map((d, i) => (
-                    <div key={i} className="text-[10px] uppercase tracking-widest text-pearl/40 font-bold flex items-center gap-2">
+                    <div key={i} className="text-[10px] uppercase tracking-widest text-pearl/60 font-bold flex items-center gap-2">
                        <span className="w-1.5 h-1.5 bg-gold/40 rounded-full"></span>
                        {d}
                     </div>
@@ -147,7 +147,7 @@ const Services: React.FC = () => {
       {/* Standalone Project */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gold p-12 md:p-16 rounded-sm text-navy space-y-8 text-center">
-            <h3 className="text-[10px] uppercase tracking-[0.4em] font-black">Standalone Strategy Audit</h3>
+            <p className="text-[10px] uppercase tracking-[0.4em] font-black">Standalone Strategy Audit</p>
             <h2 className="text-4xl md:text-5xl font-serif italic leading-tight">Process Intelligence Report — $3,000</h2>
             <p className="text-navy/70 text-lg font-light leading-relaxed max-w-2xl mx-auto">
                Your AI strategy audit. One deliverable. One week. Identifying where AI tools can reduce friction and accelerate revenue.
@@ -166,7 +166,7 @@ const Services: React.FC = () => {
            <div className="flex justify-center mb-6">
                <ShieldAlert className="w-12 h-12 text-navy/20" />
            </div>
-           <h3 className="text-[11px] uppercase tracking-[0.5em] text-navy font-black">Scope Boundaries</h3>
+           <p className="text-[11px] uppercase tracking-[0.5em] text-navy font-black">Scope Boundaries</p>
            <h2 className="text-4xl font-serif italic text-navy">What Mergelith Does Not Do.</h2>
            <p className="text-navy/60 font-light italic">We are a content and document delivery service. What sits outside our scope:</p>
         </div>
@@ -181,7 +181,7 @@ const Services: React.FC = () => {
              "Campaign management"
            ].map((item, idx) => (
              <div key={idx} className="p-6 border border-navy/5 bg-navy/5 rounded-sm">
-                <p className="text-[10px] uppercase tracking-widest font-black text-navy/40">{item}</p>
+                <p className="text-[10px] uppercase tracking-widest font-black text-navy/60">{item}</p>
              </div>
            ))}
         </div>

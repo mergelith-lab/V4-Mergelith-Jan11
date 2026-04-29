@@ -55,7 +55,7 @@ const WhatWeInstall: React.FC = () => {
         <div className="bg-navy p-12 md:p-16 rounded-sm text-pearl relative overflow-hidden">
           <div className="relative z-10 space-y-12">
             <div className="max-w-3xl space-y-6">
-              <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Mergelith AI Visibility Protocol</h3>
+              <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Mergelith AI Visibility Protocol</p>
               <h2 className="text-4xl md:text-5xl font-serif italic leading-tight">
                 4 Systems That Rank, Influence & Secure Your AI Market Share
               </h2>
@@ -79,7 +79,7 @@ const WhatWeInstall: React.FC = () => {
 
         <div className="space-y-16">
           <div className="max-w-3xl space-y-6">
-            <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Institutional Implementation</h3>
+            <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Institutional Implementation</p>
             <h2 className="text-4xl md:text-6xl font-serif text-navy italic leading-tight">
               AEO/GEO <span className="text-gold">Architecture</span>
             </h2>
@@ -94,26 +94,26 @@ const WhatWeInstall: React.FC = () => {
                     <div className="w-12 h-12 bg-navy/5 flex items-center justify-center rounded-sm group-hover:bg-gold/10 transition-colors">
                       <system.icon className="w-6 h-6 text-gold" />
                     </div>
-                    <span className="text-navy/20 font-serif italic text-4xl">{system.id}</span>
+                    <span className="text-navy/40 font-serif italic text-4xl">{system.id}</span>
                   </div>
-                  <h4 className="text-2xl font-serif text-navy italic group-hover:text-gold transition-colors">{system.title}</h4>
+                  <h3 className="text-2xl font-serif text-navy italic group-hover:text-gold transition-colors">{system.title}</h3>
                   <p className="text-navy/60 text-sm font-light leading-relaxed">
                     {system.desc}
                   </p>
                   <div className="pt-6 border-t border-navy/5 space-y-4">
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-gold font-black mb-1">Primary Impact</p>
+                      <p className="text-[10px] uppercase tracking-widest text-gold-dark font-black mb-1">Primary Impact</p>
                       <p className="text-navy font-medium text-sm leading-relaxed">{system.roi}</p>
                     </div>
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-navy/30 font-black mb-1">Payoff Timeline</p>
+                      <p className="text-[10px] uppercase tracking-widest text-navy/60 font-black mb-1">Payoff Timeline</p>
                       <p className="text-navy/60 text-sm italic">{system.payoff}</p>
                     </div>
                   </div>
                 </div>
                 <div className="mt-8 pt-4 border-t border-navy/5">
-                  <p className="text-[10px] uppercase tracking-widest text-navy/30 font-black mb-2">Ideal Benchmark</p>
-                  <p className="text-navy/50 text-xs italic">{system.bestFor}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-navy/60 font-black mb-2">Ideal Benchmark</p>
+                  <p className="text-navy/60 text-xs italic">{system.bestFor}</p>
                 </div>
               </div>
             ))}

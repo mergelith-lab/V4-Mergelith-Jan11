@@ -39,7 +39,7 @@ const ProblemSection: React.FC = () => {
     <section id="problem" className="scroll-mt-32">
       <div className="space-y-16">
         <div className="max-w-3xl space-y-6">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Status Quo</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">The Status Quo</p>
           <h2 className="text-4xl md:text-6xl font-serif text-navy italic leading-tight">
             What Small Business Owners <span className="text-gold">Tell Us About Their Agency</span>
           </h2>
@@ -54,9 +54,9 @@ const ProblemSection: React.FC = () => {
               <div className="mb-6 p-2 w-fit bg-red-50 rounded-full">
                 <X className="w-5 h-5 text-red-500" strokeWidth={3} />
               </div>
-              <h4 className="text-navy font-serif text-xl italic mb-4">
+              <h3 className="text-navy font-serif text-xl italic mb-4">
                 {problem.title}
-              </h4>
+              </h3>
               <p className="text-navy/60 text-sm font-light leading-relaxed">
                 {problem.desc}
               </p>

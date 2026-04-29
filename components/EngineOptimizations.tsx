@@ -28,7 +28,7 @@ const EngineOptimizations: React.FC = () => {
                 ))}
                 
                 <div className="pt-6">
-                  <div className="text-[10px] text-navy/40 uppercase mb-4 tracking-[0.3em] font-black">Neural Load Balance</div>
+                  <div className="text-[10px] text-navy/60 uppercase mb-4 tracking-[0.3em] font-black">Neural Load Balance</div>
                   <div className="flex gap-1.5 h-16 items-end">
                     {[...Array(18)].map((_, i) => (
                       <div key={i} className="flex-1 bg-navy/10 rounded-t-sm animate-pulse" 
@@ -41,7 +41,7 @@ const EngineOptimizations: React.FC = () => {
         </div>
 
         <div className="order-1 lg:order-2 space-y-10">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Optimization Engine</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Optimization Engine</p>
           <h2 className="text-5xl md:text-6xl font-serif text-navy leading-tight">
             Institutional leverage <br />
             <span className="italic">without headcount.</span>
@@ -51,12 +51,12 @@ const EngineOptimizations: React.FC = () => {
           </p>
           <div className="grid grid-cols-2 gap-10">
             <div>
-              <h4 className="text-navy font-cinzel text-base mb-3 tracking-widest font-black">High Velocity</h4>
-              <p className="text-sm text-navy/50 font-light">4x faster lead triage than human-only teams.</p>
+              <h3 className="text-navy font-cinzel text-base mb-3 tracking-widest font-black">High Velocity</h3>
+              <p className="text-sm text-navy/60 font-light">4x faster lead triage than human-only teams.</p>
             </div>
             <div>
-              <h4 className="text-navy font-cinzel text-base mb-3 tracking-widest font-black">Error Free</h4>
-              <p className="text-sm text-navy/50 font-light">Eliminate data entry fatigue and record leakage.</p>
+              <h3 className="text-navy font-cinzel text-base mb-3 tracking-widest font-black">Error Free</h3>
+              <p className="text-sm text-navy/60 font-light">Eliminate data entry fatigue and record leakage.</p>
             </div>
           </div>
         </div>

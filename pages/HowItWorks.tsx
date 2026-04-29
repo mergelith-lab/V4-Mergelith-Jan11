@@ -50,7 +50,7 @@ const HowItWorksPage: React.FC = () => {
     <div className="pt-32 pb-32 space-y-32">
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Request System</h3>
+        <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Request System</p>
         <h1 className="text-5xl md:text-8xl font-serif italic text-navy leading-tight">
           Exactly How Mergelith Works. <br />
           <span className="text-gold">No Ambiguity. No Surprises.</span>
@@ -69,7 +69,7 @@ const HowItWorksPage: React.FC = () => {
                 <step.icon size={32} strokeWidth={1} />
               </div>
               <div className="space-y-4">
-                <h4 className="text-2xl font-serif text-navy italic">{step.title}</h4>
+                <h3 className="text-2xl font-serif text-navy italic">{step.title}</h3>
                 <p className="text-navy/60 leading-relaxed italic text-sm">{step.desc}</p>
               </div>
             </div>

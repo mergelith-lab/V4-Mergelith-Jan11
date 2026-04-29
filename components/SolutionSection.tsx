@@ -33,7 +33,7 @@ const SolutionSection: React.FC = () => {
     <section id="solution" className="scroll-mt-32">
       <div className="space-y-16">
         <div className="max-w-3xl space-y-6 text-center mx-auto mb-20">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">The Advantage</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">The Advantage</p>
           <h2 className="text-4xl md:text-6xl font-serif text-navy italic leading-tight">
             Why Small Businesses Switch to <span className="text-gold">Mergelith</span>
           </h2>
@@ -43,9 +43,9 @@ const SolutionSection: React.FC = () => {
           {features.map((feature, idx) => (
             <div key={idx} className="space-y-6 p-8 border border-navy/5 bg-white shadow-sm hover:shadow-md transition-all">
               <div className="w-12 h-0.5 bg-gold"></div>
-              <h4 className="text-2xl font-serif text-navy italic leading-tight">
+              <h3 className="text-2xl font-serif text-navy italic leading-tight">
                 {feature.title}
-              </h4>
+              </h3>
               <p className="text-navy/60 text-sm font-light leading-relaxed">
                 {feature.desc}
               </p>
@@ -53,7 +53,7 @@ const SolutionSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="pt-12 text-center text-navy/40 text-sm italic font-light">
+        <div className="pt-12 text-center text-navy/60 text-sm italic font-light">
            "Mergelith delivers — you deploy."
         </div>
       </div>

@@ -35,7 +35,7 @@ const Pricing: React.FC = () => {
     <div className="pt-32 pb-32 space-y-32">
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
         <div className="space-y-4">
-          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Engagement Models</h3>
+          <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Engagement Models</p>
           <h1 className="text-5xl md:text-8xl font-serif italic text-navy leading-tight">
             Simple. Transparent. <br />
             <span className="text-gold">No Surprises.</span>
@@ -55,7 +55,7 @@ const Pricing: React.FC = () => {
       <section className="bg-navy/5 py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           <div className="text-center space-y-4">
-            <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Value Math</h3>
+            <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Value Math</p>
             <h2 className="text-4xl md:text-6xl font-serif text-navy italic">One Deal Pays for the Year.</h2>
             <p className="max-w-2xl mx-auto text-navy/60 font-light italic">
               The question is not whether you can afford Mergelith. It is whether you can afford what missing the next deal costs you.
