@@ -206,7 +206,7 @@ const HowItWorksPage: React.FC = () => {
           <span className="text-gold">No setup fee. No commitment.</span>
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-           <a href="https://calendly.com/sasha-g-aleksic/30min" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-5 text-sm tracking-widest">
+           <a href="https://calendly.com/mergelith/30min" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-5 text-sm tracking-widest">
              BOOK A STRATEGY CALL
            </a>
         </div>

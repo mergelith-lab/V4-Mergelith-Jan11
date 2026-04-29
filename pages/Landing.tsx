@@ -30,7 +30,7 @@ const LandingPage: React.FC = () => {
         </div>
         
         <div className="pt-6">
-           <a href="https://calendly.com/sasha-g-aleksic/30min" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-5 text-sm tracking-widest inline-flex items-center gap-3">
+           <a href="https://calendly.com/mergelith/30min" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-5 text-sm tracking-widest inline-flex items-center gap-3">
              BOOK A STRATEGY CALL
              <ArrowRight size={18} />
            </a>
@@ -127,7 +127,7 @@ const LandingPage: React.FC = () => {
           To protect the 48-hour delivery guarantee, Mergelith caps the number of active clients each month. When capacity is full, new clients go on the waitlist.
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 pt-8 text-center">
-           <a href="https://calendly.com/sasha-g-aleksic/30min" target="_blank" rel="noopener noreferrer" className="btn-primary bg-gold text-navy hover:bg-white px-12 py-5 text-sm tracking-widest">
+           <a href="https://calendly.com/mergelith/30min" target="_blank" rel="noopener noreferrer" className="btn-primary bg-gold text-navy hover:bg-white px-12 py-5 text-sm tracking-widest">
              BOOK A STRATEGY CALL
            </a>
         </div>

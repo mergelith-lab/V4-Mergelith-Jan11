@@ -17,6 +17,7 @@ const Home: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
         <ProblemSection />
         <SolutionSection />
+        <HowItWorks />
         <ExpertiseSection />
         <ComparisonSection />
         <section id="pricing" className="scroll-mt-32 space-y-16">

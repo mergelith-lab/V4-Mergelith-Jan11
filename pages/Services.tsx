@@ -153,7 +153,7 @@ const Services: React.FC = () => {
                Your AI strategy audit. One deliverable. One week. Identifying where AI tools can reduce friction and accelerate revenue.
             </p>
             <div className="pt-6">
-                <a href="https://calendly.com/sasha-g-aleksic/30min" target="_blank" rel="noopener noreferrer" className="btn-primary bg-navy text-pearl hover:bg-pearl hover:text-navy px-12 py-5 text-sm tracking-widest">
+                <a href="https://calendly.com/mergelith/30min" target="_blank" rel="noopener noreferrer" className="btn-primary bg-navy text-pearl hover:bg-pearl hover:text-navy px-12 py-5 text-sm tracking-widest">
                     GET YOUR REPORT
                 </a>
             </div>

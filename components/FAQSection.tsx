@@ -69,7 +69,7 @@ const FAQSection: React.FC = () => {
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center">
             <a 
-              href="https://calendly.com/sasha-g-aleksic/30min"
+              href="https://calendly.com/mergelith/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center"

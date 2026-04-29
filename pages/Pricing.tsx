@@ -90,10 +90,10 @@ const Pricing: React.FC = () => {
           <span className="text-gold">Start in 24 Hours.</span>
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-           <a href="https://calendly.com/sasha-g-aleksic/30min" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-5 text-sm tracking-widest">
+           <a href="https://calendly.com/mergelith/30min" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-5 text-sm tracking-widest">
              BOOK A STRATEGY CALL
            </a>
-           <a href="https://calendly.com/sasha-g-aleksic/30min" target="_blank" rel="noopener noreferrer" className="text-navy/60 text-[10px] uppercase font-black tracking-[0.3em] border-b border-navy/20 hover:text-gold transition-colors">
+           <a href="https://calendly.com/mergelith/30min" target="_blank" rel="noopener noreferrer" className="text-navy/60 text-[10px] uppercase font-black tracking-[0.3em] border-b border-navy/20 hover:text-gold transition-colors">
               Schedule discovery call
            </a>
         </div>

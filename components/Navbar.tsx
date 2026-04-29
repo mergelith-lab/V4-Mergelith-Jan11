@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           
           <div className="flex items-center gap-6 border-l border-navy/10 pl-8">
             <a 
-              href="https://calendly.com/sasha-g-aleksic/30min"
+              href="https://calendly.com/mergelith/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[9px] uppercase tracking-widest text-gold font-black hover:text-navy transition-colors"

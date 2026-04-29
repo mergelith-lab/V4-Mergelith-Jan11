@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0 font-medium tracking-widest text-[10px] uppercase">
                 <li><Link to="/get-started" className="hover:text-navy transition-colors">Get Started</Link></li>
                 <li><a 
-                      href="https://calendly.com/sasha-g-aleksic/30min"
+                      href="https://calendly.com/mergelith/30min"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-navy transition-colors text-gold"

@@ -1,16 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Zap, ShieldCheck, Clock, ArrowRight, LineChart } from 'lucide-react';
 
-import PricingGridTable from './PricingGridTable.tsx';
-
 const Hero: React.FC = () => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-20 overflow-hidden">
       {/* Background Grid */}
@@ -45,12 +37,12 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="pt-6 flex flex-col md:flex-row items-center justify-center gap-6">
-            <a 
-              href="#how-it-works"
-              className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center"
+            <Link 
+              to="/how-it-works"
+              className="btn-primary px-12 py-5 text-xs tracking-[0.3em] w-full md:w-auto text-center cursor-pointer"
             >
               See How Mergelith Works →
-            </a>
+            </Link>
           </div>
         </div>
 
