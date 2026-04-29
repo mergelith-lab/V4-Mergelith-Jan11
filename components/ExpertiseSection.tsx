@@ -4,7 +4,7 @@ const ExpertiseSection: React.FC = () => {
   const stats = [
     {
       value: "5×",
-      label: "Portfolio CAGR driven at FUJIFILM Biosciences in under 2 years"
+      label: "Portfolio CAGR driven at major Life Science companies in the NA in under 2 years"
     },
     {
       value: "160%",
@@ -12,7 +12,7 @@ const ExpertiseSection: React.FC = () => {
     },
     {
       value: "$21M+",
-      label: "Global portfolio managed at MilliporeSigma"
+      label: "Global portfolio managed at major Life Science companies in the NA"
     },
     {
       value: "200+",
