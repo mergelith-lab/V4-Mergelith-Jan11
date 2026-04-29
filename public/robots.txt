@@ -17,4 +17,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://ais-pre-uksfqw73ptrmakma2klj7m-29276518466.us-west2.run.app/sitemap.xml
+Sitemap: https://mergelith.com/sitemap.xml
