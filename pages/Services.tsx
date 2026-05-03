@@ -1,43 +1,50 @@
 import React from 'react';
-import { Presentation, MessageSquare, Palette, Sword, FileText, BarChart, Map, Megaphone, TrendingUp, Share2, ShieldAlert } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Presentation, MessageSquare, Palette, Sword, FileText, BarChart, Map, Megaphone, TrendingUp, Share2, ShieldAlert, ArrowRight } from 'lucide-react';
 
 const Services: React.FC = () => {
   const coreDeliverables = [
     {
-      title: "Corporate Slide Decks",
-      desc: "Multi-slide presentations for investor meetings, board decks, capability presentations, and executive briefings.",
-      details: ["Structured narrative", "Data visualizations", "Consistent branding", "delivered as PPT or Slides"],
-      icon: Presentation
+      title: "Corporate Capability Decks",
+      desc: "Comprehensive presentations that establish your firm's authority, expertise, and credentials for high-value contracts.",
+      details: ["Strategic positioning", "Institutional design", "Founder & team proof", "Operational process mapping"],
+      icon: Presentation,
+      link: "/capability-decks"
     },
     {
       title: "Sales Pitch Decks",
       desc: "Commercial pitch presentations built to close -- not just to impress.",
       details: ["Problem-solution-proof-offer-CTA", "Objection pre-handling", "Prospect-specific framing", "Executive summary included"],
-      icon: MessageSquare
+      icon: MessageSquare,
+      link: "/sales-pitch-decks"
     },
     {
       title: "Brand Kits",
       desc: "Everything needed to look professional, consistent, and credible across every touchpoint.",
       details: ["Color palette & hex codes", "Typography system", "Logo usage rules", "Brand application examples"],
-      icon: Palette
+      icon: Palette,
+      link: "/brand-kit"
     },
     {
       title: "Battle Cards",
       desc: "Competitive intelligence tools your sales team will actually use in the field.",
       details: ["Competitor SWOT", "Positioning against claims", "Top 5 objection handles", "Scannable in 60 seconds"],
-      icon: Sword
+      icon: Sword,
+      link: "/battle-cards"
     },
     {
       title: "One-Pagers",
       desc: "Single-page sales tools that communicate the full picture in the time a prospect will give you.",
       details: ["Product/service overview", "Key proof points", "Digital & print ready", "Capability briefs"],
-      icon: FileText
+      icon: FileText,
+      link: "/one-pagers-infographics"
     },
     {
       title: "Infographics",
       desc: "Visual communication that makes complex information immediately clear.",
       details: ["Market maps", "Process flow diagrams", "Feature matrices", "Branded data viz"],
-      icon: BarChart
+      icon: BarChart,
+      link: "/one-pagers-infographics"
     }
   ];
 
@@ -46,19 +53,22 @@ const Services: React.FC = () => {
       title: "GTM Strategy Documents",
       desc: "Go-to-market frameworks that map your path to more customers -- not just more activity.",
       details: ["Market entry timing", "ICP definition", "Channel architecture", "30/60/90-day plan"],
-      icon: Map
+      icon: Map,
+      link: "/gtm-strategy"
     },
     {
       title: "Campaign Briefs",
       desc: "Integrated campaign planning documents that connect your offer to a measurable growth outcome.",
       details: ["Success metrics", "Audience segments", "Channel maps", "Budget rationale"],
-      icon: Megaphone
+      icon: Megaphone,
+      link: "/campaign-briefs"
     },
     {
       title: "SEO / AEO / GEO Reports",
       desc: "Organic search and AI search visibility strategy for businesses that want to be found before the competition.",
       details: ["Topic opportunity analysis", "Competitive gap ID", "LLM optimization strategy", "Ranking rationale"],
-      icon: TrendingUp
+      icon: TrendingUp,
+      link: "/seo-aeo-geo-report"
     },
     {
       title: "Social Media Posts (4/mo)",
@@ -92,22 +102,35 @@ const Services: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {coreDeliverables.map((s, idx) => (
-            <div key={idx} className="bg-white p-10 border border-navy/5 shadow-sm space-y-6 hover:shadow-xl transition-all duration-500 rounded-sm group">
-              <div className="w-12 h-12 bg-navy/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all rounded-sm">
-                <s.icon size={24} strokeWidth={1} />
+            <div key={idx} className="bg-white p-10 border border-navy/5 shadow-sm space-y-6 hover:shadow-xl transition-all duration-500 rounded-sm group flex flex-col justify-between">
+              <div className="space-y-6">
+                <div className="w-12 h-12 bg-navy/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all rounded-sm">
+                  <s.icon size={24} strokeWidth={1} />
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-serif text-navy italic">{s.title}</h3>
+                  <p className="text-navy/60 text-sm italic leading-relaxed">{s.desc}</p>
+                  <ul className="space-y-2 pt-4">
+                    {s.details.map((d, i) => (
+                      <li key={i} className="text-[10px] uppercase tracking-widest text-navy/60 font-bold flex items-center gap-2">
+                         <span className="w-1 h-1 bg-gold rounded-full"></span>
+                         {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-navy italic">{s.title}</h3>
-                <p className="text-navy/60 text-sm italic leading-relaxed">{s.desc}</p>
-                <ul className="space-y-2 pt-4">
-                  {s.details.map((d, i) => (
-                    <li key={i} className="text-[10px] uppercase tracking-widest text-navy/60 font-bold flex items-center gap-2">
-                       <span className="w-1 h-1 bg-gold rounded-full"></span>
-                       {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              
+              {s.link && (
+                <div className="pt-8 mt-auto">
+                   <Link 
+                     to={s.link} 
+                     className="text-[10px] uppercase tracking-[0.2em] font-black text-navy/40 hover:text-gold flex items-center gap-2 transition-colors"
+                   >
+                     View Deliverable Details <ArrowRight size={12} />
+                   </Link>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -127,17 +150,29 @@ const Services: React.FC = () => {
               <div className="w-16 h-16 bg-white/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all rounded-sm shrink-0">
                 <s.icon size={32} strokeWidth={1} />
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-serif text-pearl italic capitalize">{s.title}</h3>
-                <p className="text-pearl/60 text-sm italic leading-relaxed font-light">{s.desc}</p>
-                <div className="grid grid-cols-2 gap-x-8 gap-y-2 pt-4">
-                  {s.details.map((d, i) => (
-                    <div key={i} className="text-[10px] uppercase tracking-widest text-pearl/60 font-bold flex items-center gap-2">
-                       <span className="w-1.5 h-1.5 bg-gold/40 rounded-full"></span>
-                       {d}
-                    </div>
-                  ))}
+              <div className="flex-1 space-y-6">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-serif text-pearl italic capitalize">{s.title}</h3>
+                  <p className="text-pearl/60 text-sm italic leading-relaxed font-light">{s.desc}</p>
+                  <div className="grid grid-cols-2 gap-x-8 gap-y-2 pt-4">
+                    {s.details.map((d, i) => (
+                      <div key={i} className="text-[10px] uppercase tracking-widest text-pearl/60 font-bold flex items-center gap-2">
+                         <span className="w-1.5 h-1.5 bg-gold/40 rounded-full"></span>
+                         {d}
+                      </div>
+                    ))}
+                  </div>
                 </div>
+                {s.link && (
+                  <div className="pt-4">
+                    <Link 
+                       to={s.link} 
+                       className="text-[10px] uppercase tracking-[0.2em] font-black text-gold/60 hover:text-gold flex items-center gap-2 transition-colors"
+                     >
+                       Strategy Deep-Dive <ArrowRight size={12} />
+                     </Link>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -146,15 +181,18 @@ const Services: React.FC = () => {
 
       {/* Standalone Project */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gold p-12 md:p-16 rounded-sm text-navy space-y-8 text-center">
+        <div className="bg-gold p-12 md:p-16 rounded-sm text-navy space-y-8 text-center ring-1 ring-gold shadow-2xl">
             <p className="text-[10px] uppercase tracking-[0.4em] font-black">Standalone Strategy Audit</p>
             <h2 className="text-4xl md:text-5xl font-serif italic leading-tight">Process Intelligence Report — $3,000</h2>
             <p className="text-navy/70 text-lg font-light leading-relaxed max-w-2xl mx-auto">
                Your AI strategy audit. One deliverable. One week. Identifying where AI tools can reduce friction and accelerate revenue.
             </p>
-            <div className="pt-6">
-                <a href="https://calendly.com/mergelith/30min" target="_blank" rel="noopener noreferrer" className="btn-primary bg-navy text-pearl hover:bg-pearl hover:text-navy px-12 py-5 text-sm tracking-widest">
-                    GET YOUR REPORT
+            <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-6">
+                <Link to="/process-intelligence-report" className="btn-primary bg-navy text-pearl hover:bg-pearl hover:text-navy px-12 py-5 text-sm tracking-widest whitespace-nowrap">
+                    LEARN MORE &rarr;
+                </Link>
+                <a href="https://calendly.com/mergelith/30min" target="_blank" rel="noopener noreferrer" className="text-navy font-black text-[10px] uppercase tracking-widest border-b border-navy/20 hover:border-navy transition-all">
+                    OR GET STARTED &rarr;
                 </a>
             </div>
         </div>

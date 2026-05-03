@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Plus, Minus } from 'lucide-react';
 
 const FAQSection: React.FC = () => {
@@ -15,7 +16,12 @@ const FAQSection: React.FC = () => {
     },
     {
       question: "What is the Process Intelligence Report?",
-      answer: "A standalone $3,000 AI process audit. Mergelith reviews your current marketing and sales workflow, identifies where AI tools can reduce friction and accelerate revenue, and delivers a written report with specific tool recommendations and an implementation roadmap. No subscription required. 1-week turnaround after intake."
+      answer: (
+        <span>
+          A standalone $3,000 AI process audit. Mergelith reviews your current marketing and sales workflow, identifies where AI tools can reduce friction and accelerate revenue, and delivers a written report with specific tool recommendations and an implementation roadmap. No subscription required. 1-week turnaround after intake.{' '}
+          <Link to="/process-intelligence-report" className="text-gold font-bold hover:underline">Learn more here</Link>.
+        </span>
+      )
     },
     {
       question: "What does 'one active task at a time' mean?",

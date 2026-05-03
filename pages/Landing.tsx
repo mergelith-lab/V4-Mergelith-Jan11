@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CheckCircle2, ArrowRight, Zap, Clock, ShieldCheck } from 'lucide-react';
 
 const LandingPage: React.FC = () => {
@@ -37,7 +38,7 @@ const LandingPage: React.FC = () => {
         </div>
         
         <p className="text-[10px] uppercase tracking-[0.3em] text-navy/40 font-bold">
-           Standard $997/mo | Growth $1,999/mo | Process Intelligence Report $3,000 flat
+           Standard $997/mo | Growth $1,999/mo | <Link to="/process-intelligence-report" className="text-gold hover:underline">Process Intelligence Report $3,000 flat</Link>
         </p>
       </section>
 

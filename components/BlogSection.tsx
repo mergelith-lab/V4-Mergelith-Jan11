@@ -1,12 +1,24 @@
 import React from 'react';
 import { ArrowRight, Calendar, User, Clock } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 const blogPosts = [
   {
+    id: 'what-is-marketing-as-a-service',
+    title: "What Is Marketing as a Service?",
+    excerpt: "Marketing as a Service (MaaS) gives small businesses access to professional marketing execution on a monthly retainer — without hiring an agency or a full-time team.",
+    date: "May 03, 2026",
+    author: "Mergelith Team",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=800",
+    category: "Marketing Strategy",
+    link: "/blog/what-is-marketing-as-a-service"
+  },
+  {
     id: 'cgt-ai-search',
     title: "Most CGT Companies Are Invisible in AI Search — Here’s Why and How to Fix It",
-    excerpt: "Most CGT companies are doing everything right—scientifically. But AI search cannot find them. If AI cannot find you, you are not even in the conversation. Learn how to shift from ranking to being selected.",
+    excerpt: "Most CGT companies are doing everything right—scientifically. But AI search cannot find them. If AI cannot find you, you are not even in the conversation.",
     date: "March 28, 2026",
     author: "Mergelith Team",
     readTime: "4 min read",
@@ -16,26 +28,18 @@ const blogPosts = [
   {
     id: 'geo-moat',
     title: "GEO: The New Competitive Moat for Institutional Advisory",
-    excerpt: "Traditional rankings are no longer enough. To win in 2026, firms must ensure their brand is embedded in the training data of major AI models. Learn the GEO strategy for institutional growth.",
+    excerpt: "Traditional rankings are no longer enough. To win in 2026, firms must ensure their brand is embedded in the training data of major AI models.",
     date: "March 15, 2026",
     author: "Mergelith Team",
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
     category: "GEO Strategy"
-  },
-  {
-    id: 'growth-systems',
-    title: "Growth Isn't More Leads; It's Better Systems",
-    excerpt: "The bottleneck for most high-growth firms isn't lead generation—it's lead activation. Learn why institutional systems beat marketing spend every single time.",
-    date: "March 08, 2026",
-    author: "Mergelith Team",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    category: "Strategy"
   }
 ];
 
 const BlogSection: React.FC = () => {
+  const navigate = useNavigate();
+
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -44,7 +48,10 @@ const BlogSection: React.FC = () => {
   };
 
   const handlePostClick = (post: typeof blogPosts[0]) => {
-    if (post.category === 'Case Study') {
+    if (post.link) {
+      navigate(post.link);
+      window.scrollTo(0, 0);
+    } else if (post.category === 'Case Study') {
       scrollTo('case-study');
     }
   };
