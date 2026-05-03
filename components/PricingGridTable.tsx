@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PricingGridTable: React.FC = () => {
   return (
@@ -6,28 +7,31 @@ const PricingGridTable: React.FC = () => {
       <div className="min-w-[800px] border border-navy/20 shadow-2xl">
         {/* Header Row */}
         <div className="grid grid-cols-3 bg-navy text-pearl">
-          <div className="p-8 border-r border-pearl/10">
-            <h3 className="text-2xl font-black tracking-widest uppercase mb-2">Standard</h3>
+          <Link to="/standard-plan" className="p-8 border-r border-pearl/10 block hover:bg-white/5 transition-colors group">
+            <h3 className="text-2xl font-black tracking-widest uppercase mb-2 group-hover:text-gold transition-colors underline decoration-gold/30 underline-offset-8">Standard</h3>
             <div className="flex items-baseline gap-1">
               <span className="text-5xl font-serif text-gold italic">$997</span>
               <span className="text-sm font-light italic">/month</span>
             </div>
-          </div>
-          <div className="p-8 border-r border-pearl/10 relative">
+            <p className="text-[9px] uppercase tracking-widest text-pearl/40 mt-4 font-black">View Plan Details &rarr;</p>
+          </Link>
+          <Link to="/growth-plan" className="p-8 border-r border-pearl/10 relative block hover:bg-white/5 transition-colors group">
             <div className="absolute top-0 right-0 bg-gold text-navy text-[8px] font-black uppercase tracking-widest px-3 py-1">Most Popular</div>
-            <h3 className="text-2xl font-black tracking-widest uppercase mb-2">Growth</h3>
+            <h3 className="text-2xl font-black tracking-widest uppercase mb-2 group-hover:text-gold transition-colors underline decoration-gold/30 underline-offset-8">Growth</h3>
             <div className="flex items-baseline gap-1">
               <span className="text-5xl font-serif text-gold italic">$1,999</span>
               <span className="text-sm font-light italic">/month</span>
             </div>
-          </div>
-          <div className="p-8">
-            <h3 className="text-2xl font-black tracking-widest uppercase mb-2 leading-tight">Process<br />Intelligence Report</h3>
+            <p className="text-[9px] uppercase tracking-widest text-pearl/40 mt-4 font-black">View Plan Details &rarr;</p>
+          </Link>
+          <Link to="/process-intelligence-report" className="p-8 block hover:bg-white/5 transition-colors group">
+            <h3 className="text-2xl font-black tracking-widest uppercase mb-2 leading-tight group-hover:text-gold transition-colors underline decoration-gold/30 underline-offset-8">Process<br />Intelligence Report</h3>
             <div className="flex items-baseline gap-1">
               <span className="text-4xl font-serif text-gold italic">$3,000</span>
               <span className="text-sm font-light italic">flat fee</span>
             </div>
-          </div>
+            <p className="text-[9px] uppercase tracking-widest text-pearl/40 mt-4 font-black">View Report Details &rarr;</p>
+          </Link>
         </div>
 
         {/* Comparison Rows */}

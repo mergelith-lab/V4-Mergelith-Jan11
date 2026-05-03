@@ -37,6 +37,7 @@ const Footer: React.FC = () => {
             <div className="space-y-6">
               <h4 className="text-[11px] uppercase tracking-[0.4em] text-gold font-black">Links</h4>
               <ul className="space-y-3 text-sm text-navy/40 font-light list-none p-0 m-0 font-medium tracking-widest text-[10px] uppercase">
+                <li><Link to="/blog" className="hover:text-navy transition-colors">Intelligence</Link></li>
                 <li><Link to="/get-started" className="hover:text-navy transition-colors">Get Started</Link></li>
                 <li><a 
                       href="https://calendly.com/mergelith/30min"

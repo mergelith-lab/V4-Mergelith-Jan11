@@ -1,0 +1,276 @@
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
+import { Calendar, Clock, ArrowRight, ChevronRight, Search } from 'lucide-react';
+
+const blogPosts = [
+  {
+    id: 'what-is-marketing-as-a-service',
+    title: "What Is Marketing as a Service?",
+    excerpt: "Marketing as a Service (MaaS) gives small businesses access to professional marketing execution on a monthly retainer — without hiring an agency or a full-time team.",
+    date: "May 03, 2026",
+    author: "Mergelith Team",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=800",
+    category: "Marketing Strategy",
+    link: "/blog/what-is-marketing-as-a-service"
+  },
+  {
+    id: 'maas-vs-agency',
+    title: "MaaS vs. Traditional Agency: Which Is Right for You?",
+    excerpt: "Marketing as a Service and traditional agencies both promise results — but they work very differently. Here's how to choose the right model for your business.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+    category: "Business Strategy",
+    link: "/blog/marketing-as-a-service-vs-agency"
+  },
+  {
+    id: 'how-to-hire-fractional',
+    title: "How to Hire a Fractional Marketing Agency: A Complete Guide",
+    excerpt: "What to look for, what to ask, and what to avoid — a practical framework for hiring a partner that actually delivers for your business.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1454165833767-027508492b4a?auto=format&fit=crop&q=80&w=800",
+    category: "Hiring Guide",
+    link: "/blog/how-to-hire-fractional-marketing-agency"
+  },
+  {
+    id: 'cmo-vs-agency',
+    title: "Fractional CMO vs. Marketing Agency: Which Do You Need?",
+    excerpt: "Fractional CMOs and marketing agencies are often compared — but they do fundamentally different things. Here's how to know which model fits your stage.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800",
+    category: "Business Strategy",
+    link: "/blog/fractional-cmo-vs-marketing-agency"
+  },
+  {
+    id: 'ai-audit-include',
+    title: "What Does a Marketing AI Audit Include?",
+    excerpt: "An AI audit reviews your sales workflow to find where automation can eliminate manual work and improve conversion. Here's exactly what to expect.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    category: "AI & Automation",
+    link: "/blog/what-does-a-marketing-ai-audit-include"
+  },
+  {
+    id: 'cgt-ai-search',
+    title: "Most CGT Companies Are Invisible in AI Search — Here’s Why and How to Fix It",
+    excerpt: "Most CGT companies are doing everything right—scientifically. But AI search cannot find them. If AI cannot find you, you are not even in the conversation.",
+    date: "March 28, 2026",
+    author: "Mergelith Team",
+    readTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&q=80&w=800",
+    category: "AEO Strategy",
+    link: "/blog/cgt-companies-invisible-in-ai-search"
+  },
+  {
+    id: 'geo-moat',
+    title: "GEO: The New Competitive Moat for Institutional Advisory",
+    excerpt: "Traditional rankings are no longer enough. To win in 2026, firms must ensure their brand is embedded in the training data of major AI models.",
+    date: "March 15, 2026",
+    author: "Mergelith Team",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+    category: "GEO Strategy",
+    link: "/blog/geo-new-competitive-moat"
+  }
+];
+
+const Blog: React.FC = () => {
+  useEffect(() => {
+    document.title = "The Mergelith Journal | Strategic Marketing Intelligence";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Expert insights on Marketing as a Service, GTM strategy, AI automation, and the future of institutional marketing.");
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="min-h-screen pt-32 pb-20">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-20 space-y-8"
+        >
+          <div className="flex items-center gap-4 text-gold mb-6">
+            <span className="text-[10px] uppercase tracking-[0.4em] font-black border-b border-gold/30 pb-1">Intelligence</span>
+            <span className="w-1 h-1 bg-gold/30 rounded-full"></span>
+            <span className="text-[10px] uppercase tracking-[0.4em] font-black border-b border-gold/30 pb-1">Official Journal</span>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-end gap-12">
+            <div className="space-y-4 max-w-3xl">
+              <h1 className="text-5xl md:text-8xl font-serif text-navy italic leading-tight">
+                The Mergelith <span className="text-gold">Journal</span>
+              </h1>
+              <p className="text-xl text-navy/60 font-light italic border-l-2 border-gold/20 pl-8">
+                Strategic insights on institutional AI, revenue systems, and the evolution of digital authority in the age of algorithmic search.
+              </p>
+            </div>
+            <div className="bg-pearl p-8 border border-navy/5 rounded-sm w-full md:w-80 space-y-4">
+              <p className="text-[10px] uppercase tracking-widest font-black text-navy/40 italic">Subscribe to Intelligence</p>
+              <div className="flex">
+                <input 
+                  type="email" 
+                  placeholder="name@company.com" 
+                  className="bg-white border border-navy/10 px-4 py-3 text-xs w-full focus:outline-none focus:border-gold/50"
+                />
+                <button className="bg-navy text-pearl px-4 py-3 text-xs uppercase tracking-widest font-black hover:bg-gold hover:text-navy transition-colors">
+                  &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Featured Post (Optional - using first one as featured) */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="grid lg:grid-cols-2 gap-12 mb-24 items-center bg-pearl/50 rounded-sm p-8 border border-navy/5"
+        >
+          <Link to={blogPosts[0].link} className="aspect-[16/9] overflow-hidden rounded-sm group">
+            <img 
+              src={blogPosts[0].image} 
+              alt={blogPosts[0].title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              referrerPolicy="no-referrer"
+            />
+          </Link>
+          <div className="space-y-8">
+            <span className="px-4 py-1.5 bg-navy text-gold text-[10px] uppercase tracking-[0.3em] font-black rounded-sm w-fit">
+              {blogPosts[0].category}
+            </span>
+            <div className="space-y-4">
+              <Link to={blogPosts[0].link} className="block group">
+                <h2 className="text-4xl md:text-5xl font-serif text-navy italic group-hover:text-gold transition-colors leading-tight">
+                  {blogPosts[0].title}
+                </h2>
+              </Link>
+              <p className="text-lg text-navy/60 font-light leading-relaxed">
+                {blogPosts[0].excerpt}
+              </p>
+            </div>
+            <div className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-navy/40 font-bold border-t border-navy/5 pt-8">
+              <div className="flex items-center gap-2">
+                <Calendar size={14} className="text-gold" />
+                {blogPosts[0].date}
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock size={14} className="text-gold" />
+                {blogPosts[0].readTime}
+              </div>
+              <Link to={blogPosts[0].link} className="ml-auto text-navy font-black hover:text-gold transition-colors flex items-center gap-2">
+                READ ARTICLE <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Categories / Filter (Visual only for now) */}
+        <div className="flex flex-wrap gap-4 mb-16 border-b border-navy/5 pb-8">
+          {["All Intelligence", "Marketing Strategy", "Business Strategy", "AI & Automation", "AEO/GEO Strategy", "Hiring Guide"].map((cat, i) => (
+            <button 
+              key={i}
+              className={`px-6 py-2.5 text-[10px] uppercase tracking-widest font-black transition-all ${i === 0 ? 'bg-navy text-pearl' : 'text-navy/40 hover:text-navy border border-transparent hover:border-navy/10'}`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
+          {blogPosts.slice(1).map((post, idx) => (
+            <motion.article 
+              key={post.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="group"
+            >
+              <Link to={post.link} className="space-y-8 block">
+                <div className="relative aspect-[16/9] overflow-hidden rounded-sm">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute top-6 left-6">
+                    <span className="px-3 py-1 bg-navy text-gold text-[10px] uppercase tracking-[0.2em] font-black rounded-sm">
+                      {post.category}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="flex items-center gap-6 text-[10px] uppercase tracking-widest text-navy/40 font-bold">
+                    <div className="flex items-center gap-2">
+                       <Calendar size={12} className="text-gold" />
+                       {post.date}
+                    </div>
+                    <div className="flex items-center gap-2">
+                       <Clock size={12} className="text-gold" />
+                       {post.readTime}
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl md:text-3xl font-serif text-navy italic group-hover:text-gold transition-colors leading-tight">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-sm text-navy/60 font-light leading-relaxed line-clamp-3">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="pt-4 flex items-center gap-3 text-navy font-black text-[11px] uppercase tracking-[0.3em] group-hover:gap-5 transition-all">
+                    Read Article
+                    <ArrowRight size={14} className="text-gold" />
+                  </div>
+                </div>
+              </Link>
+            </motion.article>
+          ))}
+        </div>
+
+        {/* Newsletter Footer */}
+        <section className="mt-32 p-20 bg-navy text-pearl rounded-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-10 opacity-5">
+             <Search size={300} className="text-gold" />
+          </div>
+          <div className="max-w-2xl space-y-8 relative z-10">
+            <h2 className="text-4xl md:text-5xl font-serif italic text-gold leading-tight">The Future of Marketing is Algorithmic.</h2>
+            <p className="text-xl text-pearl/60 font-light italic">
+              Subscribe to the Mergelith Journal for twice-monthly strategic reports on AI search visibility, revenue systems, and institutional authority.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <input 
+                type="email" 
+                placeholder="Business Email" 
+                className="bg-white/5 border border-white/10 px-8 py-5 text-sm w-full md:w-96 focus:outline-none focus:border-gold/50 text-pearl"
+              />
+              <button className="bg-gold text-navy px-12 py-5 text-xs uppercase tracking-widest font-black hover:bg-white transition-colors">
+                JOIN THE JOURNAL
+              </button>
+            </div>
+            <p className="text-[10px] uppercase tracking-widest text-pearl/40 font-black">Join 2,400+ Institutional Marketing Leaders</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;

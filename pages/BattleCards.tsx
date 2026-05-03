@@ -11,7 +11,9 @@ import {
   Search,
   MessageSquare,
   TrendingUp,
-  Target
+  Target,
+  Users,
+  ShieldCheck
 } from 'lucide-react';
 import { motion } from 'motion/react';
 

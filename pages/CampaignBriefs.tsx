@@ -12,7 +12,10 @@ import {
   BarChart3,
   Search,
   Flag,
-  Layers
+  Layers,
+  Users,
+  Network,
+  ShieldCheck
 } from 'lucide-react';
 import { motion } from 'motion/react';
 

@@ -12,7 +12,8 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
     { label: 'Home', path: '/' },
     { label: 'How It Works', path: '/how-it-works' },
     { label: 'Pricing', path: '/pricing' },
-    { label: 'Services', path: '/services' }
+    { label: 'Services', path: '/services' },
+    { label: 'Blog', path: '/blog' }
   ];
 
   return (

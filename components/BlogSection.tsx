@@ -16,6 +16,50 @@ const blogPosts = [
     link: "/blog/what-is-marketing-as-a-service"
   },
   {
+    id: 'maas-vs-agency',
+    title: "MaaS vs. Traditional Agency: Which Is Right for You?",
+    excerpt: "Marketing as a Service and traditional agencies both promise results — but they work very differently. Here's how to choose the right model for your business.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+    category: "Business Strategy",
+    link: "/blog/marketing-as-a-service-vs-agency"
+  },
+  {
+    id: 'how-to-hire-fractional',
+    title: "How to Hire a Fractional Marketing Agency: A Complete Guide",
+    excerpt: "What to look for, what to ask, and what to avoid — a practical framework for hiring a partner that actually delivers for your business.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1454165833767-027508492b4a?auto=format&fit=crop&q=80&w=800",
+    category: "Hiring Guide",
+    link: "/blog/how-to-hire-fractional-marketing-agency"
+  },
+  {
+    id: 'cmo-vs-agency',
+    title: "Fractional CMO vs. Marketing Agency: Which Do You Need?",
+    excerpt: "Fractional CMOs and marketing agencies are often compared — but they do fundamentally different things. Here's how to know which model fits your stage.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800",
+    category: "Business Strategy",
+    link: "/blog/fractional-cmo-vs-marketing-agency"
+  },
+  {
+    id: 'ai-audit-include',
+    title: "What Does a Marketing AI Audit Include?",
+    excerpt: "An AI audit reviews your sales workflow to find where automation can eliminate manual work and improve conversion. Here's exactly what to expect.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    category: "AI & Automation",
+    link: "/blog/what-does-a-marketing-ai-audit-include"
+  },
+  {
     id: 'cgt-ai-search',
     title: "Most CGT Companies Are Invisible in AI Search — Here’s Why and How to Fix It",
     excerpt: "Most CGT companies are doing everything right—scientifically. But AI search cannot find them. If AI cannot find you, you are not even in the conversation.",
