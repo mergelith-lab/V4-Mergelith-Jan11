@@ -24,9 +24,10 @@ const ExpertiseSection: React.FC = () => {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-serif text-navy italic">The Expertise Behind Every Mergelith Deliverable</h2>
-          <p className="text-navy/60 max-w-3xl mx-auto font-light lg:text-lg">
-            Mergelith is built by a commercial strategist with 20+ years in global marketing leadership — not a generalist agency team.
+          <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Differentiation</h3>
+          <h2 className="text-4xl md:text-5xl font-serif text-navy italic">Built by a Commercial Strategist. Not an Agency Team.</h2>
+          <p className="text-navy/60 max-w-3xl mx-auto font-light lg:text-lg italic">
+            Every Mergelith deliverable is built by a senior commercial strategist with 20+ years of experience scaling marketing programs at leading global life science companies — not briefed to a junior team. The same commercial rigor that drove 5× portfolio growth and enabled 200+ global sales reps goes into your pitch deck, your brand kit, and your campaign brief.
           </p>
         </div>
 

@@ -28,8 +28,10 @@ const HowItWorks: React.FC = () => {
       <div className="space-y-20">
         <div className="text-center space-y-4">
           <h3 className="text-[11px] uppercase tracking-[0.5em] text-gold font-black">Velocity</h3>
-          <h2 className="text-4xl md:text-6xl font-serif text-navy italic">Three Steps. No Agency Overhead.</h2>
-          <p className="text-navy/60 font-light">No retainer lock-ins. No onboarding calls that go nowhere. No waiting six weeks for a deck.</p>
+          <h2 className="text-4xl md:text-6xl font-serif text-navy italic">How Marketing as a Service Works</h2>
+          <p className="text-navy/60 font-light max-w-2xl mx-auto italic">
+            You submit a task — a pitch deck, a brand kit, a campaign brief. We build it in 48 hours. You own it, use it, and submit the next one. Month-to-month retainer, no agency overhead, no waiting weeks for a deliverable.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

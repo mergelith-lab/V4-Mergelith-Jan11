@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
         <div className="space-y-10 mb-20">
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-navy/10 bg-white/50 backdrop-blur-md mb-6 animate-fade-in shadow-sm">
             <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse shadow-[0_0_8px_#D4AF37]"></span>
-            <span className="text-[11px] uppercase tracking-[0.4em] text-navy font-black">Marketing-as-a-Service &bull; Lake Elsinore, CA</span>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-navy font-black">MARKETING AS A SERVICE FOR SMALL BUSINESS &bull; LAKE ELSINORE, CA</span>
           </div>
           
           <div className="space-y-6">

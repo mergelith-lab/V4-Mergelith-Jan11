@@ -33,17 +33,10 @@ const Services: React.FC = () => {
       link: "/battle-cards"
     },
     {
-      title: "One-Pagers",
-      desc: "Single-page sales tools that communicate the full picture in the time a prospect will give you.",
-      details: ["Product/service overview", "Key proof points", "Digital & print ready", "Capability briefs"],
+      title: "One-Pagers & Infographics",
+      desc: "Single-page sales tools and visual communication that makes complex information clear and scannable.",
+      details: ["Product/service overview", "Market maps", "Process flow diagrams", "Capability briefs"],
       icon: FileText,
-      link: "/one-pagers-infographics"
-    },
-    {
-      title: "Infographics",
-      desc: "Visual communication that makes complex information immediately clear.",
-      details: ["Market maps", "Process flow diagrams", "Feature matrices", "Branded data viz"],
-      icon: BarChart,
       link: "/one-pagers-infographics"
     }
   ];
@@ -71,8 +64,8 @@ const Services: React.FC = () => {
       link: "/seo-aeo-geo-report"
     },
     {
-      title: "Social Media Posts (4/mo)",
-      desc: "Written and designed -- delivered to you for publishing with your own CTA.",
+      title: "Weekly Social Media Posts",
+      desc: "Written and designed -- delivered to you for publishing with your own CTA. 4 items per month.",
       details: ["Instagram/FB/X", "Post copy + design brief", "Finished graphics", "Platform appropriate formats"],
       icon: Share2
     }
