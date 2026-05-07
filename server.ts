@@ -52,11 +52,11 @@ async function startServer() {
         await transporter.sendMail({
           from: process.env.SMTP_FROM || `"Mergelith Inquiry" <noreply@mergelith.com>`,
           to: notificationEmail,
-          subject: `New Institutional Inquiry from ${firm}`,
+          subject: `New Inquiry from ${firm}`,
           text: `Name: ${name}\nFirm: ${firm}\nEmail: ${email}\nObjective: ${objective}`,
           html: `
             <div style="font-family: serif; padding: 40px; background-color: #fcfaf7; color: #0a0e14; border: 1px solid rgba(10, 14, 20, 0.05);">
-              <h2 style="font-style: italic; border-bottom: 1px solid #d4af37; padding-bottom: 20px;">Institutional Inquiry Received</h2>
+              <h2 style="font-style: italic; border-bottom: 1px solid #d4af37; padding-bottom: 20px;">Inquiry Received</h2>
               <div style="margin-top: 30px; space-y: 10px;">
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Firm:</strong> ${firm}</p>
@@ -110,7 +110,7 @@ async function startServer() {
                 <strong>Subscriber Email:</strong> <span style="color: #d4af37;">${email}</span>
               </p>
               <p style="font-size: 12px; color: rgba(10, 14, 20, 0.4); margin-top: 50px; text-transform: uppercase; letter-spacing: 2px;">
-                Mergelith Institutional AI Infrastructure
+                Mergelith AI Infrastructure
               </p>
             </div>
           `,

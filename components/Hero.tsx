@@ -18,6 +18,23 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="z-10 text-center px-6 max-w-7xl mx-auto flex-1 flex flex-col justify-center">
+        <div className="mb-20 animate-fade-in relative group px-4">
+          <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 via-transparent to-navy/20 blur-xl opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+          <div className="relative max-w-5xl mx-auto bg-navy/5 ring-1 ring-navy/10 rounded-sm overflow-hidden shadow-2xl">
+            <img 
+              src="/banner.png" 
+              alt="Mergelith Marketing AI Banner" 
+              className="w-full aspect-[21/9] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              onError={(e) => {
+                e.currentTarget.src = "https://mergelith.com/logo.png";
+                e.currentTarget.style.objectFit = "contain";
+                e.currentTarget.style.padding = "4rem";
+              }}
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        </div>
+
         <div className="space-y-10 mb-20">
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-navy/10 bg-white/50 backdrop-blur-md mb-6 animate-fade-in shadow-sm">
             <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse shadow-[0_0_8px_#D4AF37]"></span>

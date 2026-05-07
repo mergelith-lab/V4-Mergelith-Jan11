@@ -72,7 +72,7 @@ const blogPosts = [
   },
   {
     id: 'geo-moat',
-    title: "GEO: The New Competitive Moat for Institutional Advisory",
+    title: "GEO: The New Competitive Moat for Advisory",
     excerpt: "Traditional rankings are no longer enough. To win in 2026, firms must ensure their brand is embedded in the training data of major AI models.",
     date: "March 15, 2026",
     author: "Mergelith Team",
