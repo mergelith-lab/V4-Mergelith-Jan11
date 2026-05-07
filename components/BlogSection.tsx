@@ -67,7 +67,8 @@ const blogPosts = [
     author: "Mergelith Team",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&q=80&w=800",
-    category: "AEO Strategy"
+    category: "AEO/GEO Strategy",
+    link: "/blog/cgt-companies-invisible-in-ai-search"
   },
   {
     id: 'geo-moat',
@@ -77,7 +78,8 @@ const blogPosts = [
     author: "Mergelith Team",
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-    category: "GEO Strategy"
+    category: "AEO/GEO Strategy",
+    link: "/blog/geo-new-competitive-moat"
   }
 ];
 
@@ -170,9 +172,12 @@ const BlogSection: React.FC = () => {
         </div>
 
         <div className="mt-24 pt-12 border-t border-navy/5 text-center">
-          <button className="text-navy/40 hover:text-navy transition-colors text-[11px] uppercase tracking-[0.4em] font-black">
+          <Link 
+            to="/blog"
+            className="text-navy/40 hover:text-navy transition-colors text-[11px] uppercase tracking-[0.4em] font-black"
+          >
             View All Intelligence &bull; Archive
-          </button>
+          </Link>
         </div>
       </div>
     </section>

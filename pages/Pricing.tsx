@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO.tsx';
 import PricingGridTable from '../components/PricingGridTable.tsx';
 import ComparisonSection from '../components/ComparisonSection.tsx';
 import { Target, Scale, Briefcase, Home as HomeIcon, HardHat } from 'lucide-react';
@@ -33,6 +34,10 @@ const Pricing: React.FC = () => {
 
   return (
     <div className="pt-32 pb-32 space-y-32">
+      <SEO 
+        title="Predictable Pricing" 
+        description="Simple, flat-rate marketing retainer pricing. No proposals, no discovery fees, and no long-term contracts. Get corporate-grade assets starting from $997/mo." 
+      />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
         <div className="space-y-4">
           <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Engagement Models</p>

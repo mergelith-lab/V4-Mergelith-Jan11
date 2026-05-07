@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO.tsx';
 import { Link } from 'react-router-dom';
 import { Presentation, MessageSquare, Palette, Sword, FileText, BarChart, Map, Megaphone, TrendingUp, Share2, ShieldAlert, ArrowRight } from 'lucide-react';
 
@@ -73,6 +74,10 @@ const Services: React.FC = () => {
 
   return (
     <div className="pt-32 pb-32 space-y-32">
+      <SEO 
+        title="Marketing as a Service Offerings" 
+        description="Every deliverable from pitch decks to GTM strategy, included in a single subscription. 48-hour delivery for institutional-grade marketing materials." 
+      />
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
         <p className="text-[11px] uppercase tracking-[0.5em] text-gold-dark font-black">Our Capabilities</p>

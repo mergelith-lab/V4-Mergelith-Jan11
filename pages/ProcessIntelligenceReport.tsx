@@ -194,7 +194,7 @@ const ProcessIntelligenceReport: React.FC = () => {
                   {[
                     { step: "01", title: "Book and pay", desc: "Flat fee. Secure checkout. No contract." },
                     { step: "02", title: "Complete the intake", desc: "Structured forms take 20-30 mins to fill." },
-                    { step: "03", title: "We audit", desc: "Sasha reviews your workflow end-to-end." },
+                    { step: "03", title: "We audit", desc: "Mergelith reviews your workflow end-to-end." },
                     { step: "04", title: "Report delivered", desc: "Sent within one week of intake completion." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-6 group">

@@ -1,9 +1,21 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import SEO from '../components/SEO.tsx';
 import { Calendar, Clock, ArrowRight, ChevronRight, Search } from 'lucide-react';
 
 const blogPosts = [
+  {
+    id: 'how-ai-help-small-business',
+    title: "How AI Can Help Small Businesses Compete — and Win",
+    excerpt: "AI tools for small business are no longer optional — they're the difference between competing and falling behind. Here's exactly how small businesses are using AI to grow faster with less overhead.",
+    date: "May 02, 2026",
+    author: "Mergelith Team",
+    readTime: "12 min read",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
+    category: "AI & Automation",
+    link: "/blog/how-ai-can-help-small-business"
+  },
   {
     id: 'what-is-marketing-as-a-service',
     title: "What Is Marketing as a Service?",
@@ -67,7 +79,7 @@ const blogPosts = [
     author: "Mergelith Team",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&q=80&w=800",
-    category: "AEO Strategy",
+    category: "AEO/GEO Strategy",
     link: "/blog/cgt-companies-invisible-in-ai-search"
   },
   {
@@ -78,12 +90,43 @@ const blogPosts = [
     author: "Mergelith Team",
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-    category: "GEO Strategy",
+    category: "AEO/GEO Strategy",
     link: "/blog/geo-new-competitive-moat"
   }
 ];
 
 const Blog: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = React.useState('All Intelligence');
+  const [email1, setEmail1] = React.useState('');
+  const [email2, setEmail2] = React.useState('');
+  const [status1, setStatus1] = React.useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [status2, setStatus2] = React.useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubscribe = async (email: string, setStatus: (s: any) => void) => {
+    if (!email || !email.includes('@')) {
+      alert("Please enter a valid business email.");
+      return;
+    }
+
+    setStatus('loading');
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      setStatus('error');
+    }
+  };
+
   useEffect(() => {
     document.title = "The Mergelith Journal | Strategic Marketing Intelligence";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -93,8 +136,26 @@ const Blog: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Dynamically get unique categories from blogPosts that actually have topics
+  const availableCategories = ['All Intelligence', ...new Set(blogPosts.map(post => post.category))].sort((a, b) => {
+    if (a === 'All Intelligence') return -1;
+    if (b === 'All Intelligence') return 1;
+    return a.localeCompare(b);
+  });
+
+  const filteredPosts = selectedCategory === 'All Intelligence' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
+  const featuredPost = filteredPosts[0];
+  const gridPosts = filteredPosts.slice(1);
+
   return (
     <div className="min-h-screen pt-32 pb-20">
+      <SEO 
+        title="The Mergelith Journal" 
+        description="Strategic insights on institutional AI, revenue systems, and the evolution of digital authority in the age of algorithmic search." 
+      />
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div 
@@ -118,85 +179,107 @@ const Blog: React.FC = () => {
             </div>
             <div className="bg-pearl p-8 border border-navy/5 rounded-sm w-full md:w-80 space-y-4">
               <p className="text-[10px] uppercase tracking-widest font-black text-navy/40 italic">Subscribe to Intelligence</p>
-              <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="name@company.com" 
-                  className="bg-white border border-navy/10 px-4 py-3 text-xs w-full focus:outline-none focus:border-gold/50"
-                />
-                <button className="bg-navy text-pearl px-4 py-3 text-xs uppercase tracking-widest font-black hover:bg-gold hover:text-navy transition-colors">
-                  &rarr;
-                </button>
-              </div>
+              {status1 === 'success' ? (
+                <div className="text-[10px] uppercase tracking-widest font-black text-gold">
+                  Welcome to the Journal.
+                </div>
+              ) : (
+                <form 
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSubscribe(email1, setStatus1);
+                  }}
+                  className="flex"
+                >
+                  <input 
+                    type="email" 
+                    placeholder="name@company.com" 
+                    value={email1}
+                    onChange={(e) => setEmail1(e.target.value)}
+                    required
+                    className="bg-white border border-navy/10 px-4 py-3 text-xs w-full focus:outline-none focus:border-gold/50"
+                  />
+                  <button 
+                    type="submit"
+                    disabled={status1 === 'loading'}
+                    className="bg-navy text-pearl px-4 py-3 text-xs uppercase tracking-widest font-black hover:bg-gold hover:text-navy transition-colors disabled:opacity-50"
+                  >
+                    {status1 === 'loading' ? '...' : '→'}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </motion.div>
 
-        {/* Featured Post (Optional - using first one as featured) */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="grid lg:grid-cols-2 gap-12 mb-24 items-center bg-pearl/50 rounded-sm p-8 border border-navy/5"
-        >
-          <Link to={blogPosts[0].link} className="aspect-[16/9] overflow-hidden rounded-sm group">
-            <img 
-              src={blogPosts[0].image} 
-              alt={blogPosts[0].title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              referrerPolicy="no-referrer"
-            />
-          </Link>
-          <div className="space-y-8">
-            <span className="px-4 py-1.5 bg-navy text-gold text-[10px] uppercase tracking-[0.3em] font-black rounded-sm w-fit">
-              {blogPosts[0].category}
-            </span>
-            <div className="space-y-4">
-              <Link to={blogPosts[0].link} className="block group">
-                <h2 className="text-4xl md:text-5xl font-serif text-navy italic group-hover:text-gold transition-colors leading-tight">
-                  {blogPosts[0].title}
-                </h2>
-              </Link>
-              <p className="text-lg text-navy/60 font-light leading-relaxed">
-                {blogPosts[0].excerpt}
-              </p>
-            </div>
-            <div className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-navy/40 font-bold border-t border-navy/5 pt-8">
-              <div className="flex items-center gap-2">
-                <Calendar size={14} className="text-gold" />
-                {blogPosts[0].date}
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock size={14} className="text-gold" />
-                {blogPosts[0].readTime}
-              </div>
-              <Link to={blogPosts[0].link} className="ml-auto text-navy font-black hover:text-gold transition-colors flex items-center gap-2">
-                READ ARTICLE <ArrowRight size={14} />
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Categories / Filter (Visual only for now) */}
-        <div className="flex flex-wrap gap-4 mb-16 border-b border-navy/5 pb-8">
-          {["All Intelligence", "Marketing Strategy", "Business Strategy", "AI & Automation", "AEO/GEO Strategy", "Hiring Guide"].map((cat, i) => (
+        {/* Categories / Filter (Dynamic and Topics-first) */}
+        <div className="flex flex-wrap gap-4 mb-16 border-b border-navy/5 pb-8 overflow-x-auto no-scrollbar">
+          {availableCategories.map((cat, i) => (
             <button 
               key={i}
-              className={`px-6 py-2.5 text-[10px] uppercase tracking-widest font-black transition-all ${i === 0 ? 'bg-navy text-pearl' : 'text-navy/40 hover:text-navy border border-transparent hover:border-navy/10'}`}
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-6 py-2.5 text-[10px] uppercase tracking-widest font-black transition-all whitespace-nowrap ${selectedCategory === cat ? 'bg-navy text-pearl' : 'text-navy/40 hover:text-navy border border-transparent hover:border-navy/10'}`}
             >
               {cat}
             </button>
           ))}
         </div>
 
+        {/* Featured Post */}
+        {featuredPost && (
+          <motion.div 
+            key={featuredPost.id + selectedCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="grid lg:grid-cols-2 gap-12 mb-24 items-center bg-pearl/50 rounded-sm p-8 border border-navy/5"
+          >
+            <Link to={featuredPost.link} className="aspect-[16/9] overflow-hidden rounded-sm group">
+              <img 
+                src={featuredPost.image} 
+                alt={featuredPost.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+            </Link>
+            <div className="space-y-8">
+              <span className="px-4 py-1.5 bg-navy text-gold text-[10px] uppercase tracking-[0.3em] font-black rounded-sm w-fit">
+                {featuredPost.category}
+              </span>
+              <div className="space-y-4">
+                <Link to={featuredPost.link} className="block group">
+                  <h2 className="text-4xl md:text-5xl font-serif text-navy italic group-hover:text-gold transition-colors leading-tight">
+                    {featuredPost.title}
+                  </h2>
+                </Link>
+                <p className="text-lg text-navy/60 font-light leading-relaxed">
+                  {featuredPost.excerpt}
+                </p>
+              </div>
+              <div className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-navy/40 font-bold border-t border-navy/5 pt-8">
+                <div className="flex items-center gap-2">
+                  <Calendar size={14} className="text-gold" />
+                  {featuredPost.date}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={14} className="text-gold" />
+                  {featuredPost.readTime}
+                </div>
+                <Link to={featuredPost.link} className="ml-auto text-navy font-black hover:text-gold transition-colors flex items-center gap-2">
+                  READ ARTICLE <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
-          {blogPosts.slice(1).map((post, idx) => (
+          {gridPosts.map((post, idx) => (
             <motion.article 
               key={post.id}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               className="group"
             >
@@ -256,14 +339,35 @@ const Blog: React.FC = () => {
               Subscribe to the Mergelith Journal for twice-monthly strategic reports on AI search visibility, revenue systems, and institutional authority.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <input 
-                type="email" 
-                placeholder="Business Email" 
-                className="bg-white/5 border border-white/10 px-8 py-5 text-sm w-full md:w-96 focus:outline-none focus:border-gold/50 text-pearl"
-              />
-              <button className="bg-gold text-navy px-12 py-5 text-xs uppercase tracking-widest font-black hover:bg-white transition-colors">
-                JOIN THE JOURNAL
-              </button>
+              {status2 === 'success' ? (
+                <div className="text-xl text-gold font-serif italic">
+                  Thank you. You've been added to the Journal.
+                </div>
+              ) : (
+                <form 
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSubscribe(email2, setStatus2);
+                  }}
+                  className="flex flex-col sm:flex-row gap-4 w-full"
+                >
+                  <input 
+                    type="email" 
+                    placeholder="Business Email" 
+                    value={email2}
+                    onChange={(e) => setEmail2(e.target.value)}
+                    required
+                    className="bg-white/5 border border-white/10 px-8 py-5 text-sm w-full md:w-96 focus:outline-none focus:border-gold/50 text-pearl"
+                  />
+                  <button 
+                    type="submit"
+                    disabled={status2 === 'loading'}
+                    className="bg-gold text-navy px-12 py-5 text-xs uppercase tracking-widest font-black hover:bg-white transition-colors disabled:opacity-50"
+                  >
+                    {status2 === 'loading' ? 'SUBSCRIBING...' : 'JOIN THE JOURNAL'}
+                  </button>
+                </form>
+              )}
             </div>
             <p className="text-[10px] uppercase tracking-widest text-pearl/40 font-black">Join 2,400+ Institutional Marketing Leaders</p>
           </div>

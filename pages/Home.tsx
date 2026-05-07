@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO.tsx';
 import Hero from '../components/Hero.tsx';
 import ProblemSection from '../components/ProblemSection.tsx';
 import SolutionSection from '../components/SolutionSection.tsx';
@@ -16,6 +17,10 @@ import { ArrowRight } from 'lucide-react';
 const Home: React.FC = () => {
   return (
     <div className="space-y-32 pb-32">
+      <SEO 
+        title="Institutional Marketing AI Agency" 
+        description="Mergelith delivers corporate-grade marketing materials in 48 hours. Specializing in AEO, GEO, and high-velocity marketing execution for small businesses." 
+      />
       <Hero />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
         <ProblemSection />

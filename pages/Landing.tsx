@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO.tsx';
 import { CheckCircle2, ArrowRight, Zap, Clock, ShieldCheck } from 'lucide-react';
 
 const LandingPage: React.FC = () => {
@@ -14,6 +15,10 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="pt-32 pb-32 space-y-32 bg-pearl relative overflow-hidden">
+      <SEO 
+        title="Marketing Strategy & Execution" 
+        description="Stop losing deals to competitors with better materials. Get corporate-grade marketing assets built by a commercial strategist — in 48 hours." 
+      />
       {/* Decorative Hook Element */}
       <div className="absolute top-0 left-0 w-1 h-32 bg-gold"></div>
 

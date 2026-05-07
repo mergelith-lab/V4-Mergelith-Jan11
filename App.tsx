@@ -17,6 +17,7 @@ import FractionalCMOVsAgency from './pages/blog/FractionalCMOVsAgency.tsx';
 import MarketingAIAudit from './pages/blog/MarketingAIAudit.tsx';
 import CGTInvisibleInAISearch from './pages/blog/CGTInvisibleInAISearch.tsx';
 import GEOMoatInstitutionalAdvisory from './pages/blog/GEOMoatInstitutionalAdvisory.tsx';
+import HowAICanHelpSmallBusiness from './pages/blog/HowAICanHelpSmallBusiness.tsx';
 import Blog from './pages/Blog.tsx';
 import StandardPlan from './pages/StandardPlan.tsx';
 import GrowthPlan from './pages/GrowthPlan.tsx';
@@ -29,6 +30,7 @@ import OnePagers from './pages/OnePagers.tsx';
 import GTMStrategy from './pages/GTMStrategy.tsx';
 import CampaignBriefs from './pages/CampaignBriefs.tsx';
 import SearchVisibilityReport from './pages/SearchVisibilityReport.tsx';
+import NotFound from './pages/NotFound.tsx';
 
 const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,6 +70,7 @@ const App: React.FC = () => {
             <Route path="/blog/what-does-a-marketing-ai-audit-include" element={<MarketingAIAudit />} />
             <Route path="/blog/cgt-companies-invisible-in-ai-search" element={<CGTInvisibleInAISearch />} />
             <Route path="/blog/geo-new-competitive-moat" element={<GEOMoatInstitutionalAdvisory />} />
+            <Route path="/blog/how-ai-can-help-small-business" element={<HowAICanHelpSmallBusiness />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/standard-plan" element={<StandardPlan />} />
             <Route path="/growth-plan" element={<GrowthPlan />} />
@@ -80,6 +83,7 @@ const App: React.FC = () => {
             <Route path="/gtm-strategy" element={<GTMStrategy />} />
             <Route path="/campaign-briefs" element={<CampaignBriefs />} />
             <Route path="/seo-aeo-geo-report" element={<SearchVisibilityReport />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 

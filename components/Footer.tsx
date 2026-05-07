@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-28 pt-10 border-t border-navy/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[11px] text-navy/20 uppercase tracking-[0.5em] font-black">
-            &copy; {new Date().getFullYear()} Mergelith. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Mergelith. All Rights Reserved. Copy paste prohibited.
           </p>
           <div className="flex gap-12 items-center">
             <div className="flex gap-3">
