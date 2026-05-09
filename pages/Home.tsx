@@ -18,7 +18,7 @@ const Home: React.FC = () => {
   return (
     <div className="space-y-32 pb-32">
       <SEO 
-        title="Marketing AI Agency" 
+        title="Marketing as a Service" 
         description="Mergelith delivers corporate-grade marketing materials in 48 hours. Specializing in AEO, GEO, and high-velocity marketing execution for small businesses." 
       />
       <Hero />

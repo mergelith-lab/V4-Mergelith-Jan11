@@ -1,6 +1,6 @@
-# Mergelith | Marketing AI Agency
+# Mergelith | Marketing as a Service
 
-Mergelith is a premier AI agency specializing in search visibility and revenue systems optimization. We provide deep-tissue AI infrastructure, focusing on Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and visibility intelligence.
+Mergelith is a premier Marketing as a Service (MaaS) provider specializing in search visibility and revenue systems optimization. We provide deep-tissue marketing infrastructure, focusing on Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and visibility intelligence.
 
 ## Core Offerings
 
