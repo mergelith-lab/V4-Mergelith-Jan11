@@ -23,12 +23,10 @@ const Hero: React.FC = () => {
           <div className="relative max-w-5xl mx-auto bg-navy/5 ring-1 ring-navy/10 rounded-sm overflow-hidden shadow-2xl">
             <img 
               src="/banner.png" 
-              alt="Mergelith Marketing AI Banner" 
+              alt="Mergelith Strategic Banner" 
               className="w-full aspect-[21/9] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               onError={(e) => {
-                e.currentTarget.src = "https://mergelith.com/logo.png";
-                e.currentTarget.style.objectFit = "contain";
-                e.currentTarget.style.padding = "4rem";
+                e.currentTarget.style.display = 'none';
               }}
               referrerPolicy="no-referrer"
             />

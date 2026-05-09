@@ -23,11 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
         : 'bg-transparent py-6'
     }`}>
       <div className="max-w-[1800px] mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="group flex items-center gap-2">
-          <h1 className="font-cinzel text-base tracking-[0.3em] font-bold text-navy leading-none transition-colors group-hover:text-gold">
-            MERGELITH
-          </h1>
-        </Link>
+        <div className="w-32"></div> {/* Spacer for symmetry */}
 
         <div className="flex items-center gap-8">
           <div className="hidden lg:flex items-center gap-6">

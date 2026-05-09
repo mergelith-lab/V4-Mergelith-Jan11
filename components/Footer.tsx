@@ -8,14 +8,6 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-16">
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 flex items-center justify-center">
-                <img 
-                  src="https://mergelith.com/logo.png" 
-                  alt="Mergelith Logo" 
-                  className="w-full h-full object-contain"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
               <h1 className="font-cinzel text-xl tracking-[0.3em] font-black text-navy uppercase">MERGELITH</h1>
             </div>
             <div className="space-y-3">
